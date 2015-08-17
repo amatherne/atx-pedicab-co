@@ -1,50 +1,46 @@
 <footer class="site-footer">
 
-  <div class="wrapper">
+  <h2><a href="{{ site.baseurl }}">
+    Austin Pedicab Co.
+    <!-- <img src="/img/icons/logo-yellow.png"> -->
+  </a></h2>
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+  <h4>Created by: Austin Matherne 
+    <BR>@ The Iron Yard - Aug 2015</h4>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
+  <ul>
+    
+    <li class="nav-link">
+      <a href="{{ site.baseurl }}/">
+        <img src="/img/icons/home.png"><span>Home</span>
+      </a>
+    </li>
 
-      <div class="footer-col  footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            <a href="https://github.com/{{ site.github_username }}">
-              <span class="icon  icon--github">
-               
-              </span>
+    <li class="nav-link">
+      <a href="{{ site.baseurl }}/tours/">
+        <img src="/img/icons/pedicab.png"><span>Tours</span>
+      </a>
+    </li>
 
-              <span class="username">{{ site.github_username }}</span>
-            </a>
-          </li>
-          {% endif %}
+    <li class="nav-link">
+      <a href="{{ site.baseurl }}/about/">
+        <img src="/img/icons/butt.png"><span>About</span>
+      </a>
+    </li>
 
-          {% if site.twitter_username %}
-          <li>
-            <a href="https://twitter.com/{{ site.twitter_username }}">
-              <span class="icon  icon--twitter">
-                
-              </span>
+    <li class="nav-link">
+      <a href="{{ site.baseurl }}/partners/">
+        <img src="/img/icons/partners.png"><span>Partners</span>
+      </a>
+    </li>
 
-              <span class="username">{{ site.twitter_username }}</span>
-            </a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
+    <li class="nav-link">
+      <a href="{{ site.baseurl }}/contact/">
+        <img src="/img/icons/contact-chat.png"><span>Contact</span>
+      </a>
+    </li>
 
-      <div class="footer-col  footer-col-3">
-        <p class="text">{{ site.description }}</p>
-      </div>
-    </div>
-
-  </div>
+  </ul>
 
 </footer>
+
