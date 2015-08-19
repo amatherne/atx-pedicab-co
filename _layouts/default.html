@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div class="container">
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+    </div>
+
+<!--========================= Landing Overlay =================-->
+
+    <div class="overlay overlay-contentpush landing">
+
+      <button type="button" class="overlay-close"><span>Close</span><img src="/img/cross.png"></button>
+            <div class="tag-line">
+              <h2>DON'T WALK</h2>
+              <div class="divider"></div>
+              <h3>TAKE A PEDICAB</h3>
+            </div>
+            <div class="inputs">
+
+              <!-- passenger select -->
+
+              <div class="dropdown">
+              <div class="dropdown-container">
+                <div class="dropdown-description"># of Passengers</div>
+                <div id="highlight" class="dropdown-button"><span>&#8964;</span></div>
+                <ul class="dropdown-menu dropdown-select">
+                  <li># of Passengers</li>
+                  <li>1-3 Butts</li>
+                  <li>4-6 Butts</li>
+                  <li>7-9 Butts</li>
+                  <li>10 or More Butts</li>
+                </ul>
+                <span class="sub-text">3 Passengers MAX per Pedicab</span>
+              </div>
+            </div>
+                <!-- Time Select -->
+
+           <div class="dropdown">
+              <div class="dropdown-container">
+                <div class="dropdown-description">Pickup Time</div>
+                <div id="highlight" class="dropdown-button"><span>&#8964;</span></div>
+                <ul class="dropdown-menu dropdown-select">
+                  <li>Pickup Time</li>
+                  <li>We're Ready Now!</li>
+                  <li>Other Time</li>
+                </ul>
+                <span class="sub-text">(optional)</span>
+
+              </div>
+            </div>
+
+            <!-- Location Select -->
+
+            <div class="location">
+
+              <button id="find-me" class="find-me">
+
+                <img id="rotate" src="/img/icons/locator.png">
+
+              </button>
+
+              <input type="text" id="input" for="" placeholder="Any Downtown Location!">
+
+            </div>
+            </div>
+           <!-- Call Button -->
+            <div class="call">
+              <button id="call"><span>Call Cab</span><img src="/img/pedicab.png"></button>     
+            </div>
+          </div>
+
+          
+
+
+
+
+              <!-- This is the end of the landing page -->
+
+
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
+<script type="text/javascript" src="{{ site.baseurl }}/js/modernizer.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/snap.svg.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/jquery.js"></script>
+  </body>
+
+</html>

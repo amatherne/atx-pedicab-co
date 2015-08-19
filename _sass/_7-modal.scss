@@ -1,0 +1,116 @@
+/* Overlay style */
+.overlay {
+	position: fixed;
+	overflow-y:scroll;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	// background: rgba(153,204,51,0.9);
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+	width: 144px;
+	height: 49px;
+	position: relative;
+	float:right;
+	overflow: hidden;
+	@include margin(-4em 1em null null);
+	border: none;
+	background:transparent;
+	@include border-radius(0.8em);
+	z-index:10;
+	background: $brandcolor2;
+	outline: none;
+	display:inline-block;
+	img {
+		width: 40px;
+		// float: right;
+		vertical-align: middle;
+		padding-bottom:1.8em;
+		padding-top:0.15em;
+		z-index: 20;
+	}
+	span {
+	font-family: "roadgeek";
+	display:inline-block;
+	width:70px;
+	color:$fontcolor;
+      @include font(3);
+      line-height: 0.3em;
+      padding-top:0.6em;
+      padding-right:0.3em;
+      z-index: 20;
+	}
+}
+
+
+/* Effects */
+html, body {
+	overflow-x: hidden;
+	// height:-100%;
+
+}
+
+.container {
+	overflow-x: hidden;
+	-webkit-transition: -webkit-transform 0.5s 0.5s;
+	transition: transform 0.5s 0.5s;	
+}
+
+.container.overlay-open {
+	-webkit-transform: translateX(100%);
+	transform: translateX(50%);
+}
+
+.container::after {
+	content: '';
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.container.overlay-open::after {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.overlay-contentpush {
+	// background: rgba(153,204,51,1);
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+	-webkit-transition: -webkit-transform 0s, visibility 0s 0.5s;
+	transition: transform 0s, visibility 0s 0.5s;
+}
+
+.overlay-contentpush.open {
+	visibility: visible;
+	-webkit-transform: translateX(0%);
+	transform: translateX(0%);
+	-webkit-transition: -webkit-transform 0.5s 0.5s;
+	transition: transform 0.5s 0.5s;
+}
+
+// figure out how to make this work later
+// .close {
+// 	visibility: visible;
+// 	-webkit-transform: translateX(-100%);
+// 	transform: translateX(-100%);
+// 	-webkit-transition: -webkit-transform 0.5s 0.5s;
+// 	transition: transform 0.5s 0.5s;
+// }
+
+ 

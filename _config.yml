@@ -1,0 +1,11 @@
+# Site settings
+title: Austin Pedicab Co.
+email: your-email@domain.com
+description:  An Austin Pedicab Booking and Tour Service.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "amatherne.github.io" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown

@@ -1,0 +1,1569 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+a:focus {
+  outline: none; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* ========================= Colors ============================ */
+/* ========================== Font ============================= */
+@font-face {
+  font-family: 'Melbourne';
+  src: url("fonts/Melbourne regular basic.otf") format("opentype"); }
+@font-face {
+  font-family: 'Melbourne Light';
+  src: url("fonts/Melbourne light basic.otf") format("opentype"); }
+@font-face {
+  font-family: 'Melbourne Bold';
+  src: url("fonts/Melbourne bold basic.otf") format("opentype"); }
+@font-face {
+  font-family: 'Roadgeek';
+  src: url("fonts/Roadgeek 2005 Series C.ttf") format("truetype"); }
+/* ========================== Border Box ======================= */
+/* ==================== Border Radius ========================== */
+/* ============================= gradient ====================*/
+body,
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  body p, body li, body sub, body sup, body span, body input,
+  * p,
+  * li,
+  * sub,
+  * sup,
+  * span,
+  * input,
+  *:after p,
+  *:after li,
+  *:after sub,
+  *:after sup,
+  *:after span,
+  *:after input,
+  *:before p,
+  *:before li,
+  *:before sub,
+  *:before sup,
+  *:before span,
+  *:before input {
+    font-family: "Melbourne", san-serif, serif;
+    font-size: 0.9375px;
+    font-size: 1.5em;
+    line-height: 2.1em;
+    color: #F5E6BF; }
+  body a,
+  * a,
+  *:after a,
+  *:before a {
+    color: #F5E6BF;
+    font-family: "Melbourne bold", san-serif;
+    font-size: 0.9375px;
+    font-size: 1.5em;
+    line-height: 2.1em;
+    text-decoration: none; }
+  body h1,
+  * h1,
+  *:after h1,
+  *:before h1 {
+    font-family: "Roadgeek", san-serif;
+    font-size: 0.9375px;
+    font-size: 1.5em;
+    line-height: 2.1em;
+    color: #F5E6BF; }
+  body h2,
+  * h2,
+  *:after h2,
+  *:before h2 {
+    font-family: "Roadgeek", san-serif;
+    font-size: 0.8125px;
+    font-size: 1.3em;
+    line-height: 1.82em;
+    color: #F5E6BF; }
+  body h3,
+  * h3,
+  *:after h3,
+  *:before h3 {
+    font-family: "Roadgeek", san-serif;
+    font-size: 0.6875px;
+    font-size: 1.1em;
+    line-height: 1.54em;
+    color: #F5E6BF; }
+  body h4,
+  * h4,
+  *:after h4,
+  *:before h4 {
+    font-family: "Roadgeek", san-serif;
+    font-size: 0.625px;
+    font-size: 1em;
+    line-height: 1.4em;
+    color: #F5E6BF; }
+  body h5,
+  * h5,
+  *:after h5,
+  *:before h5 {
+    font-family: "Roadgeek", san-serif;
+    font-size: 0.5px;
+    font-size: 0.8em;
+    line-height: 1.12em;
+    color: #F5E6BF; }
+  body h6,
+  * h6,
+  *:after h6,
+  *:before h6 {
+    font-family: "Roadgeek", san-serif;
+    font-size: 0.5px;
+    font-size: 0.8em;
+    line-height: 1.12em;
+    color: #F5E6BF; }
+
+.show-width {
+  background: #18a390;
+  width: 70px;
+  height: 40px;
+  color: white;
+  top: 1em;
+  left: 1em;
+  position: fixed;
+  z-index: 1000; }
+  .show-width p {
+    text-align: center;
+    margin: 2px;
+    font-family: 'lato-light'; }
+
+.ph-number {
+  position: absolute;
+  top: -3em;
+  right: 0;
+  width: 100%;
+  background: #4c9e79; }
+  .ph-number span {
+    display: none; }
+  .ph-number a {
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    float: left;
+    font-family: "roadgeek";
+    border: 1px solid #22262D;
+    background: #4c9e79; }
+  @media screen and (min-width: 600px) {
+    .ph-number {
+      position: absolute;
+      top: 0.3em;
+      right: -0.2em;
+      width: 60%;
+      padding: 0.5em auto;
+      background: transparent; }
+      .ph-number a {
+        background: transparent;
+        float: right;
+        font-size: 1.25px;
+        font-size: 2em;
+        line-height: 2.8em; }
+      .ph-number span {
+        display: initial;
+        font-family: "roadgeek";
+        font-size: 0.625px;
+        font-size: 1em;
+        line-height: 1.4em; }
+      .ph-number .book-button {
+        display: none; } }
+
+header {
+  position: relative;
+  top: 3em;
+  width: 100%;
+  background: #22262d;
+  height: 8em;
+  z-index: 1;
+  clear: both; }
+  header h1 > a {
+    padding: 0.8em 4% 0.4em;
+    display: inline-block;
+    text-align: left;
+    font-size: 0.9375px;
+    font-size: 1.5em;
+    line-height: 2.1em;
+    float: left;
+    width: 72%;
+    position: relative;
+    color: #9bcfb7;
+    text-shadow: 1px 1px 0.5px #56ae86, 2px 2px 0.5px #448d6b, 3px 3px 0.5px #336a51; }
+  @media screen and (min-width: 600px) {
+    header {
+      top: 0;
+      height: 12em; } }
+
+header.navigation .navigation-menu-button {
+  display: inline-block;
+  margin: 1.7em 1em 2.05em 0;
+  padding: 0.1em;
+  float: right;
+  width: 50px;
+  position: relative;
+  text-align: center;
+  background: #647084;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  overflow: hidden;
+  font-size: 0.8125px;
+  font-size: 1.3em;
+  line-height: 1.82em;
+  font-family: "roadgeek"; }
+  header.navigation .navigation-menu-button:hover {
+    background: #383f4a; }
+  header.navigation .navigation-menu-button .menuword {
+    display: none; }
+  header.navigation .navigation-menu-button img {
+    width: 100%;
+    float: left; }
+header.navigation ul.navigation-menu {
+  -webkit-transform-style: preserve-3d;
+  clear: both;
+  display: none;
+  background: #4e5767;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+  top: 1em; }
+  header.navigation ul.navigation-menu.show {
+    display: block; }
+header.navigation .nav-link {
+  position: relative;
+  z-index: 10;
+  background: #4e5767;
+  width: 20%;
+  display: inline-block;
+  float: left; }
+  header.navigation .nav-link span {
+    display: block;
+    font-size: 0.34375px;
+    font-size: 0.55em;
+    line-height: 0.77em;
+    font-family: "roadgeek";
+    text-align: center;
+    margin: -1.5em auto 0.5em; }
+  header.navigation .nav-link img {
+    margin: 0.2em 15%;
+    width: 70%; }
+  header.navigation .nav-link:hover {
+    background: #647084; }
+@media screen and (min-width: 600px) {
+  header.navigation .navigation-menu-button {
+    margin: 1.13em 1em 0 0;
+    width: 160px;
+    height: 50px; }
+    header.navigation .navigation-menu-button img {
+      width: 27.5%; }
+    header.navigation .navigation-menu-button .menuword {
+      display: inline-block;
+      position: relative;
+      font-size: 1.25px;
+      font-size: 2em;
+      line-height: 2.8em;
+      line-height: 1.2em; }
+  header.navigation .nav-link {
+    margin: 0; } }
+
+.page-content {
+  margin-top: 3em; }
+  @media screen and (min-width: 600px) {
+    .page-content {
+      margin: 0;
+      position: relative; } }
+
+.landing {
+  background: url("../img/frosttower-sm-2.png");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: -100em;
+  overflow: hidden;
+  position: relative;
+  padding-top: 3em;
+  clear: both; }
+  .landing:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    overflow: hidden;
+    background: #2E526B;
+    opacity: 0.7; }
+  .landing .tag-line {
+    text-align: center;
+    -webkit-border-radius: 0.4em;
+    border-radius: 0.4em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    margin: 2em 5%;
+    display: block;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    padding: 1em 0;
+    background: url("../img/secondst.JPG");
+    background-repeat: no-repeat;
+    background-position: 80% 80%;
+    background-size: cover;
+    z-index: 1; }
+    .landing .tag-line:before {
+      content: '';
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(38, 68, 89, 0.6);
+      z-index: -1; }
+    .landing .tag-line h2 {
+      font-size: 2.9375px;
+      font-size: 4.7em;
+      line-height: 6.58em;
+      margin: -2.5em auto;
+      z-index: 99;
+      position: relative;
+      display: block; }
+    .landing .tag-line h3 {
+      font-size: 1.875px;
+      font-size: 3em;
+      line-height: 4.2em;
+      margin: -1em auto;
+      z-index: 99;
+      position: relative; }
+    .landing .tag-line .divider {
+      width: 60%;
+      height: 2px;
+      margin: 1em 20%;
+      background: #F5E6BF; }
+  .landing .inputs {
+    z-index: 10;
+    overflow: hidden;
+    width: 90%;
+    margin: 2em 5%;
+    padding: 1.5em;
+    -webkit-border-radius: 0.4em;
+    border-radius: 0.4em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    position: relative; }
+    .landing .inputs:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #22262D;
+      opacity: 0.8;
+      z-index: -1; }
+  .landing .dropdown {
+    color: #22262D;
+    font-family: "Roadgeek", san-serif;
+    overflow: visible; }
+    .landing .dropdown .dropdown-container {
+      overflow: visible;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      width: 90%;
+      margin: 1em 5%; }
+    .landing .dropdown .dropdown-description {
+      float: left;
+      padding: 0 0 0 0.5em;
+      text-align: left;
+      display: block;
+      background: #F5E6BF;
+      background: #89c7ab;
+      width: 80%;
+      height: 37px;
+      color: #2E526B;
+      z-index: 1;
+      font-size: 1.0625px;
+      font-size: 1.7em;
+      line-height: 2.38em;
+      line-height: 1.5em; }
+    .landing .dropdown .dropdown-button {
+      -webkit-border-bottom-right-radius: 0.3em;
+      border-bottom-right-radius: 0.3em;
+      -webkit-border-top-right-radius: 0.3em;
+      border-top-right-radius: 0.3em;
+      background-clip: padding-box;
+      cursor: pointer;
+      float: right;
+      position: relative;
+      background: #4c9e79;
+      width: 20%;
+      height: 37px; }
+      .landing .dropdown .dropdown-button span {
+        color: #F5E6BF;
+        font-size: 2.8125px;
+        font-size: 4.5em;
+        line-height: 6.3em;
+        line-height: 0.5em;
+        display: block; }
+      .landing .dropdown .dropdown-button.active {
+        background: #89c7ab; }
+        .landing .dropdown .dropdown-button.active > span {
+          color: #2E526B; }
+    .landing .dropdown .dropdown-menu {
+      -webkit-border-bottom-right-radius: 0.3em;
+      border-bottom-right-radius: 0.3em;
+      -webkit-border-bottom-left-radius: 0.3em;
+      border-bottom-left-radius: 0.3em;
+      background-clip: padding-box;
+      cursor: pointer;
+      display: none;
+      -webkit-transition: height 1s ease;
+      -moz-transition: height 1s ease;
+      transition: height 1s ease;
+      position: absolute;
+      text-align: left;
+      top: 2.4em;
+      height: 0;
+      z-index: 1;
+      width: 80%;
+      background: #F5E6BF;
+      background: #89c7ab; }
+      .landing .dropdown .dropdown-menu li {
+        color: #2E526B;
+        font-family: "Roadgeek", san-serif;
+        font-size: 1.0625px;
+        font-size: 1.7em;
+        line-height: 2.38em;
+        line-height: 1.5em; }
+    .landing .dropdown .show-menu {
+      -webkit-transition: height 1s ease;
+      -moz-transition: height 1s ease;
+      transition: height 1s ease;
+      display: block;
+      height: auto;
+      overflow: hidden;
+      margin: -0.25em 0 0;
+      padding: 0.2em 0.9em; }
+    .landing .dropdown .sub-text {
+      font-size: 0.5px;
+      font-size: 0.8em;
+      line-height: 1.12em;
+      color: #F5E6BF;
+      float: right;
+      margin: 1em;
+      opacity: 0.8; }
+  .landing .location {
+    width: 90%;
+    margin: 1.3em 5%; }
+  .landing .find-me {
+    background: #7e899d;
+    width: 50px;
+    height: 50px;
+    z-index: 90;
+    display: inline-block;
+    -webkit-border-radius: 1.2em;
+    border-radius: 1.2em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    padding: 0.005em; }
+    .landing .find-me img {
+      width: 90%;
+      padding-top: 0.019em;
+      padding-right: 0.019em; }
+  .landing input {
+    width: 77%;
+    float: right;
+    height: 37px;
+    vertical-align: top;
+    color: #22262D;
+    font-size: 0.8125px;
+    font-size: 1.3em;
+    line-height: 1.82em;
+    margin-top: 0.2em;
+    padding: 0.7em;
+    font-family: "Roadgeek", san-serif;
+    -webkit-border-radius: 0.2em;
+    border-radius: 0.2em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+  .landing .call {
+    width: 90%;
+    margin: 1em 5%;
+    position: relative;
+    padding-bottom: -5em; }
+    .landing .call button {
+      background: #4c9e79;
+      font-size: 1.25px;
+      font-size: 2em;
+      line-height: 2.8em;
+      color: #F5E6BF;
+      padding: 0.2em 0 0;
+      width: 100%;
+      margin: 0 0 -5em;
+      -webkit-transition: background-color 10ms ease-in 0s;
+      -moz-transition: background-color 10ms ease-in 0s;
+      transition: background-color 10ms ease-in 0s;
+      -webkit-border-radius: 0.2em;
+      border-radius: 0.2em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
+      .landing .call button img {
+        vertical-align: middle;
+        padding: 0.3em 0 0.5em;
+        width: 35%;
+        display: inline-block; }
+      .landing .call button span {
+        display: inline-block;
+        font-size: 1.1875px;
+        font-size: 1.9em;
+        line-height: 2.66em;
+        line-height: 1em;
+        padding: 0.5em 0.3em 0 0; }
+      .landing .call button.complete {
+        -webkit-transition: background-color 10ms ease-in 0s;
+        -moz-transition: background-color 10ms ease-in 0s;
+        transition: background-color 10ms ease-in 0s;
+        background-color: #8a3051; }
+
+footer {
+  background: #22262D;
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  position: relative; }
+  footer h2 {
+    font-size: 1.25px;
+    font-size: 2em;
+    line-height: 2.8em;
+    text-align: center;
+    margin: 1em auto; }
+  footer h4 {
+    font-size: 0.625px;
+    font-size: 1em;
+    line-height: 1.4em;
+    text-align: center;
+    margin: 2em 0.5em; }
+  footer ul {
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    display: block; }
+  footer .nav-link {
+    position: relative;
+    background: #4e5767;
+    width: 20%;
+    display: inline-block;
+    float: left; }
+    footer .nav-link span {
+      display: block;
+      font-size: 0.34375px;
+      font-size: 0.55em;
+      line-height: 0.77em;
+      font-family: "roadgeek";
+      text-align: center;
+      margin: -1em auto 0.6em; }
+    footer .nav-link img {
+      margin: 0.2em 15%;
+      width: 70%; }
+    footer .nav-link:hover {
+      background: #647084; }
+    footer .nav-link:nth-of-type(3) img {
+      margin: 0.24em 15% 0.2em; }
+
+/* Overlay style */
+.overlay {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+  width: 144px;
+  height: 49px;
+  position: relative;
+  float: right;
+  overflow: hidden;
+  margin-top: -4em;
+  margin-right: 1em;
+  border: none;
+  background: transparent;
+  -webkit-border-radius: 0.8em;
+  border-radius: 0.8em;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  z-index: 10;
+  background: #22262D;
+  outline: none;
+  display: inline-block; }
+  .overlay .overlay-close img {
+    width: 40px;
+    vertical-align: middle;
+    padding-bottom: 1.8em;
+    padding-top: 0.15em;
+    z-index: 20; }
+  .overlay .overlay-close span {
+    font-family: "roadgeek";
+    display: inline-block;
+    width: 70px;
+    color: #F5E6BF;
+    font-size: 1.875px;
+    font-size: 3em;
+    line-height: 4.2em;
+    line-height: 0.3em;
+    padding-top: 0.6em;
+    padding-right: 0.3em;
+    z-index: 20; }
+
+/* Effects */
+html, body {
+  overflow-x: hidden; }
+
+.container {
+  overflow-x: hidden;
+  -webkit-transition: -webkit-transform 0.5s 0.5s;
+  transition: transform 0.5s 0.5s; }
+
+.container.overlay-open {
+  -webkit-transform: translateX(100%);
+  transform: translateX(50%); }
+
+.container::after {
+  content: '';
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s; }
+
+.container.overlay-open::after {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+
+.overlay-contentpush {
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0s, visibility 0s 0.5s;
+  transition: transform 0s, visibility 0s 0.5s; }
+
+.overlay-contentpush.open {
+  visibility: visible;
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  -webkit-transition: -webkit-transform 0.5s 0.5s;
+  transition: transform 0.5s 0.5s; }
+
+.home {
+  background: #2E526B;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .home .landing {
+    display: none; }
+  .home .call {
+    display: none; }
+  .home .tag-line {
+    text-align: center;
+    margin: 2em 5%;
+    display: block;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    padding: 1em 0;
+    background: url("../img/kids.jpg");
+    background-repeat: no-repeat;
+    background-position: 80% 80%;
+    background-size: cover;
+    -webkit-border-radius: 0.4em;
+    border-radius: 0.4em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+    .home .tag-line:before {
+      content: '';
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(23, 41, 54, 0.6);
+      -webkit-border-radius: 0.4em;
+      border-radius: 0.4em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
+    .home .tag-line h2 {
+      display: block;
+      font-size: 2.9375px;
+      font-size: 4.7em;
+      line-height: 6.58em;
+      line-height: 1.7em;
+      position: relative; }
+    .home .tag-line h3 {
+      font-size: 2.0625px;
+      font-size: 3.3em;
+      line-height: 4.62em;
+      line-height: 1.5em;
+      position: relative; }
+    .home .tag-line .divider {
+      width: 80%;
+      height: 2px;
+      margin: 1em 10%;
+      background: #F5E6BF;
+      position: relative; }
+  .home .blurb {
+    text-align: center;
+    margin: 2em 5%;
+    display: block;
+    width: 90%;
+    position: relative;
+    -webkit-border-radius: 0.4em;
+    border-radius: 0.4em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    padding: 1em 1.5em; }
+    .home .blurb:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #22262D;
+      opacity: 0.8;
+      -webkit-border-radius: 0.4em;
+      border-radius: 0.4em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
+    .home .blurb p {
+      font-size: 0.75px;
+      font-size: 1.2em;
+      line-height: 1.68em;
+      text-align: left;
+      position: relative; }
+  .home .tour-links {
+    display: block;
+    text-align: center;
+    margin: 2em 5%;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1; }
+    .home .tour-links::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .home .tour-links button {
+      background: none;
+      position: relative;
+      border: none;
+      width: 100%;
+      overflow: hidden;
+      margin: 1.5em 0;
+      padding: 0; }
+      .home .tour-links button a {
+        font-family: "roadgeek";
+        font-size: 4.8125px;
+        font-size: 7.7em;
+        line-height: 10.78em;
+        line-height: 1.3em;
+        width: 100%;
+        height: 100%;
+        display: block;
+        color: #9bcfb7;
+        text-shadow: 1px 1px 0.5px #56ae86, 2px 2px 0.5px #448d6b, 3px 3px 0.5px #336a51; }
+      .home .tour-links button.taco {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        background: url("../img/chilantro.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0% 40%;
+        -webkit-border-radius: 0.4em;
+        border-radius: 0.4em;
+        background-clip: padding-box;
+        /* stops bg color from leaking outside the border: */ }
+        .home .tour-links button.taco:before {
+          content: '';
+          -webkit-border-radius: 0.4em;
+          border-radius: 0.4em;
+          background-clip: padding-box;
+          /* stops bg color from leaking outside the border: */
+          position: absolute;
+          overflow: hidden;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(38, 68, 89, 0.6);
+          z-index: -1; }
+      .home .tour-links button.wine {
+        -webkit-border-radius: 0.4em;
+        border-radius: 0.4em;
+        background-clip: padding-box;
+        /* stops bg color from leaking outside the border: */
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        background: url("../img/wine.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+        .home .tour-links button.wine a {
+          font-size: 4.0625px;
+          font-size: 6.5em;
+          line-height: 9.1em;
+          line-height: 1.5em; }
+        .home .tour-links button.wine:before {
+          -webkit-border-radius: 0.4em;
+          border-radius: 0.4em;
+          background-clip: padding-box;
+          /* stops bg color from leaking outside the border: */
+          content: '';
+          position: absolute;
+          overflow: hidden;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(38, 68, 89, 0.6);
+          z-index: -1; }
+      .home .tour-links button.margs {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        background: url("../img/marg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0% 10%;
+        -webkit-border-radius: 0.4em;
+        border-radius: 0.4em;
+        background-clip: padding-box;
+        /* stops bg color from leaking outside the border: */ }
+        .home .tour-links button.margs:before {
+          -webkit-border-radius: 0.4em;
+          border-radius: 0.4em;
+          background-clip: padding-box;
+          /* stops bg color from leaking outside the border: */
+          content: '';
+          position: absolute;
+          overflow: hidden;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(38, 68, 89, 0.6);
+          z-index: -1; }
+  .home .recents {
+    text-align: center;
+    margin: 0.6em 5%;
+    display: block;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    .home .recents:before {
+      background: #22262D;
+      opacity: 0.8;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      -webkit-border-radius: 0.4em;
+      border-radius: 0.4em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
+    .home .recents h3 {
+      font-size: 1.5px;
+      font-size: 2.4em;
+      line-height: 3.36em;
+      line-height: 1.4em; }
+    .home .recents .divider {
+      width: 80%;
+      height: 2px;
+      margin: 1em 10%;
+      background: #F5E6BF; }
+    .home .recents p {
+      padding: 1em;
+      font-size: 0.75px;
+      font-size: 1.2em;
+      line-height: 1.68em;
+      line-height: 1.4;
+      text-align: left; }
+    .home .recents .name {
+      font-size: 0.5625px;
+      font-size: 0.9em;
+      line-height: 1.26em;
+      margin: -1.2em 0.5em 0;
+      display: block; }
+    .home .recents .sub {
+      margin: -1.3em 2em 0;
+      font-size: 0.5px;
+      font-size: 0.8em;
+      line-height: 1.12em;
+      display: block; }
+
+.tours {
+  background: #2E526B;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .tours .divider {
+    width: 80%;
+    height: 2px;
+    margin: 1.5em 10%;
+    position: relative;
+    background: #F5E6BF; }
+  .tours .hero {
+    background: url("../img/ride.jpg");
+    text-align: center;
+    margin: 2em 5%;
+    display: block;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    padding: 4em 1em;
+    background-repeat: no-repeat;
+    background-position: 80% 80%;
+    background-size: cover;
+    z-index: 1;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+    .tours .hero:before {
+      content: '';
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(38, 68, 89, 0.6);
+      z-index: -1;
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
+    .tours .hero h3 {
+      display: block;
+      font-size: 1.5625px;
+      font-size: 2.5em;
+      line-height: 3.5em;
+      line-height: 1.3em; }
+  .tours .experience {
+    text-align: center;
+    margin: 2em 5%;
+    display: block;
+    width: 90%;
+    position: relative;
+    z-index: 1;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+    .tours .experience:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #22262D;
+      opacity: 0.8;
+      z-index: -1;
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
+    .tours .experience p {
+      font-size: 0.75px;
+      font-size: 1.2em;
+      line-height: 1.68em;
+      text-align: left;
+      padding: 1em; }
+  .tours .accordion {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    z-index: 1; }
+    .tours .accordion .tour-box {
+      width: 90%;
+      margin: 2em 5%;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0.05rem 0.15rem 0.3rem 0.001rem black; }
+    .tours .accordion .taco {
+      position: relative; }
+      .tours .accordion .taco.opened:before {
+        content: '';
+        background: url("../img/turf1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 13.5em;
+        opacity: 1;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+      .tours .accordion .taco.close:before {
+        content: '';
+        background: url("../img/turf1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10em;
+        opacity: 0.5;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+    .tours .accordion .wine {
+      position: relative; }
+      .tours .accordion .wine.opened:before {
+        content: '';
+        background: url("../img/secondst.JPG");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 13.5em;
+        opacity: 1;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+      .tours .accordion .wine.close:before {
+        content: '';
+        background: url("../img/secondst.JPG");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10em;
+        opacity: 0.5;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+    .tours .accordion .margs {
+      position: relative; }
+      .tours .accordion .margs.opened:before {
+        content: '';
+        background: url("../img/marg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 13.5em;
+        opacity: 1;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+      .tours .accordion .margs.close:before {
+        content: '';
+        background: url("../img/marg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10em;
+        opacity: 0.5;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+    .tours .accordion .pub {
+      position: relative; }
+      .tours .accordion .pub.opened:before {
+        content: '';
+        background: url("../img/dash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 13.5em;
+        opacity: 1;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+      .tours .accordion .pub.close:before {
+        content: '';
+        background: url("../img/dash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10em;
+        opacity: 0.5;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+    .tours .accordion h3 {
+      font-size: 0.8125px;
+      font-size: 1.3em;
+      line-height: 1.82em;
+      line-height: 1.5em;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      display: block;
+      color: #89c7ab;
+      text-shadow: 1px 1px 0.5px #56ae86, 2px 2px 0.5px #448d6b, 3px 3px 0.5px #336a51; }
+      .tours .accordion h3.closed {
+        transition: background-color 500ms ease;
+        background-color: rgba(31, 55, 71, 0.8);
+        transition: opacity 500ms ease;
+        opacity: 1; }
+      .tours .accordion h3.open {
+        transition: background-color 500ms ease;
+        background-color: rgba(23, 41, 54, 0.8);
+        transition: opacity 500ms ease;
+        opacity: 0; }
+    .tours .accordion span {
+      font-size: 0.3125px;
+      font-size: 0.5em;
+      line-height: 0.7em;
+      line-height: 1.5em;
+      width: 100%;
+      height: 100%;
+      padding: 0.7em;
+      display: block;
+      overflow: hidden;
+      z-index: 100;
+      position: relative; }
+      .tours .accordion span.closed {
+        transition: background-color 500ms ease;
+        background-color: rgba(31, 55, 71, 0.8);
+        transition: opacity 500ms ease;
+        opacity: 1;
+        margin-top: 0;
+        transition: margin 500ms ease-in; }
+      .tours .accordion span.open {
+        transition: background-color 500ms ease;
+        background-color: rgba(23, 41, 54, 0.8);
+        transition: opacity 500ms ease;
+        opacity: 0;
+        margin-top: 7em;
+        transition: margin 500ms ease-in; }
+    .tours .accordion .submenu {
+      display: none;
+      margin: 0;
+      overflow: hidden;
+      width: 100%;
+      clear: both;
+      background: #1f3747;
+      padding: 0.7em;
+      box-shadow: 0em 0em 1em 0.1em black; }
+      .tours .accordion .submenu p {
+        font-size: 0.3125px;
+        font-size: 0.5em;
+        line-height: 0.7em;
+        line-height: 1.5em; }
+      .tours .accordion .submenu h4 {
+        text-align: center;
+        font-size: 0.71875px;
+        font-size: 1.15em;
+        line-height: 1.61em;
+        line-height: 1.6em;
+        color: #9bcfb7;
+        text-shadow: 1px 1px 0.5px #56ae86, 2px 2px 0.5px #448d6b, 3px 3px 0.5px #336a51; }
+      .tours .accordion .submenu h5 {
+        text-align: center;
+        font-size: 0.9375px;
+        font-size: 1.5em;
+        line-height: 2.1em;
+        line-height: 1.5em; }
+      .tours .accordion .submenu .left {
+        float: left;
+        font-size: 0.1875px;
+        font-size: 0.3em;
+        line-height: 0.42em;
+        width: 30%;
+        margin: 0.2em 2% 0.2em 18%; }
+        .tours .accordion .submenu .left li {
+          font-family: "Melbourne bold", san-serif; }
+      .tours .accordion .submenu .right {
+        float: right;
+        width: 30%;
+        font-size: 0.1875px;
+        font-size: 0.3em;
+        line-height: 0.42em;
+        margin: 0.2em 18% 0.2em 2%; }
+        .tours .accordion .submenu .right li {
+          font-family: "Melbourne bold", san-serif; }
+
+.about-us {
+  background: #2E526B;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .about-us .divider {
+    width: 80%;
+    height: 2px;
+    margin: 1.5em 10%;
+    position: relative;
+    background: #F5E6BF; }
+  .about-us .about-hero {
+    background: url("../img/about-hero.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    width: 90%;
+    margin: 2em 1em;
+    height: 14em;
+    z-index: 9999;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+    .about-us .about-hero h3 {
+      text-align: center;
+      display: block;
+      font-size: 1.875px;
+      font-size: 3em;
+      line-height: 4.2em;
+      line-height: 1.3em;
+      padding: 1.7em 0;
+      background-color: rgba(38, 68, 89, 0.6);
+      height: 100%;
+      position: relative;
+      -webkit-border-radius: 0.1em;
+      border-radius: 0.1em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
+  .about-us .mission {
+    text-align: center;
+    margin: 2em 5%;
+    display: block;
+    width: 90%;
+    position: relative;
+    z-index: 1;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+    .about-us .mission:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #22262D;
+      opacity: 0.8;
+      z-index: -1;
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
+    .about-us .mission p {
+      font-size: 0.75px;
+      font-size: 1.2em;
+      line-height: 1.68em;
+      text-align: left;
+      padding: 1em; }
+  .about-us .accordion {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    z-index: 1; }
+    .about-us .accordion .riders {
+      width: 90%;
+      margin: 2em 5%;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0.05rem 0.15rem 0.3rem 0.001rem black; }
+    .about-us .accordion .matt {
+      position: relative; }
+      .about-us .accordion .matt.opened:before {
+        content: '';
+        background: url("../img/matt-lg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 18em;
+        opacity: 1;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+      .about-us .accordion .matt.close:before {
+        content: '';
+        background: url("../img/matt-lg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 15em;
+        opacity: 0.5;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+    .about-us .accordion .quinton {
+      position: relative; }
+      .about-us .accordion .quinton.opened:before {
+        content: '';
+        background: url("../img/quinton-lg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 18em;
+        opacity: 1;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+      .about-us .accordion .quinton.close:before {
+        content: '';
+        background: url("../img/quinton-lg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 15em;
+        opacity: 0.5;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+    .about-us .accordion .rob {
+      position: relative; }
+      .about-us .accordion .rob.opened:before {
+        content: '';
+        background: url("../img/rob.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 18em;
+        opacity: 1;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+      .about-us .accordion .rob.close:before {
+        content: '';
+        background: url("../img/rob.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 15em;
+        opacity: 0.5;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+    .about-us .accordion .austin {
+      position: relative; }
+      .about-us .accordion .austin.opened:before {
+        content: '';
+        background: url("../img/austin.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 18em;
+        opacity: 1;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+      .about-us .accordion .austin.close:before {
+        content: '';
+        background: url("../img/austin.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 15em;
+        opacity: 0.5;
+        z-index: -1;
+        transition: opacity 500ms ease, height 700ms ease 200ms; }
+    .about-us .accordion h3 {
+      font-size: 0.875px;
+      font-size: 1.4em;
+      line-height: 1.96em;
+      line-height: 1.5em;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      display: block;
+      color: #9bcfb7;
+      text-shadow: 1px 1px 0.5px #56ae86, 2px 2px 0.5px #448d6b, 3px 3px 0.5px #336a51; }
+      .about-us .accordion h3.closed {
+        transition: background-color 500ms ease;
+        background-color: rgba(31, 55, 71, 0.8);
+        transition: opacity 500ms ease;
+        opacity: 1;
+        padding: 0.3em 0;
+        transition: padding 500ms ease-in; }
+      .about-us .accordion h3.open {
+        transition: background-color 500ms ease;
+        background-color: rgba(23, 41, 54, 0);
+        transition: opacity 500ms ease-out;
+        opacity: 0;
+        padding: 3.5em 0;
+        transition: padding 500ms ease-in; }
+    .about-us .accordion .submenu {
+      display: none;
+      margin: 0;
+      overflow: hidden;
+      width: 100%;
+      clear: both;
+      background: #1f3747;
+      padding: 0.7em;
+      box-shadow: 0em 0em 1em 0.1em black; }
+      .about-us .accordion .submenu li {
+        font-size: 0.5px;
+        font-size: 0.8em;
+        line-height: 1.12em;
+        margin: 0.5em 0; }
+      .about-us .accordion .submenu p {
+        font-size: 0.625px;
+        font-size: 1em;
+        line-height: 1.4em;
+        line-height: 1.5em;
+        padding: 1em; }
+      .about-us .accordion .submenu h4 {
+        text-align: center;
+        font-size: 1.5625px;
+        font-size: 2.5em;
+        line-height: 3.5em;
+        line-height: 1.6em; }
+      .about-us .accordion .submenu .markets {
+        font-size: 0.625px;
+        font-size: 1em;
+        line-height: 1.4em;
+        width: 80%;
+        margin: 0.2em 5% 0.2em 15%; }
+        .about-us .accordion .submenu .markets li {
+          font-family: "Melbourne bold", san-serif; }
+        .about-us .accordion .submenu .markets sup {
+          font-size: 0.46875px;
+          font-size: 0.75em;
+          line-height: 1.05em;
+          vertical-align: super;
+          display: inline-block; }
