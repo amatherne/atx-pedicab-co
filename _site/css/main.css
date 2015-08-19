@@ -1004,7 +1004,6 @@ html, body {
     background-repeat: no-repeat;
     background-position: 80% 80%;
     background-size: cover;
-    z-index: 1;
     -webkit-border-radius: 0.3em;
     border-radius: 0.3em;
     background-clip: padding-box;
@@ -1018,7 +1017,6 @@ html, body {
       top: 0;
       left: 0;
       background-color: rgba(38, 68, 89, 0.6);
-      z-index: -1;
       -webkit-border-radius: 0.3em;
       border-radius: 0.3em;
       background-clip: padding-box;
@@ -1028,10 +1026,11 @@ html, body {
       font-size: 1.5625px;
       font-size: 2.5em;
       line-height: 3.5em;
-      line-height: 1.3em; }
+      line-height: 1.3em;
+      position: relative; }
   .tours .experience {
     text-align: center;
-    margin: 2em 5%;
+    margin: 2em 5% 0;
     display: block;
     width: 90%;
     position: relative;
@@ -1334,7 +1333,7 @@ html, body {
       /* stops bg color from leaking outside the border: */ }
   .about-us .mission {
     text-align: center;
-    margin: 2em 5%;
+    margin: 2em 5% 0;
     display: block;
     width: 90%;
     position: relative;
