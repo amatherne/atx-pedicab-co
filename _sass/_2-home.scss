@@ -3,17 +3,20 @@
   	width: 100%;
   	position: relative;
   	overflow: hidden;
-	.landing {
+	.cab-hail {
 		display: none;
 	}
+  .landing {
+    display: none;
+  }
 	.call {
 		display: none;
 	}
 	.tag-line {
 	    text-align: center;
-	    @include margin(2em 5%);
+	    @include margin(0.5em auto);
 	    display: block;
-	    width: 90%;
+	    width: 96%;
 	    position: relative;
 	    overflow: hidden;
 	    padding:1em 0;
@@ -32,21 +35,33 @@
 	        position: absolute;
 	        top:0;
 	        left:0;
-            background-color: darken(rgba(46,82,107,0.6),15%);
+            // background-color: darken(rgba(46,82,107,0.6),15%);
+                  background-color: darken(rgba(46,82,107,0.6),5%);
+
 	        // z-index: -1;
 	    	@include border-radius(0.4em);
 
 	    }
 	    h2 {
 	      	display: block;
-	      	@include font(4.7);
+	      	@include font(4);
 	      	line-height: 1.7em;
           position: relative;
+          opacity: 1;
+          @media screen and (min-width:400px) {
+            @include font(4.7);
+            line-height: 1.7em;
+          }
 	    }
 	    h3 {
-	      	@include font(3.3);
+	      	@include font(3);
 	      	line-height: 1.5em;
           position: relative;
+          opacity: 1;
+          @media screen and (min-width:400px) {
+            @include font(3.3);
+            line-height: 1.5em;
+          }
 
 	    }
 	    .divider {
@@ -55,18 +70,19 @@
 	      	@include margin(1em 10%);
 	      	background: $fontcolor;
 	      	position: relative;
+          opacity: 0.8;
 	    }
 	}
 
 	.blurb {
 	    text-align: center;
-	    @include margin(2em 5%);
+	    @include margin(0.5em auto 0.35em auto);
 	    display: block;
-	    width: 90%;
+	    width: 96%;
 	    position: relative;
 	    // z-index: 1;
 	    @include border-radius(0.4em);
-	    @include padding(1em 1.5em);
+	    @include padding(1em 1.2em);
 	    &:before {
 	      	content: '';
 	      	position: absolute;
@@ -87,11 +103,11 @@
 	    }
 	}
 	.tour-links {
-        display: block; 
+        // display: block; 
         text-align: center;
-        @include clearfix;
-        @include margin(2em 5%);
-        width: 90%;
+        // @include clearfix;
+        // @include margin(1em 5%);
+        // width: 90%;
         position: relative;
         overflow: hidden;
         z-index: 1;
@@ -99,21 +115,23 @@
           	background: none;
           	position: relative;
           	border:none;
-          	width:100%;
+          	width:96%;
           	overflow: hidden;
-          	@include margin(1.5em 0);
-          	padding:0;
+          	@include margin(0.5em auto);
+          	// padding:0;
           	a {
             	font-family: "roadgeek";
-            	@include font(7.7);
+            	@include font(7);
             	line-height: 1.3em;
+              // @include padding(0.1em);
             	width: 100%;
             	height: 100%;
             	display: block;
-            	color:lighten($buttoncolor,15%);
-            	text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
-            	 			2px 2px 0.5px darken($buttoncolor,15%),
-            	 			3px 3px 0.5px darken($buttoncolor,25%);
+              opacity: 0.8;
+            	// color:lighten($buttoncolor,15%);
+            	// text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
+            	//  			2px 2px 0.5px darken($buttoncolor,15%),
+            	//  			3px 3px 0.5px darken($buttoncolor,25%);
           	}
           	&.taco {
             	position: relative;
@@ -192,13 +210,13 @@
     }
 	.recents {
 	    text-align: center;
-	    @include margin(0.6em 5% 0.6em 5%);
+	    @include margin(0.4em auto 0.5em auto);
 	    display: block;
-	    width: 90%;
+	    width: 96%;
 	    position: relative;
 	    overflow: hidden;
 	    z-index: 1;
-	    padding:1em;
+	    @include padding(0.5em 0.1em);
 	    // background: url('../img/parade.jpg');
         background-repeat:no-repeat;
         background-position:center;
@@ -251,7 +269,7 @@
 // ===============================================================  
 
 
-//             Tablet Media Query
+//             Media Query
 
 
 // ==============================================================
@@ -260,12 +278,53 @@
 
 
 @media screen and (min-width:600px) {
+  .home {
+    @include margin(3em 0 0 0);
 
+    .tag-line {
+      width: 100%;
+      @include margin(0 0 0 0);
+      background-position: top;
+    }
 
+    .landing {
+      width:47%;
+      float: right;
+      display: block;
+      position: relative;
+      @include margin(-2em 2% 1em 1%);
+      background:none;
+      .dropdown {
+        @include font(0.8);
+      }
 
+      .call {
+        display: block;
+        position: relative;
+      }
+      .inputs {
+        width: 100%;
+        overflow: hidden;
+        border-radius:none;
+        @include padding(0.5em);
+      }
+      input {
+        width: 70%;
+      }
+    }
 
+    .blurb {
+      width:47%;
+      float:left;
+      @include margin(3em 1% 0 2%);
 
+    }
+    
+    .tour-links {
+      clear: both;
+    }
 
+  }
 
 }
 

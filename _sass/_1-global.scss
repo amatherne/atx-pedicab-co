@@ -9,8 +9,8 @@ $h-font:"Roadgeek", san-serif;
 
 $brandcolor:#2E526B;
 $brandcolor2:#22262D;
-$fontcolor:#F5E6BF;
-// $fontcolor:#F6EF8F;
+// $fontcolor:#F5E6BF;
+$fontcolor: rgb(212,201,173);
 $fontcolor2:#F5EC6B;
 
 $linkcolor:#F5E6BF;
@@ -146,6 +146,7 @@ body,
     font-family: $globalfont, serif;
     @include font(1.5);
     color: $fontcolor;
+    // opacity: 0.85;
   }
   a {
     color: $linkcolor;
@@ -224,6 +225,7 @@ body,
     background:darken($buttoncolor,10%);
     span {
       display: none;
+
     }
     a {
       text-align: center;
@@ -236,49 +238,6 @@ body,
     }
     
 
-  // <!--===========================================================
-// ===============================================================  
-
-
-//             Tablet Media Query
-
-
-// ==============================================================
-// ===========================================================-->
-
-    @media screen and (min-width:600px) {
-      position: absolute;
-      top:0.3em;
-      right:-0.2em;
-      width: 60%;
-      padding: 0.5em auto;
-      background:transparent;
-      a {
-        background:transparent;
-        float: right;
-        @include font(2);
-
-      }
-      span {
-        display: initial;
-        font-family: "roadgeek";
-        @include font(1);
-      }
-      // .book-button, h2 > a{
-      //   text-align: center;
-      //   display: inline-block;
-      //   width: 50%;
-      //   float: right;
-      //   font-family: "roadgeek";
-      //   border:none;
-      //   height: 2.5em;
-      // }
-      .book-button{ 
-        display: none;
-      }
-  
-
-  }
 }
 header {
     position: relative;
@@ -295,38 +254,16 @@ header {
       text-align: left;
       @include font(1.5);
       float:left;
-      width: 72%;
+      // width: 72%;
       position: relative;
-      color:lighten($buttoncolor,15%);
-              text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
-                    2px 2px 0.5px darken($buttoncolor,15%),
-                    3px 3px 0.5px darken($buttoncolor,25%);
+      // color:lighten($buttoncolor,15%);
+      //         text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
+      //               2px 2px 0.5px darken($buttoncolor,15%),
+      //               3px 3px 0.5px darken($buttoncolor,25%);
 
 
 
     }
-    
-
-  // <!--===========================================================
-// ===============================================================  
-
-
-//             Tablet Media Query
-
-
-// ==============================================================
-// ===========================================================-->
-
-    @media screen and (min-width:600px) {
-
-    top:0;
-    height:12em;
-
-
-
-
-
-  }
 }
 header.navigation {
 
@@ -406,49 +343,10 @@ header.navigation {
       background:lighten($brandcolor2,30%);
     }
   }
-  
-
-
-  
-
-  // <!--===========================================================
-// ===============================================================  
-
-
-//             Tablet Media Query
-
-
-// ==============================================================
-// ===========================================================-->
-
-  @media screen and (min-width:600px) {
-
-  .navigation-menu-button {
-    @include margin(1.13em 1em 0 0);
-    width: 160px;
-    height: 50px;
-    img {
-      width: 27.5%;
-    }
-
-  
-    .menuword {
-        display: inline-block;
-        position: relative;
-        @include font(2);
-        line-height: 1.2em;
-    }
-  }
-  .nav-link {
-    @include margin(0 0 0 0);
-  }
-
-
-  }
 }
 
 .page-content {
-  @include margin(3em null null null);
+  @include margin(3em 0 0 0);
   // height:40em;
   
 
@@ -464,7 +362,7 @@ header.navigation {
 
   @media screen and (min-width:600px) {
     @include margin(0);
-    position: relative;
+    // position: relative;
 
 
 
@@ -602,7 +500,7 @@ header.navigation {
       position: relative;
       text-align: center;
       width:90%;
-      @include margin(1em 5%);
+      @include margin(0.5em 5%);
     }
     .dropdown-description {
       float: left;
@@ -611,7 +509,7 @@ header.navigation {
       // vertical-align: middle;
       display: block;
       background:$fontcolor;
-        background:lighten($buttoncolor,10%);
+        // background:lighten($buttoncolor,10%);
 
       width: 80%;
       height:37px;
@@ -644,12 +542,12 @@ header.navigation {
         line-height: 0.5em;
         display: block;
       }
-      &.active {
-        background:lighten($buttoncolor,10%);
-        > span{
-        color:$brandcolor;
-        }
-      }
+      // &.active {
+      //   background:lighten($buttoncolor,10%);
+      //   > span{
+      //   color:$brandcolor;
+      //   }
+      // }
     }
     .dropdown-menu {
       @include border-bottom-radius(0.3em);
@@ -667,7 +565,7 @@ header.navigation {
       width: 80%;
       // z-index: 90;
       background:$fontcolor;
-        background:lighten($buttoncolor,10%);
+        // background:lighten($buttoncolor,10%);
 
       li {
         color:$brandcolor;
@@ -698,7 +596,7 @@ header.navigation {
   }
   .location {
     width: 90%;
-      @include margin(1.3em 5%);
+      @include margin(0.7em 5%);
 
     
   }
@@ -724,7 +622,7 @@ header.navigation {
     height:37px;
     vertical-align: top;
     color: $brandcolor2;
-    @include font(1.3);
+    @include font(1.1);
       @include margin(0.2em null null null);
     padding:0.7em;
     font-family: $h-font;
@@ -769,27 +667,6 @@ header.navigation {
         background-color: darken($highlightcolor,5%);
       }
     }
-  }
-  
-
-  // <!--===========================================================
-// ===============================================================  
-
-
-//             Tablet Media Query
-
-
-// ==============================================================
-// ===========================================================-->
-
-  @media screen and (min-width:600px) {
-
-
-
-
-
-
-
   }
 
 }
@@ -855,10 +732,12 @@ footer {
     }
   }
 
+}
 
-  
 
-  // <!--===========================================================
+
+
+// <!--===========================================================
 // ===============================================================  
 
 
@@ -869,19 +748,102 @@ footer {
 // ===========================================================-->
 
   @media screen and (min-width:600px) {
+  .ph-number {
+    position: absolute;
+    top:2.7em;
+    right:-0.2em;
+    width: 35%;
+    padding: 0.5em auto;
+    background:transparent;
+    a {
+      width: 100%;
+      background:transparent;
+    //   float: right;
+    //   @include font(2);
+      color: $fontcolor;
 
+    }
+    span {
+      display: initial;
+      font-family: "roadgeek";
+      @include font(1);
 
-
-
-
-
-
+    }
+    // .book-button, h2 > a{
+    //   text-align: center;
+    //   display: inline-block;
+    //   width: 50%;
+    //   float: right;
+    //   font-family: "roadgeek";
+    //   border:none;
+    //   height: 2.5em;
+    // }
+    .book-button{ 
+      display: none;
+    }
   }
+  header {
+    top:0;
+    height:8em;
+  }
+  header.navigation {
+    .navigation-menu-button {
+      // @include margin(3em 1em 0 0);
+      // // @include margin(-1em 1em -1em 0);
+      // width: 160px;
+      // height: 50px;
+      // img {
+      //   width: 27.5%;
+      // }
+      // .menuword {
+      //   display: inline-block;
+      //   position: relative;
+      //   @include font(2);
+      //   line-height: 1.2em;
+      //   color: $fontcolor;
 
+      // }
+      display: none;
+    }
+    ul.navigation-menu {
+      display: inline-block;
+      position: relative;
+      height: 3.1em;
+      @include margin(-0.5em 0 0 0);
+    }
+    .nav-link {
+      // position: relative;
+      // background:lighten($brandcolor2,20%);
+      // width: 20%;
+      // display: inline-block;
+      // float: left;
+      span {
+        display: inline-block;
+        @include font(0.55);
+        text-align: left;
+        float: right;
+        @include margin(1em 3% 0 3%);
+        width: 50%;
+        // vertical-align: middle;
+
+      }
+      img {
+        @include margin(0 0.1em 0 0.25em);
+        width: 40px;
+        display: inline-block;
+        // vertical-align: middle;
+
+      }
+      &:hover {
+        background:lighten($brandcolor2,30%);
+      }
+      // &:nth-of-type(3){
+      //   img {
+      //     @include margin(0 3%);
+      //   }
+      // }
+    }
+  }
 }
-
-
-
-
 
 

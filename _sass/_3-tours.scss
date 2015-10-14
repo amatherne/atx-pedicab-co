@@ -42,9 +42,23 @@
         }
         h3 {
             display: block;
-            @include font(2.5);
-            line-height: 1.3em;
+            @include font(2.75);
+            line-height: 1em;
             position: relative;
+            @include margin(-0.5em 0 0.5em 0);
+            opacity: 0.85;
+            // color: lighten($buttoncolor,20%);
+
+
+        }
+        h2 {
+            display: block;
+            @include font(10);
+            line-height: 0.7em;
+            position: relative;
+            // color: lighten($buttoncolor,20%);
+            opacity: 0.75;
+
         }
     }
     .experience {
@@ -247,33 +261,65 @@
             }
         }
         h3 {
-            @include font(1.3);
+            // @include font(1.3);
+            // line-height: 1.5em;
+            // width: 100%;
+            // text-align: center;
+            // position: relative;
+            // display: block;
+            // color:lighten($buttoncolor,10%);
+            //   // text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
+            //   //       2px 2px 0.5px darken($buttoncolor,15%),
+            //   //       3px 3px 0.5px darken($buttoncolor,25%);
+            // // background: darken(rgba(46,82,107,0.6),10%);
+            // &.closed {
+            //     transition: background-color 500ms ease;
+            //     // background-color: darken(rgba(46,82,107,0.8),10%);
+            //     transition: opacity 500ms ease;
+            //     opacity: 0.7;
+            // }
+            // &.open {
+            //     transition: background-color 500ms ease;
+            //     background-color: darken(rgba(46,82,107,0.8),15%);
+            //     transition: opacity 500ms ease;
+            //     opacity: 0;
+
+
+            //     // @include gradient-vert(darken(rgba(46,82,107,0),5%), darken(rgba(46,82,107,1),10%),0,30%);
+            // }
+            @include font(1.5);
             line-height: 1.5em;
             width: 100%;
             text-align: center;
             position: relative;
             display: block;
-            color:lighten($buttoncolor,10%);
-              text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
-                    2px 2px 0.5px darken($buttoncolor,15%),
-                    3px 3px 0.5px darken($buttoncolor,25%);
-            // background: darken(rgba(46,82,107,0.6),10%);
+            // opacity: 0.1;
+             // color:lighten($buttoncolor,15%);
+             //  text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
+             //        2px 2px 0.5px darken($buttoncolor,15%),
+             //        3px 3px 0.5px darken($buttoncolor,25%);
             &.closed {
-                transition: background-color 500ms ease;
-                background-color: darken(rgba(46,82,107,0.8),10%);
-                transition: opacity 500ms ease;
-                opacity: 1;
+              transition: background-color 500ms ease;
+              // background-color: darken(rgba(46,82,107,1),10%);
+              transition: opacity 500ms ease;
+              opacity: 1;
+              // @include padding(0.3em 0);
+              // transition: padding 500ms ease-in;
             }
             &.open {
-                transition: background-color 500ms ease;
-                background-color: darken(rgba(46,82,107,0.8),15%);
-                transition: opacity 500ms ease;
+                // transition: background-color 500ms ease;
+                // background-color: darken(rgba(46,82,107,0),15%);
+                transition: opacity 500ms ease-out;
                 opacity: 0;
-
-
-                // @include gradient-vert(darken(rgba(46,82,107,0),5%), darken(rgba(46,82,107,1),10%),0,30%);
+                // @include padding(3.5em 0);
+                // transition: padding 500ms ease-in;
             }
         }
+        h3:last-of-type {
+                @include font(1.17);
+              line-height: 1.7em;
+
+              }
         span {
             @include font(0.5);
             line-height: 1.5em;
@@ -321,13 +367,19 @@
             }
             h4 {
               text-align: center;
-              @include font(1.15);
+              @include font(1.5);
               line-height: 1.6em;
-              color:lighten($buttoncolor,15%);
-              text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
-                    2px 2px 0.5px darken($buttoncolor,15%),
-                    3px 3px 0.5px darken($buttoncolor,25%);
+              
+              // color:lighten($buttoncolor,15%);
+              // text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
+              //       2px 2px 0.5px darken($buttoncolor,15%),
+              //       3px 3px 0.5px darken($buttoncolor,25%);
             }
+            h4:last-of-type {
+                @include font(1.17);
+              line-height: 1.7em;
+
+              }
             h5 {
               text-align: center;
               @include font(1.5);

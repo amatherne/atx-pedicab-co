@@ -17,20 +17,21 @@
 	    background-repeat:no-repeat;
 	    background-position: right top;
 	    width: 90%;
-	    @include margin(2em 1em);
-	    height:14em;
+	    @include margin(2em 5%);
+	    // height:16em;
 	    z-index: 9999;
 	    @include border-radius(0.3em);
 	    h3 {
 	    	text-align: center;
             display: block;
-            @include font(3);
-            line-height: 1.3em;
-            @include padding(1.7em 0);
-            background-color: darken(rgba(46,82,107,0.6),5%);
+            @include font(7);
+            line-height: 0.7em;
+            @include padding(0.3em 0);
+            background-color: darken(rgba(46,82,107,0.8),10%);
 			height: 100%;
 			position: relative;
-	    	@include border-radius(0.1em);
+	    	@include border-radius(0.05em);
+            opacity: 0.75;
 	    	// color:lighten($buttoncolor,10%);
             // text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
             //         2px 2px 0.5px darken($buttoncolor,15%),
@@ -106,7 +107,7 @@
                 background: url('../img/matt-lg.png');
                 background-size: cover;
                 background-repeat:no-repeat;
-                background-position: top;
+                background-position:bottom;
                 position: absolute;
                 overflow: hidden;
                 top:0;
@@ -248,18 +249,18 @@
             text-align: center;
             position: relative;
             display: block;
-             color:lighten($buttoncolor,15%);
-              text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
-                    2px 2px 0.5px darken($buttoncolor,15%),
-                    3px 3px 0.5px darken($buttoncolor,25%);
+            // opacity: 0.1;
+             // color:lighten($buttoncolor,15%);
+             //  text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
+             //        2px 2px 0.5px darken($buttoncolor,15%),
+             //        3px 3px 0.5px darken($buttoncolor,25%);
             &.closed {
               transition: background-color 500ms ease;
-              background-color: darken(rgba(46,82,107,0.8),10%);
+              // background-color: darken(rgba(46,82,107,1),10%);
               transition: opacity 500ms ease;
               opacity: 1;
-              @include padding(0.3em 0);
+              @include padding(0.7em 0);
               transition: padding 500ms ease-in;
-
 	        }
 	        &.open {
 	            transition: background-color 500ms ease;
