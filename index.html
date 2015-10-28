@@ -15,20 +15,47 @@ layout: default
     </div>
 	
 	<!-- end of tagline -->
+<div class="landing">
+  <form class="inputs" action="sendMessage.php" method="get">
 
-    <div class="landing">
+              <!-- passenger select -->
+              
+    <div class="info">
 
-<!--         <div class="tag-line">
-          <h2>DON'T WALK</h2>
-          <div class="divider"></div>
-          <h3>TAKE A PEDICAB</h3>
-        </div>
- -->        
-        <div class="inputs">
+      <h3>Just fill out this easy form!</h3>
+      <input type="text" id="input" for="" placeholder="Your Name/Call Sign">
+
+      <h3>Total number of Passengers.</h3>
+      <input type="text" id="input" for="" placeholder="3 Passengers MAX per cab!">
+
+      <h3>Current Locale.</h3>
+      <input type="text" id="input" for="" placeholder="Current/Pickup Location">
+
+      <h3>Where are y'all going?</h3>
+      <input type="text" id="input" for="" placeholder="Destination (optional)">
+
+      <h3>When do you need us?</h3>
+      <input type="text" id="input" for="" placeholder="Leave Blank for Instant Pickup!">
+
+      <h3>Can we get them digits?</h3>
+      <input type="text" id="\" for="" placeholder="Confirmation Phone Number">
+
+    </div>
+
+  </form>
+           <!-- Call Button -->
+            <div class="call">
+              <button type="submit" name="submit" id="call"><span>Call Cab</span><img src="{{ site.baseurl }}/img/pedicab.png"></button>     
+            </div>
+          </div>
+
+<!--     <div class="landing">
+      
+        <div class="inputs"> -->
 
           <!-- passenger select -->
 
-          <div class="dropdown">
+<!--           <div class="dropdown">
           <div class="dropdown-container">
             <p class="dropdown-description"># of Passengers</p>
             <div class="dropdown-button"><span>&#8964;</span></div>
@@ -41,10 +68,10 @@ layout: default
             </ul>
             <span class="sub-text">3 Passengers MAX per Pedicab</span>
           </div>
-        </div>
+        </div> -->
             <!-- Time Select -->
 
-       <div class="dropdown">
+<!--        <div class="dropdown">
           <div class="dropdown-container">
             <p class="dropdown-description">Pickup Time</p>
             <div class="dropdown-button"><span>&#8964;</span></div>
@@ -56,20 +83,20 @@ layout: default
             <span class="sub-text">(optional)</span>
 
           </div>
-        </div>
+        </div> -->
 
         <!-- Location Select -->
 
-        <div class="location">
+  <!--       <div class="location">
           <button id="click-me" class="find-me"><img id="rotate-box" src="img/icons/locator.png"></button>
           <input type="text" placeholder="Any Downtown Location!">
         </div>
-        </div>
+        </div> -->
        <!-- Call Button -->
-        <div class="call">
+<!--         <div class="call">
           <button id="call"><span>Call Cab</span><img src="img/pedicab.png"></button>     
         </div>
-    </div>
+    </div> -->
 
     <!-- End of Tablet/desktop landing -->
 
