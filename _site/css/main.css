@@ -373,126 +373,25 @@ header.navigation .nav-link {
       background: #22262D;
       opacity: 0.8;
       z-index: -1; }
-  .landing .dropdown {
-    color: #22262D;
-    font-family: "Roadgeek", san-serif;
-    overflow: visible; }
-    .landing .dropdown .dropdown-container {
-      overflow: visible;
-      display: inline-block;
-      position: relative;
-      text-align: center;
-      width: 90%;
-      margin: 0.5em 5%; }
-    .landing .dropdown .dropdown-description {
-      float: left;
-      padding: 0 0 0 0.5em;
-      text-align: left;
-      display: block;
-      background: #d4c9ad;
+    .landing .inputs h3 {
       width: 80%;
-      height: 37px;
-      color: #2E526B;
-      z-index: 1;
-      font-size: 1.0625px;
-      font-size: 1.7em;
-      line-height: 2.38em;
-      line-height: 1.5em; }
-    .landing .dropdown .dropdown-button {
-      -webkit-border-bottom-right-radius: 0.3em;
-      border-bottom-right-radius: 0.3em;
-      -webkit-border-top-right-radius: 0.3em;
-      border-top-right-radius: 0.3em;
-      background-clip: padding-box;
-      cursor: pointer;
-      float: right;
-      position: relative;
-      background: #4c9e79;
-      width: 20%;
-      height: 37px; }
-      .landing .dropdown .dropdown-button span {
-        color: #d4c9ad;
-        font-size: 2.8125px;
-        font-size: 4.5em;
-        line-height: 6.3em;
-        line-height: 0.5em;
-        display: block; }
-    .landing .dropdown .dropdown-menu {
-      -webkit-border-bottom-right-radius: 0.3em;
-      border-bottom-right-radius: 0.3em;
-      -webkit-border-bottom-left-radius: 0.3em;
-      border-bottom-left-radius: 0.3em;
-      background-clip: padding-box;
-      cursor: pointer;
-      display: none;
-      -webkit-transition: height 1s ease;
-      -moz-transition: height 1s ease;
-      transition: height 1s ease;
-      position: absolute;
-      text-align: left;
-      top: 2.4em;
-      height: 0;
-      z-index: 1;
+      margin: 0 10%; }
+    .landing .inputs input {
       width: 80%;
-      background: #d4c9ad; }
-      .landing .dropdown .dropdown-menu li {
-        color: #2E526B;
-        font-family: "Roadgeek", san-serif;
-        font-size: 1.0625px;
-        font-size: 1.7em;
-        line-height: 2.38em;
-        line-height: 1.5em; }
-    .landing .dropdown .show-menu {
-      -webkit-transition: height 1s ease;
-      -moz-transition: height 1s ease;
-      transition: height 1s ease;
-      display: block;
-      height: auto;
-      overflow: hidden;
-      margin: -0.25em 0 0;
-      padding: 0.2em 0.9em; }
-    .landing .dropdown .sub-text {
-      font-size: 0.5px;
-      font-size: 0.8em;
-      line-height: 1.12em;
-      color: #d4c9ad;
       float: right;
-      margin: 1em;
-      opacity: 0.8; }
-  .landing .location {
-    width: 90%;
-    margin: 0.7em 5%; }
-  .landing .find-me {
-    background: #7e899d;
-    width: 50px;
-    height: 50px;
-    z-index: 90;
-    display: inline-block;
-    -webkit-border-radius: 1.2em;
-    border-radius: 1.2em;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */
-    padding: 0.005em; }
-    .landing .find-me img {
-      width: 90%;
-      padding-top: 0.019em;
-      padding-right: 0.019em; }
-  .landing input {
-    width: 77%;
-    float: right;
-    height: 37px;
-    vertical-align: top;
-    color: #22262D;
-    font-size: 0.6875px;
-    font-size: 1.1em;
-    line-height: 1.54em;
-    margin-top: 0.2em;
-    padding: 0.7em;
-    font-family: "Roadgeek", san-serif;
-    -webkit-border-radius: 0.2em;
-    border-radius: 0.2em;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+      height: 30px;
+      vertical-align: top;
+      color: #22262D;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
+      margin: 0.5em 10% 1.5em;
+      padding: 0.7em;
+      font-family: "Roadgeek", san-serif;
+      -webkit-border-radius: 0.2em;
+      border-radius: 0.2em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
   .landing .call {
     width: 90%;
     margin: 1em 5%;
