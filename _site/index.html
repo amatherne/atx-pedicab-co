@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="/atx-pedicab-co/css/main.css">
   <link rel="canonical" href="https://amatherne.github.io/atx-pedicab-co/">
   <link rel="alternate" type="application/rss+xml" title="Austin Pedicab Co." href="https://amatherne.github.io/atx-pedicab-co/feed.xml" />
+  <!-- Latest compiled and minified CSS -->
+
 </head>
 
 
@@ -31,7 +33,7 @@
       <a href="#"><span>(512)</span> 555-0123</a>
     </div>
 
-    <div class="show-width"></div>
+    <!-- <div class="show-width"></div> -->
 
     <a href="#" class="navigation-menu-button" id="js-mobile-menu"><img src="/atx-pedicab-co/img/icons/burger1.png"><span class="menuword">Menu</span></a>
     <nav role="navigation">
@@ -253,10 +255,10 @@
               <div class="divider"></div>
               <h3>TAKE A PEDICAB</h3>
             </div>
-            <div class="inputs">
+            <form class="inputs" action="sendMessage.php" method="get">
 
               <!-- passenger select -->
-
+              
               <div class="dropdown">
               <div class="dropdown-container">
                 <div class="dropdown-description"># of Passengers</div>
@@ -300,10 +302,10 @@
               <input type="text" id="input" for="" placeholder="Any Downtown Location!">
 
             </div>
-            </div>
+            </form>
            <!-- Call Button -->
             <div class="call">
-              <button id="call"><span>Call Cab</span><img src="/atx-pedicab-co/img/pedicab.png"></button>     
+              <button type="submit" name="submit" id="call"><span>Call Cab</span><img src="/atx-pedicab-co/img/pedicab.png"></button>     
             </div>
           </div>
 

@@ -26,10 +26,10 @@
               <div class="divider"></div>
               <h3>TAKE A PEDICAB</h3>
             </div>
-            <div class="inputs">
+            <form class="inputs" action="sendMessage.php" method="get">
 
               <!-- passenger select -->
-
+              
               <div class="dropdown">
               <div class="dropdown-container">
                 <div class="dropdown-description"># of Passengers</div>
@@ -73,10 +73,10 @@
               <input type="text" id="input" for="" placeholder="Any Downtown Location!">
 
             </div>
-            </div>
+            </form>
            <!-- Call Button -->
             <div class="call">
-              <button id="call"><span>Call Cab</span><img src="{{ site.baseurl }}/img/pedicab.png"></button>     
+              <button type="submit" name="submit" id="call"><span>Call Cab</span><img src="{{ site.baseurl }}/img/pedicab.png"></button>     
             </div>
           </div>
 
