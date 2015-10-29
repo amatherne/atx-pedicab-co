@@ -398,7 +398,7 @@ header.navigation .nav-link {
     position: relative;
     padding-bottom: -5em; }
     .landing .call button {
-      background: #4c9e79;
+      background-color: #8a3051;
       font-size: 1.25px;
       font-size: 2em;
       line-height: 2.8em;
@@ -428,7 +428,7 @@ header.navigation .nav-link {
         -webkit-transition: background-color 10ms ease-in 0s;
         -moz-transition: background-color 10ms ease-in 0s;
         transition: background-color 10ms ease-in 0s;
-        background-color: #8a3051; }
+        background: #4c9e79; }
 
 footer {
   background: #22262D;
@@ -498,30 +498,45 @@ footer {
 
   header {
     top: 0;
-    height: 8em; }
+    height: 8em; } }
+  @media screen and (min-width: 600px) and (min-width: 800px) {
+    header {
+      height: 10em; } }
 
+@media screen and (min-width: 600px) {
   header.navigation .navigation-menu-button {
     display: none; }
   header.navigation ul.navigation-menu {
     display: inline-block;
     position: relative;
     height: 3.1em;
-    margin: -0.5em 0 0; }
-  header.navigation .nav-link span {
-    display: inline-block;
-    font-size: 0.34375px;
-    font-size: 0.55em;
-    line-height: 0.77em;
-    text-align: left;
-    float: right;
-    margin: 1em 3% 0;
-    width: 50%; }
-  header.navigation .nav-link img {
-    margin: 0 0.1em 0 0.25em;
-    width: 40px;
-    display: inline-block; }
-  header.navigation .nav-link:hover {
-    background: #647084; } }
+    margin: -0.5em 0 0; } }
+  @media screen and (min-width: 600px) and (min-width: 800px) {
+    header.navigation ul.navigation-menu {
+      width: 75%;
+      margin: -1.5em auto 0; } }
+@media screen and (min-width: 600px) {
+  header.navigation .nav-link {
+    background-color: transparent; }
+    header.navigation .nav-link span {
+      display: inline-block;
+      font-size: 0.34375px;
+      font-size: 0.55em;
+      line-height: 0.77em;
+      text-align: left;
+      float: right;
+      margin: 1em 3% 0;
+      width: 50%; }
+    header.navigation .nav-link img {
+      margin: 0 0.1em 0 0.25em;
+      width: 40px;
+      display: inline-block; }
+    header.navigation .nav-link:hover {
+      background: #647084; } }
+@media screen and (min-width: 900px) {
+  header.navigation ul.navigation-menu {
+    width: 65%;
+    margin: -1.5em 17.5% 0; } }
 /* Overlay style */
 .overlay {
   position: fixed;
@@ -624,15 +639,15 @@ html, body {
   overflow: hidden; }
   .home .cab-hail {
     display: none; }
-  .home .landing {
+  .home .landing-home {
     display: none; }
   .home .call {
     display: none; }
   .home .tag-line {
     text-align: center;
-    margin: 0.5em auto;
+    margin: 1em auto;
     display: block;
-    width: 96%;
+    width: 94%;
     position: relative;
     overflow: hidden;
     padding: 1em 0;
@@ -693,15 +708,15 @@ html, body {
       opacity: 0.8; }
   .home .blurb {
     text-align: center;
-    margin: 0.5em auto 0.35em;
+    margin: 2em auto;
     display: block;
-    width: 96%;
+    width: 94%;
     position: relative;
     -webkit-border-radius: 0.4em;
     border-radius: 0.4em;
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */
-    padding: 1em 1.2em; }
+    padding: 2em 2.5em; }
     .home .blurb:before {
       content: '';
       position: absolute;
@@ -730,15 +745,16 @@ html, body {
       background: none;
       position: relative;
       border: none;
-      width: 96%;
+      width: 80%;
       overflow: hidden;
-      margin: 0.5em auto; }
+      margin: 1em auto; }
       .home .tour-links button a {
         font-family: "roadgeek";
-        font-size: 4.375px;
-        font-size: 7em;
-        line-height: 9.8em;
+        font-size: 3.125px;
+        font-size: 5em;
+        line-height: 7em;
         line-height: 1.3em;
+        padding: 0.5em 0;
         width: 100%;
         height: 100%;
         display: block;
@@ -781,11 +797,6 @@ html, body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center; }
-        .home .tour-links button.wine a {
-          font-size: 4.0625px;
-          font-size: 6.5em;
-          line-height: 9.1em;
-          line-height: 1.5em; }
         .home .tour-links button.wine:before {
           -webkit-border-radius: 0.4em;
           border-radius: 0.4em;
@@ -828,13 +839,13 @@ html, body {
           z-index: -1; }
   .home .recents {
     text-align: center;
-    margin: 0.4em auto 0.5em;
+    margin: 2em auto;
     display: block;
-    width: 96%;
+    width: 94%;
     position: relative;
     overflow: hidden;
     z-index: 1;
-    padding: 0.5em 0.1em;
+    padding: 2em 1.1em;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
@@ -884,38 +895,110 @@ html, body {
 
 @media screen and (min-width: 600px) {
   .home {
-    margin: 3em 0 0; }
+    margin: 3em 0 0; } }
+  @media screen and (min-width: 600px) and (min-width: 800px) {
+    .home {
+      margin: 0; } }
+@media screen and (min-width: 600px) {
     .home .tag-line {
       width: 100%;
       margin: 0;
       background-position: top; }
-    .home .landing {
-      width: 47%;
-      float: right;
-      display: block;
-      position: relative;
-      margin: -2em 2% 1em 1%;
-      background: none; }
-      .home .landing .dropdown {
-        font-size: 0.5px;
-        font-size: 0.8em;
-        line-height: 1.12em; }
-      .home .landing .call {
-        display: block;
-        position: relative; }
-      .home .landing .inputs {
-        width: 100%;
-        overflow: hidden;
-        border-radius: none;
-        padding: 0.5em; }
-      .home .landing input {
-        width: 70%; }
-    .home .blurb {
+    .home .landing-home {
       width: 47%;
       float: left;
+      display: block;
+      position: relative;
+      margin: 1em 2% 1em 1%;
+      background: none; }
+      .home .landing-home .inputs {
+        z-index: 10;
+        overflow: hidden;
+        width: 90%;
+        margin: 2em 5%;
+        padding: 1.5em;
+        -webkit-border-radius: 0.4em;
+        border-radius: 0.4em;
+        background-clip: padding-box;
+        /* stops bg color from leaking outside the border: */
+        position: relative; }
+        .home .landing-home .inputs:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #22262D;
+          opacity: 0.8;
+          z-index: -1; }
+        .home .landing-home .inputs h3 {
+          width: 80%;
+          margin: 0 10%; }
+        .home .landing-home .inputs input {
+          width: 80%;
+          float: right;
+          height: 30px;
+          vertical-align: top;
+          color: #22262D;
+          font-size: 0.6875px;
+          font-size: 1.1em;
+          line-height: 1.54em;
+          margin: 0.5em 10% 1.5em;
+          padding: 0.7em;
+          font-family: "Roadgeek", san-serif;
+          -webkit-border-radius: 0.2em;
+          border-radius: 0.2em;
+          background-clip: padding-box;
+          /* stops bg color from leaking outside the border: */ }
+    .home .call {
+      display: block;
+      float: right;
+      width: 40%;
+      margin: 5em 5% 1em;
+      position: relative;
+      padding-bottom: -5em; }
+      .home .call button {
+        background-color: #8a3051;
+        font-size: 1.25px;
+        font-size: 2em;
+        line-height: 2.8em;
+        color: #d4c9ad;
+        padding: 0.2em 0 0;
+        width: 100%;
+        -webkit-transition: background-color 10ms ease-in 0s;
+        -moz-transition: background-color 10ms ease-in 0s;
+        transition: background-color 10ms ease-in 0s;
+        -webkit-border-radius: 0.2em;
+        border-radius: 0.2em;
+        background-clip: padding-box;
+        /* stops bg color from leaking outside the border: */ }
+        .home .call button img {
+          vertical-align: middle;
+          padding: 0.3em 0 0.5em;
+          width: 35%;
+          display: inline-block; }
+        .home .call button span {
+          display: inline-block;
+          font-size: 1.1875px;
+          font-size: 1.9em;
+          line-height: 2.66em;
+          line-height: 1em;
+          padding: 0.5em 0.3em 0 0; }
+        .home .call button.complete {
+          -webkit-transition: background-color 10ms ease-in 0s;
+          -moz-transition: background-color 10ms ease-in 0s;
+          transition: background-color 10ms ease-in 0s;
+          background: #4c9e79; }
+    .home .blurb {
+      width: 47%;
+      float: right;
       margin: 3em 1% 0 2%; }
     .home .tour-links {
       clear: both; } }
+@media screen and (min-width: 900px) {
+  .home {
+    padding: 0 10%; } }
 .tours {
   background: #2E526B;
   width: 100%;
