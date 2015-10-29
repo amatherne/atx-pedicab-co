@@ -1,5 +1,7 @@
 .home {
-	  background: $brandcolor;
+    background-color: darken(rgba(46,82,107,1),10%);
+
+
   	width: 100%;
   	position: relative;
   	overflow: hidden;
@@ -21,6 +23,9 @@
 	    overflow: hidden;
 	    @include padding(1em 0);
 	    background: url('../img/kids.jpg');
+      background: url('../img/secondst.JPG');
+      
+
 	    background-repeat:no-repeat;
 	    background-position: 80% 80%;
 	    background-size: cover;
@@ -44,30 +49,30 @@
 	    }
 	    h2 {
 	      	display: block;
-	      	@include font(4);
+	      	@include font(2.3);
 	      	line-height: 1.7em;
           position: relative;
           opacity: 1;
           @media screen and (min-width:400px) {
-            @include font(4.7);
+            @include font(3);
             line-height: 1.7em;
           }
 	    }
 	    h3 {
-	      	@include font(3);
+	      	@include font(1.5);
 	      	line-height: 1.5em;
           position: relative;
           opacity: 1;
           @media screen and (min-width:400px) {
-            @include font(3.3);
+            @include font(2);
             line-height: 1.5em;
           }
 
 	    }
 	    .divider {
-	      	width: 80%;
+	      	width: 300px;
 	      	height:2px;
-	      	@include margin(1em 10%);
+	      	@include margin(1em auto);
 	      	background: $fontcolor;
 	      	position: relative;
           opacity: 0.8;
@@ -91,6 +96,7 @@
 	      	width: 100%;
 	      	height:100%;
 	      	background: $brandcolor2;
+
 	     	opacity: 0.8;
 	      	// z-index: -1;
 	    	@include border-radius(0.4em);
@@ -279,10 +285,8 @@
 
 @media screen and (min-width:600px) {
   .home {
-    @include margin(3em 0 0 0);
-    @media screen and (min-width:800px){
-      @include margin(0);
-    }
+    @include margin(0 0 0 0);
+
 
     .tag-line {
       width: 100%;
@@ -296,13 +300,13 @@
       float: left;
       display: block;
       position: relative;
-      @include margin(1em 2% 1em 1%);
+      @include margin(1em 1% 1em 2%);
       background:none;
       .inputs {
         z-index: 10;
         overflow: hidden;
-        width: 90%;
-        @include margin(2em 5%);
+        width: 100%;
+        @include margin(2em 0);
         @include padding(1.5em);
         @include border-radius(0.4em);
 
@@ -319,17 +323,17 @@
           z-index: -1;
         }
         h3 {
-          width: 80%;
-          @include margin(0 10%);
+          width: 90%;
+          @include margin(0 5%);
         }
         input {
-          width: 80%;
+          width: 90%;
           float: right;
           height:30px;
           vertical-align: top;
           color: $brandcolor2;
           @include font(1.1);
-          @include margin(0.5em 10% 1.5em 10%);
+          @include margin(0.5em 5% 1.5em 5%);
           @include padding(0.7em);
           font-family: $h-font;
           @include border-radius(0.2em);
@@ -354,7 +358,7 @@
         display: block;
         float:right;
         width: 40%;
-        @include margin(5em 5% 1em 5%);
+        @include margin(3.5em 5% 1em 5%);
         position: relative;
         padding-bottom:-5em;
         button {
@@ -393,7 +397,7 @@
     .blurb {
       width:47%;
       float:right;
-      @include margin(3em 1% 0 2%);
+      @include margin(3em 2% 0 1%);
 
     }
     
@@ -419,9 +423,26 @@
 
 
 @media screen and (min-width:900px) {
-.home {
-  @include padding(0 10%);
-}
+  .home {
+    @include padding(0);
+    .content {
+      width: 80%;
+      @include margin(0 10%);
+    }
+    .tag-line { 
+      height:50em;
+      @include padding(10em 0 10em 0);
+      &:before {
+        @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.7),15%),0%,40%);
+      }
+      .divider {
+        // display: none;
+      }
+
+    }
+
+
+  }
 
 }
 
