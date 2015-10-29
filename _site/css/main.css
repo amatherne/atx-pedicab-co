@@ -211,7 +211,7 @@ header {
   z-index: 1;
   clear: both; }
   header h1 > a {
-    padding: 0.8em 4% 0.4em;
+    padding: 0.2em 4% 1em;
     display: inline-block;
     text-align: left;
     font-size: 0.9375px;
@@ -238,8 +238,6 @@ header.navigation .navigation-menu-button {
   font-size: 1.3em;
   line-height: 1.82em;
   font-family: "roadgeek"; }
-  header.navigation .navigation-menu-button:hover {
-    background: #383f4a; }
   header.navigation .navigation-menu-button .menuword {
     display: none; }
   header.navigation .navigation-menu-button img {
@@ -249,7 +247,6 @@ header.navigation ul.navigation-menu {
   -webkit-transform-style: preserve-3d;
   clear: both;
   display: none;
-  background: #4e5767;
   width: 100%;
   overflow: hidden;
   z-index: 10;
@@ -274,8 +271,6 @@ header.navigation .nav-link {
   header.navigation .nav-link img {
     margin: 0.2em 15%;
     width: 70%; }
-  header.navigation .nav-link:hover {
-    background: #647084; }
 
 .page-content {
   margin: 3em 0 0; }
@@ -289,7 +284,6 @@ header.navigation .nav-link {
   background-position: top center;
   background-repeat: no-repeat;
   width: 100%;
-  height: -100em;
   overflow: hidden;
   position: relative;
   padding-top: 3em;
@@ -302,8 +296,8 @@ header.navigation .nav-link {
     width: 100%;
     height: 150%;
     overflow: hidden;
-    background: #2E526B;
-    opacity: 0.7; }
+    background: #061644;
+    opacity: 0.8; }
   .landing .tag-line {
     text-align: center;
     -webkit-border-radius: 0.4em;
@@ -370,8 +364,8 @@ header.navigation .nav-link {
       left: 0;
       width: 100%;
       height: 100%;
-      background: #22262D;
-      opacity: 0.8;
+      background-color: #1f3747;
+      opacity: 0.7;
       z-index: -1; }
     .landing .inputs h3 {
       width: 80%;
@@ -470,22 +464,20 @@ footer {
     footer .nav-link img {
       margin: 0.2em 15%;
       width: 70%; }
-    footer .nav-link:hover {
-      background: #647084; }
     footer .nav-link:nth-of-type(3) img {
       margin: 0.24em 15% 0.2em; }
 
 @media screen and (min-width: 600px) {
   .ph-number {
     position: absolute;
-    top: 2.7em;
-    right: -0.2em;
-    width: 35%;
-    padding: 0.5em auto;
+    left: 3.2em;
+    top: 3.3em;
+    width: 180px;
     background: transparent; }
     .ph-number a {
       width: 100%;
       background: transparent;
+      border: none;
       color: #d4c9ad; }
     .ph-number span {
       display: initial;
@@ -498,7 +490,7 @@ footer {
 
   header {
     top: 0;
-    height: 8em; } }
+    height: 10em; } }
   @media screen and (min-width: 600px) and (min-width: 800px) {
     header {
       height: 10em; } }
@@ -509,12 +501,11 @@ footer {
   header.navigation ul.navigation-menu {
     display: inline-block;
     position: relative;
-    height: 3.1em;
-    margin: -0.5em 0 0; } }
+    margin: -2em 0 0; } }
   @media screen and (min-width: 600px) and (min-width: 800px) {
     header.navigation ul.navigation-menu {
       width: 75%;
-      margin: -1.5em auto 0; } }
+      margin: -1.5em 12.5% 0; } }
 @media screen and (min-width: 600px) {
   header.navigation .nav-link {
     background-color: transparent; }
@@ -530,19 +521,28 @@ footer {
     header.navigation .nav-link img {
       margin: 0 0.1em 0 0.25em;
       width: 40px;
-      display: inline-block; }
-    header.navigation .nav-link:hover {
-      background: #647084; } }
+      display: inline-block; } }
 @media screen and (min-width: 900px) {
+  .ph-number {
+    left: 3.2em;
+    top: 5em;
+    width: 180px; }
+
+  header {
+    background: transparent;
+    position: absolute; }
+
   header.navigation ul.navigation-menu {
-    width: 65%;
-    margin: -1.5em 17.5% 0; } }
+    display: block;
+    margin: -2em 0 0 1em; }
+    header.navigation ul.navigation-menu .nav-link {
+      clear: both;
+      margin: 0 3% -0.7em; } }
 /* Overlay style */
 .overlay {
   position: fixed;
   overflow-y: scroll;
   width: 100%;
-  height: 100%;
   top: 0;
   left: 0; }
 
@@ -553,7 +553,7 @@ footer {
   position: relative;
   float: right;
   overflow: hidden;
-  margin-top: -4em;
+  margin-top: -2em;
   margin-right: 1em;
   border: none;
   background: transparent;
@@ -632,8 +632,15 @@ html, body {
   -webkit-transition: -webkit-transform 0.5s 0.5s;
   transition: transform 0.5s 0.5s; }
 
+.close {
+  visibility: visible;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s 0.5s;
+  transition: transform 0.5s 0.5s; }
+
 .home {
-  background: #2E526B;
+  background-color: #1f3747;
   width: 100%;
   position: relative;
   overflow: hidden; }
@@ -652,6 +659,7 @@ html, body {
     overflow: hidden;
     padding: 1em 0;
     background: url("../img/kids.jpg");
+    background: url("../img/secondst.JPG");
     background-repeat: no-repeat;
     background-position: 80% 80%;
     background-size: cover;
@@ -674,35 +682,35 @@ html, body {
       /* stops bg color from leaking outside the border: */ }
     .home .tag-line h2 {
       display: block;
-      font-size: 2.5px;
-      font-size: 4em;
-      line-height: 5.6em;
+      font-size: 1.4375px;
+      font-size: 2.3em;
+      line-height: 3.22em;
       line-height: 1.7em;
       position: relative;
       opacity: 1; }
       @media screen and (min-width: 400px) {
         .home .tag-line h2 {
-          font-size: 2.9375px;
-          font-size: 4.7em;
-          line-height: 6.58em;
+          font-size: 1.875px;
+          font-size: 3em;
+          line-height: 4.2em;
           line-height: 1.7em; } }
     .home .tag-line h3 {
-      font-size: 1.875px;
-      font-size: 3em;
-      line-height: 4.2em;
+      font-size: 0.9375px;
+      font-size: 1.5em;
+      line-height: 2.1em;
       line-height: 1.5em;
       position: relative;
       opacity: 1; }
       @media screen and (min-width: 400px) {
         .home .tag-line h3 {
-          font-size: 2.0625px;
-          font-size: 3.3em;
-          line-height: 4.62em;
+          font-size: 1.25px;
+          font-size: 2em;
+          line-height: 2.8em;
           line-height: 1.5em; } }
     .home .tag-line .divider {
-      width: 80%;
+      width: 300px;
       height: 2px;
-      margin: 1em 10%;
+      margin: 1em auto;
       background: #d4c9ad;
       position: relative;
       opacity: 0.8; }
@@ -895,11 +903,7 @@ html, body {
 
 @media screen and (min-width: 600px) {
   .home {
-    margin: 3em 0 0; } }
-  @media screen and (min-width: 600px) and (min-width: 800px) {
-    .home {
-      margin: 0; } }
-@media screen and (min-width: 600px) {
+    margin: 0; }
     .home .tag-line {
       width: 100%;
       margin: 0;
@@ -909,13 +913,13 @@ html, body {
       float: left;
       display: block;
       position: relative;
-      margin: 1em 2% 1em 1%;
+      margin: 1em 1% 1em 2%;
       background: none; }
       .home .landing-home .inputs {
         z-index: 10;
         overflow: hidden;
-        width: 90%;
-        margin: 2em 5%;
+        width: 100%;
+        margin: 2em 0;
         padding: 1.5em;
         -webkit-border-radius: 0.4em;
         border-radius: 0.4em;
@@ -933,10 +937,10 @@ html, body {
           opacity: 0.8;
           z-index: -1; }
         .home .landing-home .inputs h3 {
-          width: 80%;
-          margin: 0 10%; }
+          width: 90%;
+          margin: 0 5%; }
         .home .landing-home .inputs input {
-          width: 80%;
+          width: 90%;
           float: right;
           height: 30px;
           vertical-align: top;
@@ -944,7 +948,7 @@ html, body {
           font-size: 0.6875px;
           font-size: 1.1em;
           line-height: 1.54em;
-          margin: 0.5em 10% 1.5em;
+          margin: 0.5em 5% 1.5em;
           padding: 0.7em;
           font-family: "Roadgeek", san-serif;
           -webkit-border-radius: 0.2em;
@@ -955,7 +959,7 @@ html, body {
       display: block;
       float: right;
       width: 40%;
-      margin: 5em 5% 1em;
+      margin: 3.5em 5% 1em;
       position: relative;
       padding-bottom: -5em; }
       .home .call button {
@@ -993,12 +997,32 @@ html, body {
     .home .blurb {
       width: 47%;
       float: right;
-      margin: 3em 1% 0 2%; }
+      margin: 3em 2% 0 1%; }
     .home .tour-links {
       clear: both; } }
 @media screen and (min-width: 900px) {
   .home {
-    padding: 0 10%; } }
+    padding: 0; }
+    .home .content {
+      width: 80%;
+      margin: 0 10%; }
+    .home .tag-line {
+      height: 50em;
+      padding: 10em 0; }
+      .home .tag-line:before {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ceb59d+0,ceb59d+100&amp;1+0,0+100 */
+        background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(23, 41, 54, 0.7) 40%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left, right, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(40%, rgba(23, 41, 54, 0.7)));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(23, 41, 54, 0.7) 40%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(23, 41, 54, 0.7) 40%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(23, 41, 54, 0.7) 40%);
+        /* IE10+ */
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(23, 41, 54, 0.7) 40%);
+        /* W3C */ } }
 .tours {
   background: #2E526B;
   width: 100%;
