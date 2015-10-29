@@ -6,7 +6,7 @@
 	.cab-hail {
 		display: none;
 	}
-  .landing {
+  .landing-home {
     display: none;
   }
 	.call {
@@ -14,12 +14,12 @@
 	}
 	.tag-line {
 	    text-align: center;
-	    @include margin(0.5em auto);
+	    @include margin(1em auto);
 	    display: block;
-	    width: 96%;
+	    width: 94%;
 	    position: relative;
 	    overflow: hidden;
-	    padding:1em 0;
+	    @include padding(1em 0);
 	    background: url('../img/kids.jpg');
 	    background-repeat:no-repeat;
 	    background-position: 80% 80%;
@@ -76,13 +76,13 @@
 
 	.blurb {
 	    text-align: center;
-	    @include margin(0.5em auto 0.35em auto);
+	    @include margin(2em auto 2em auto);
 	    display: block;
-	    width: 96%;
+	    width: 94%;
 	    position: relative;
 	    // z-index: 1;
 	    @include border-radius(0.4em);
-	    @include padding(1em 1.2em);
+	    @include padding(2em 2.5em);
 	    &:before {
 	      	content: '';
 	      	position: absolute;
@@ -115,15 +115,15 @@
           	background: none;
           	position: relative;
           	border:none;
-          	width:96%;
+          	width:80%;
           	overflow: hidden;
-          	@include margin(0.5em auto);
+          	@include margin(1em auto);
           	// padding:0;
           	a {
             	font-family: "roadgeek";
-            	@include font(7);
+            	@include font(5);
             	line-height: 1.3em;
-              // @include padding(0.1em);
+              @include padding(0.5em 0);
             	width: 100%;
             	height: 100%;
             	display: block;
@@ -158,10 +158,10 @@
           
           	&.wine {
               	@include border-radius(0.4em);
-            	a {
-              		@include font(6.5);
-            		line-height: 1.5em;
-            	}
+            	// a {
+             //  		@include font(5);
+            	// 	line-height: 1.5em;
+            	// }
             	position: relative;
             	overflow: hidden;
             	z-index: 1;
@@ -210,13 +210,13 @@
     }
 	.recents {
 	    text-align: center;
-	    @include margin(0.4em auto 0.5em auto);
+	    @include margin(2em auto 2em auto);
 	    display: block;
-	    width: 96%;
+	    width: 94%;
 	    position: relative;
 	    overflow: hidden;
 	    z-index: 1;
-	    @include padding(0.5em 0.1em);
+	    @include padding(2em 1.1em);
 	    // background: url('../img/parade.jpg');
         background-repeat:no-repeat;
         background-position:center;
@@ -280,42 +280,119 @@
 @media screen and (min-width:600px) {
   .home {
     @include margin(3em 0 0 0);
+    @media screen and (min-width:800px){
+      @include margin(0);
+    }
 
     .tag-line {
       width: 100%;
       @include margin(0 0 0 0);
       background-position: top;
+
     }
 
-    .landing {
+    .landing-home {
       width:47%;
-      float: right;
+      float: left;
       display: block;
       position: relative;
-      @include margin(-2em 2% 1em 1%);
+      @include margin(1em 2% 1em 1%);
       background:none;
-      .dropdown {
-        @include font(0.8);
-      }
+      .inputs {
+        z-index: 10;
+        overflow: hidden;
+        width: 90%;
+        @include margin(2em 5%);
+        @include padding(1.5em);
+        @include border-radius(0.4em);
 
+        position: relative;
+          &:before {
+          content: '';
+          position: absolute;
+          top:0;
+          left:0;
+          width: 100%;
+          height:100%;
+          background: $brandcolor2;
+          opacity: 0.8;
+          z-index: -1;
+        }
+        h3 {
+          width: 80%;
+          @include margin(0 10%);
+        }
+        input {
+          width: 80%;
+          float: right;
+          height:30px;
+          vertical-align: top;
+          color: $brandcolor2;
+          @include font(1.1);
+          @include margin(0.5em 10% 1.5em 10%);
+          @include padding(0.7em);
+          font-family: $h-font;
+          @include border-radius(0.2em);
+
+        }
+      }
+      // .dropdown {
+      //   @include font(0.8);
+      // }
+
+      // .inputs {
+      //   width: 100%;
+      //   overflow: hidden;
+      //   border-radius:none;
+      //   @include padding(0.5em);
+      // }
+      // input {
+      //   width: 70%;
+      // }
+    }
       .call {
         display: block;
+        float:right;
+        width: 40%;
+        @include margin(5em 5% 1em 5%);
         position: relative;
-      }
-      .inputs {
-        width: 100%;
-        overflow: hidden;
-        border-radius:none;
-        @include padding(0.5em);
-      }
-      input {
-        width: 70%;
-      }
-    }
+        padding-bottom:-5em;
+        button {
+            background-color: darken($highlightcolor,5%);
+          @include font(2);
+          color:$fontcolor;
+          // padding:0.5em;
+          @include padding(0.2em 0 0 0);
+          width: 100%;
+          // @include margin(0 0 -5em 0);
+          @include transition(background-color 10ms ease-in 0s);
+          @include border-radius(0.2em);
 
+          img {
+            vertical-align: middle;
+          // @include margin(0.3em null null null);
+          @include padding(0.3em 0 0.5em 0);
+            width: 35%;
+            display: inline-block;
+          }
+          span {
+            // padding: null 0.2em null 0;
+            // width: 45%;
+            display: inline-block;
+
+            @include font(1.9);
+            line-height: 1em;
+            @include padding(0.5em 0.3em 0 0);
+          }
+          &.complete {
+            @include transition(background-color 10ms ease-in 0s);
+          background:darken($buttoncolor,10%);
+          }
+        }
+      }
     .blurb {
       width:47%;
-      float:left;
+      float:right;
       @include margin(3em 1% 0 2%);
 
     }
@@ -329,8 +406,24 @@
 }
 
 
+// <!--===========================================================
+// ===============================================================  
 
 
+//             Media Query
+
+
+// ==============================================================
+// ===========================================================-->
+
+
+
+@media screen and (min-width:900px) {
+.home {
+  @include padding(0 10%);
+}
+
+}
 
 
 
