@@ -1,13 +1,13 @@
 <?php
 require '../twilio-php-master/Services/Twilio.php';
 
-// $fullName .= $_GET["full_name"];
+$fullName .= $_GET["full_name"];
 $phone .= $_GET["phone"];
 $destination .= $_GET["destination"];
 $current_location .= $_GET["current_location"];
 
 $body = array(
-      // "fullName" => $_GET["full_name"],
+      "fullName" => $_GET["full_name"],
       "phone"    => $_GET["phone_number"],
       "destination"    => $_GET["destination"],
       "currentLocation"    => $_GET["current_location"],
@@ -28,8 +28,19 @@ $messageToClient = $client->account->messages->create(array(
 
 $messageToDispatcher = $client->account->messages->create(array(
     "From" => "+19292266848",
-    "To" => "+15126441746",
+    "To" => "+12259376324",
     "Body" => "\r\n " . "\r\n Name: " . $body["fullName"] . "\r\n Phone: " . $body["phone"] . "\r\n Destination: " . $body["destination"] . "\r\n Current Location: " . $body["currentLocation"] . "\r\n Party Size: " . $body["partySize"]
 ));
 
 ?>
+
+<html>
+  <body>
+    <div class="confirmed">
+      <h2>A driver has been notified!</h2>
+      <div class="divider"></div>
+      <h3>Hold on to ya butts!</h3>
+
+    </div>
+  </body>
+</html>

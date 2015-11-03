@@ -327,13 +327,19 @@ header.navigation .nav-link {
       background-color: rgba(38, 68, 89, 0.6);
       z-index: -1; }
     .landing .tag-line h2 {
-      font-size: 2.9375px;
-      font-size: 4.7em;
-      line-height: 6.58em;
-      margin: -2.5em auto;
+      font-size: 2.375px;
+      font-size: 3.8em;
+      line-height: 5.32em;
+      margin: -1.5em auto;
       z-index: 99;
       position: relative;
       display: block; }
+      @media screen and (min-width: 400px) {
+        .landing .tag-line h2 {
+          font-size: 2.9375px;
+          font-size: 4.7em;
+          line-height: 6.58em;
+          margin: -2.5em auto; } }
     .landing .tag-line h3 {
       font-size: 1.875px;
       font-size: 3em;
@@ -522,6 +528,32 @@ footer {
       margin: 0 0.1em 0 0.25em;
       width: 40px;
       display: inline-block; } }
+@media screen and (min-width: 600px) and (min-width: 750px) {
+  footer {
+    padding: 0 2em; } }
+@media screen and (min-width: 600px) {
+  footer h2 {
+    font-size: 0.8125px;
+    font-size: 1.3em;
+    line-height: 1.82em;
+    text-align: left;
+    float: left;
+    margin: 1em 0 1em 2em; }
+  footer h4 {
+    font-size: 0.625px;
+    font-size: 1em;
+    line-height: 1.4em;
+    text-align: left;
+    clear: left;
+    margin: 1em 0 0 3em; }
+  footer ul {
+    width: 50%;
+    float: right;
+    margin: -7em 3em 4em 0; }
+  footer .nav-link {
+    background: transparent; }
+    footer .nav-link img {
+      visibility: hidden; } }
 @media screen and (min-width: 900px) {
   .ph-number {
     left: 3.2em;
@@ -537,7 +569,10 @@ footer {
     margin: -2em 0 0 1em; }
     header.navigation ul.navigation-menu .nav-link {
       clear: both;
-      margin: 0 3% -0.7em; } }
+      margin: 0 3% -0.7em; }
+
+  footer {
+    padding: 0 15%; } }
 /* Overlay style */
 .overlay {
   position: fixed;
@@ -632,13 +667,6 @@ html, body {
   -webkit-transition: -webkit-transform 0.5s 0.5s;
   transition: transform 0.5s 0.5s; }
 
-.close {
-  visibility: visible;
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 0.5s 0.5s;
-  transition: transform 0.5s 0.5s; }
-
 .home {
   background-color: #1f3747;
   width: 100%;
@@ -695,18 +723,18 @@ html, body {
           line-height: 4.2em;
           line-height: 1.7em; } }
     .home .tag-line h3 {
-      font-size: 0.9375px;
-      font-size: 1.5em;
-      line-height: 2.1em;
+      font-size: 0.875px;
+      font-size: 1.4em;
+      line-height: 1.96em;
       line-height: 1.5em;
       position: relative;
       opacity: 1; }
       @media screen and (min-width: 400px) {
         .home .tag-line h3 {
-          font-size: 1.25px;
-          font-size: 2em;
-          line-height: 2.8em;
-          line-height: 1.5em; } }
+          font-size: 1.125px;
+          font-size: 1.8em;
+          line-height: 2.52em;
+          line-height: 3em; } }
     .home .tag-line .divider {
       width: 300px;
       height: 2px;
@@ -999,9 +1027,18 @@ html, body {
       float: right;
       margin: 3em 2% 0 1%; }
     .home .tour-links {
-      clear: both; } }
+      clear: both; }
+    .home .quotes {
+      margin: 1em 10%; } }
+    @media screen and (min-width: 600px) and (min-width: 700px) {
+      .home .quotes {
+        width: 45%;
+        margin: 0 2%;
+        display: inline-block; } }
+
 @media screen and (min-width: 900px) {
   .home {
+    background-color: #1f3747;
     padding: 0; }
     .home .content {
       width: 80%;
@@ -1025,6 +1062,7 @@ html, body {
         /* W3C */ } }
 .tours {
   background: #2E526B;
+  background-color: #1f3747;
   width: 100%;
   position: relative;
   overflow: hidden; }
@@ -1083,6 +1121,7 @@ html, body {
   .tours .experience {
     text-align: center;
     margin: 2em 5% 0;
+    padding: 0 1.5em;
     display: block;
     width: 90%;
     position: relative;
@@ -1106,151 +1145,22 @@ html, body {
       background-clip: padding-box;
       /* stops bg color from leaking outside the border: */ }
     .tours .experience p {
-      font-size: 0.75px;
-      font-size: 1.2em;
-      line-height: 1.68em;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
       text-align: left;
-      padding: 1em; }
-  .tours .accordion {
+      padding: 1em 0; }
+  .tours .tour-desc {
+    width: 90%;
+    position: relative;
+    margin: 2em 5%;
+    overflow: hidden;
+    z-index: 1; }
+  .tours .accordian {
     position: relative;
     overflow: hidden;
-    display: block;
-    z-index: 1; }
-    .tours .accordion .tour-box {
-      width: 90%;
-      margin: 2em 5%;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0.05rem 0.15rem 0.3rem 0.001rem black; }
-    .tours .accordion .taco {
-      position: relative; }
-      .tours .accordion .taco.opened:before {
-        content: '';
-        background: url("../img/turf1.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 13.5em;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-      .tours .accordion .taco.close:before {
-        content: '';
-        background: url("../img/turf1.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10em;
-        opacity: 0.5;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-    .tours .accordion .wine {
-      position: relative; }
-      .tours .accordion .wine.opened:before {
-        content: '';
-        background: url("../img/secondst.JPG");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 13.5em;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-      .tours .accordion .wine.close:before {
-        content: '';
-        background: url("../img/secondst.JPG");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10em;
-        opacity: 0.5;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-    .tours .accordion .margs {
-      position: relative; }
-      .tours .accordion .margs.opened:before {
-        content: '';
-        background: url("../img/marg.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 13.5em;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-      .tours .accordion .margs.close:before {
-        content: '';
-        background: url("../img/marg.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10em;
-        opacity: 0.5;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-    .tours .accordion .pub {
-      position: relative; }
-      .tours .accordion .pub.opened:before {
-        content: '';
-        background: url("../img/dash.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 13.5em;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-      .tours .accordion .pub.close:before {
-        content: '';
-        background: url("../img/dash.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10em;
-        opacity: 0.5;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-    .tours .accordion h3 {
+    display: block; }
+    .tours .accordian h3 {
       font-size: 0.9375px;
       font-size: 1.5em;
       line-height: 2.1em;
@@ -1259,124 +1169,30 @@ html, body {
       text-align: center;
       position: relative;
       display: block; }
-      .tours .accordion h3.closed {
+      .tours .accordian h3.closed {
         transition: background-color 500ms ease;
         transition: opacity 500ms ease;
         opacity: 1; }
-      .tours .accordion h3.open {
+      .tours .accordian h3.open {
         transition: opacity 500ms ease-out;
         opacity: 0; }
-    .tours .accordion h3:last-of-type {
-      font-size: 0.73125px;
-      font-size: 1.17em;
-      line-height: 1.638em;
-      line-height: 1.7em; }
-    .tours .accordion span {
-      font-size: 0.3125px;
-      font-size: 0.5em;
-      line-height: 0.7em;
-      line-height: 1.5em;
+    .tours .accordian p {
+      font-size: 0.5px;
+      font-size: 0.8em;
+      line-height: 1.12em; }
+    .tours .accordian .tour-box {
       width: 100%;
-      height: 100%;
-      padding: 0.7em;
-      display: block;
-      overflow: hidden;
-      z-index: 100;
+      margin: 2em 0;
+      position: relative;
+      overflow: hidden; }
+    .tours .accordian .taco {
       position: relative; }
-      .tours .accordion span.closed {
-        transition: background-color 500ms ease;
-        background-color: rgba(31, 55, 71, 0.8);
-        transition: opacity 500ms ease;
-        opacity: 1;
-        margin-top: 0;
-        transition: margin 500ms ease-in; }
-      .tours .accordion span.open {
-        transition: background-color 500ms ease;
-        background-color: rgba(23, 41, 54, 0.8);
-        transition: opacity 500ms ease;
-        opacity: 0;
-        margin-top: 7em;
-        transition: margin 500ms ease-in; }
-    .tours .accordion .submenu {
-      display: none;
-      margin: 0;
-      overflow: hidden;
-      width: 100%;
-      clear: both;
-      background: #1f3747;
-      padding: 0.7em;
-      box-shadow: 0em 0em 1em 0.1em black; }
-      .tours .accordion .submenu p {
-        font-size: 0.3125px;
-        font-size: 0.5em;
-        line-height: 0.7em;
-        line-height: 1.5em; }
-      .tours .accordion .submenu h4 {
-        text-align: center;
-        font-size: 0.9375px;
-        font-size: 1.5em;
-        line-height: 2.1em;
-        line-height: 1.6em; }
-      .tours .accordion .submenu h4:last-of-type {
-        font-size: 0.73125px;
-        font-size: 1.17em;
-        line-height: 1.638em;
-        line-height: 1.7em; }
-      .tours .accordion .submenu h5 {
-        text-align: center;
-        font-size: 0.9375px;
-        font-size: 1.5em;
-        line-height: 2.1em;
-        line-height: 1.5em; }
-      .tours .accordion .submenu .left {
-        float: left;
-        font-size: 0.1875px;
-        font-size: 0.3em;
-        line-height: 0.42em;
-        width: 30%;
-        margin: 0.2em 2% 0.2em 18%; }
-        .tours .accordion .submenu .left li {
-          font-family: "Melbourne bold", san-serif; }
-      .tours .accordion .submenu .right {
-        float: right;
-        width: 30%;
-        font-size: 0.1875px;
-        font-size: 0.3em;
-        line-height: 0.42em;
-        margin: 0.2em 18% 0.2em 2%; }
-        .tours .accordion .submenu .right li {
-          font-family: "Melbourne bold", san-serif; }
 
 @media screen and (min-width: 600px) {
   .tours .hero {
-    background: url("../img/ride.jpg");
-    text-align: center;
-    margin: 5em 5%;
-    display: block;
-    width: 90%;
-    position: relative;
-    overflow: hidden;
-    padding: 4em 1em;
-    background-repeat: no-repeat;
-    background-position: 100% 80%;
-    background-size: cover;
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
-    .tours .hero:before {
-      content: '';
-      overflow: hidden;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: rgba(38, 68, 89, 0.6);
-      -webkit-border-radius: 0.3em;
-      border-radius: 0.3em;
-      background-clip: padding-box;
-      /* stops bg color from leaking outside the border: */ }
+    width: 100%;
+    margin: 0;
+    background-position: center; }
     .tours .hero h3 {
       display: block;
       font-size: 1.71875px;
@@ -1394,7 +1210,14 @@ html, body {
       line-height: 0.7em;
       position: relative;
       margin: 0 0 0.5em;
-      opacity: 0.75; }
+      opacity: 0.75; } }
+@media screen and (min-width: 600px) and (min-width: 700px) {
+  .tours .experience p {
+    width: 45%;
+    margin: 1em 2%;
+    display: inline-block;
+    vertical-align: top; } }
+@media screen and (min-width: 600px) {
   .tours .accordion {
     position: relative;
     overflow: hidden;
@@ -1535,48 +1358,38 @@ html, body {
         z-index: -1;
         transition: opacity 500ms ease, height 700ms ease 200ms; } }
 @media screen and (min-width: 900px) {
-  .tours {
-    padding: 0 10%; }
-    .tours .experience {
-      text-align: center;
-      margin: 2em 4% 0;
-      display: inline-block;
-      width: 42%;
-      float: left;
-      position: relative;
-      z-index: 1;
-      -webkit-border-radius: 0.3em;
-      border-radius: 0.3em;
-      background-clip: padding-box;
-      /* stops bg color from leaking outside the border: */ }
-      .tours .experience:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #22262D;
-        opacity: 0.8;
-        z-index: -1;
-        -webkit-border-radius: 0.3em;
-        border-radius: 0.3em;
-        background-clip: padding-box;
-        /* stops bg color from leaking outside the border: */ }
-      .tours .experience p {
-        font-size: 0.75px;
-        font-size: 1.2em;
-        line-height: 1.68em;
-        text-align: left;
-        padding: 1em; }
-    .tours .accordion {
-      width: 42%;
-      display: inline-block;
-      margin: 0 4%;
-      float: left; }
-      .tours .accordion .tour-box {
-        width: 70%;
-        margin: 2em 3% 2em 7%; } }
+  .tours .content {
+    width: 80%;
+    margin: 0 10%; }
+  .tours .hero {
+    height: 30em;
+    width: 100%; }
+    .tours .hero:before {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ceb59d+0,ceb59d+100&amp;1+0,0+100 */
+      background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(38, 68, 89, 0.6) 40%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left, right, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(40%, rgba(38, 68, 89, 0.6)));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(38, 68, 89, 0.6) 40%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(38, 68, 89, 0.6) 40%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(38, 68, 89, 0.6) 40%);
+      /* IE10+ */
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(38, 68, 89, 0.6) 40%);
+      /* W3C */ } }
+  @media screen and (min-width: 900px) and (min-width: 1200px) {
+    .tours .hero {
+      height: 35em; } }
+@media screen and (min-width: 900px) {
+  .tours .accordion {
+    width: 42%;
+    display: inline-block;
+    margin: 0 4%;
+    float: left; }
+    .tours .accordion .tour-box {
+      width: 70%;
+      margin: 2em 3% 2em 7%; } }
 .about-us {
   background: #2E526B;
   width: 100%;

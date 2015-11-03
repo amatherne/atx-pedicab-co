@@ -59,13 +59,13 @@
           }
 	    }
 	    h3 {
-	      	@include font(1.5);
+	      	@include font(1.4);
 	      	line-height: 1.5em;
           position: relative;
           opacity: 1;
           @media screen and (min-width:400px) {
-            @include font(2);
-            line-height: 1.5em;
+            @include font(1.8);
+            line-height: 3em;
           }
 
 	    }
@@ -404,7 +404,14 @@
     .tour-links {
       clear: both;
     }
-
+    .quotes {
+      @include margin(1em 10%);
+      @media screen and (min-width:700px) {
+          width: 45%;
+          @include margin(0 2%);
+          display: inline-block;
+      }
+    }
   }
 
 }
@@ -424,6 +431,8 @@
 
 @media screen and (min-width:900px) {
   .home {
+    background-color: darken(rgba(46,82,107,1),10%);
+
     @include padding(0);
     .content {
       width: 80%;
@@ -433,7 +442,9 @@
       height:50em;
       @include padding(10em 0 10em 0);
       &:before {
-        @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.7),15%),0%,40%);
+        // @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.7),15%),0%,40%);
+            @include gradient-hori(darken(rgba(46,82,107,0.8),85%), darken(rgba(46,82,107,0.7),15%),0%,40%);
+
       }
       .divider {
         // display: none;

@@ -432,8 +432,12 @@ header.navigation {
 
     
     h2 {
-      @include font(4.7);
-    @include margin(-2.5em auto);
+      @include font(3.8);
+      @include margin(-1.5em auto);
+      @media screen and (min-width:400px) {
+        @include font(4.7);
+        @include margin(-2.5em auto);
+      }
       z-index: 99;
       position: relative;
       display: block;
@@ -493,134 +497,6 @@ header.navigation {
 
     }
   }
-  // .dropdown {
-  //   color: $brandcolor2;
-  //   font-family: $h-font;
-  //   overflow: visible;
-  //   .dropdown-container {
-  //   overflow: visible;
-
-  //     display: inline-block;
-  //     position: relative;
-  //     text-align: center;
-  //     width:90%;
-  //     @include margin(0.5em 5%);
-  //   }
-  //   .dropdown-description {
-  //     float: left;
-  //     @include padding(0 0 0 0.5em);
-  //     text-align: left;
-  //     // vertical-align: middle;
-  //     display: block;
-  //     background:$fontcolor;
-  //       // background:lighten($buttoncolor,10%);
-
-  //     width: 80%;
-  //     height:37px;
-  //       color: $brandcolor;
-      
-  //     z-index: 1;
-  //       @include font(1.7);
-  //       line-height: 1.5em;
-      
-
-
-  //   }
-  //   .dropdown-button {
-  //     @include border-right-radius(0.3em);
-
-  //     cursor: pointer;
-  //     float: right;
-  //     position: relative;
-      
-  //     background:darken($buttoncolor,10%);
-      
-  //     width:20%;
-  //     height:37px;
-  //     span {
-  //       color:$fontcolor;
-  //       //    Leave margin-top in, testing for iphone
-  //       // margin-top:-0.3em;
-  //       // @include padding(-1.5em);
-  //       @include font(4.5);
-  //       line-height: 0.5em;
-  //       display: block;
-  //     }
-  //     // &.active {
-  //     //   background:lighten($buttoncolor,10%);
-  //     //   > span{
-  //     //   color:$brandcolor;
-  //     //   }
-  //     // }
-  //   }
-  //   .dropdown-menu {
-  //     @include border-bottom-radius(0.3em);
-
-      
-  //     cursor: pointer;
-  //     display: none;
-  //     @include transition (height 1s ease);
-  //     position: absolute;
-  //     text-align: left;
-  //     top: 2.4em;
-  //     height:0;
-  //     z-index: 1;
-  //     // padding:0.2em null 0.2em 1.5em;
-  //     width: 80%;
-  //     // z-index: 90;
-  //     background:$fontcolor;
-  //       // background:lighten($buttoncolor,10%);
-
-  //     li {
-  //       color:$brandcolor;
-
-  //       font-family: $h-font;
-  //       @include font(1.7);
-  //       line-height: 1.5em;
-  //     }
-  //     // background-color: darken(rgba(46,82,107,0.8),5%);
-
-  //   }
-
-  //   .show-menu {
-  //     @include transition (height 1s ease);
-  //     display: block;
-  //     height:auto;
-  //     overflow: hidden;
-  //       @include margin(-0.25em 0 0 0);
-  //         @include padding(0.2em 0.9em);
-  //   }
-  //   .sub-text {
-  //     @include font(0.8);
-  //     color: $fontcolor;
-  //     float: right;
-  //     @include margin(1em);
-  //     opacity: 0.8;
-  //   }
-  // }
-  // .location {
-  //   width: 90%;
-  //     @include margin(0.7em 5%);
-
-    
-  // }
-  // .find-me {
-  //   background:lighten($brandcolor2,40%);
-  //   width: 50px;
-  //   height:50px;
-  //   z-index: 90;
-  //   display: inline-block;
-  //   @include border-radius(1.2em);
-  //   padding:0.005em;
-  //   img {
-  //     width: 90%;
-  //     padding-top: 0.019em;
-  //     padding-right:0.019em;
-  //     // color:$fontcolor;
-  //   }
-
-  // }
-
 
   .call {
     width: 90%;
@@ -833,6 +709,36 @@ footer {
       // }
     }
   }
+  footer {
+    @media screen and (min-width:750px) {
+      @include padding(0 2em);
+    }
+    h2 {
+      @include font(1.3);
+      // width: 30%;
+      text-align: left;
+      float: left;
+      @include margin(1em 0 1em 2em);
+    }
+    h4 {
+      @include font(1);
+      // width: 30%;
+      text-align: left;
+      clear:left;
+      @include margin(1em 0 0 3em);
+    }
+    ul {
+      width: 50%;
+      float: right;
+      @include margin(-7em 3em 4em 0);
+    }
+    .nav-link {
+      background: transparent;
+      img {
+        visibility: hidden;
+      }
+    }
+  }
 }
 // <!--===========================================================
 // ===============================================================  
@@ -871,6 +777,10 @@ footer {
       }
 
     }
+  }
+  footer {
+      @include padding(0 15%);
+
   }
 
 

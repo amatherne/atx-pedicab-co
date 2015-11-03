@@ -105,12 +105,12 @@ html, body {
 }
 
 // figure out how to make this work later
-.close {
-	visibility: visible;
-	-webkit-transform: translateX(-100%);
-	transform: translateX(-100%);
-	-webkit-transition: -webkit-transform 0.5s 0.5s;
-	transition: transform 0.5s 0.5s;
-}
+// .overlay-contentpush.close {
+// 	visibility: visible;
+// 	-webkit-transform: translateX(-100%);
+// 	transform: translateX(-100%);
+// 	-webkit-transition: -webkit-transform 0.5s 0.5s;
+// 	transition: transform 0.5s 0.5s;
+// }
 
  
