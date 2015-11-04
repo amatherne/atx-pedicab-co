@@ -199,14 +199,14 @@ body,
     width: 50%;
     float: left;
     font-family: "roadgeek";
-    border: 1px solid #22262D;
+    border: 1px solid #212932;
     background: #4c9e79; }
 
 header {
   position: relative;
   top: 3em;
   width: 100%;
-  background: #22262d;
+  background: #212932;
   height: 8em;
   z-index: 1;
   clear: both; }
@@ -228,7 +228,7 @@ header.navigation .navigation-menu-button {
   width: 50px;
   position: relative;
   text-align: center;
-  background: #647084;
+  background: #5e758e;
   -webkit-border-radius: 0.3em;
   border-radius: 0.3em;
   background-clip: padding-box;
@@ -256,7 +256,7 @@ header.navigation ul.navigation-menu {
 header.navigation .nav-link {
   position: relative;
   z-index: 10;
-  background: #4e5767;
+  background: #4a5b6f;
   width: 20%;
   display: inline-block;
   float: left; }
@@ -381,7 +381,7 @@ header.navigation .nav-link {
       float: right;
       height: 30px;
       vertical-align: top;
-      color: #22262D;
+      color: #212932;
       font-size: 0.6875px;
       font-size: 1.1em;
       line-height: 1.54em;
@@ -431,7 +431,7 @@ header.navigation .nav-link {
         background: #4c9e79; }
 
 footer {
-  background: #22262D;
+  background: #212932;
   width: 100%;
   overflow: hidden;
   clear: both;
@@ -455,7 +455,7 @@ footer {
     display: block; }
   footer .nav-link {
     position: relative;
-    background: #4e5767;
+    background: #4a5b6f;
     width: 20%;
     display: inline-block;
     float: left; }
@@ -597,7 +597,7 @@ footer {
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */
   z-index: 10;
-  background: #22262D;
+  background: #212932;
   outline: none;
   display: inline-block; }
   .overlay .overlay-close img {
@@ -760,8 +760,7 @@ html, body {
       left: 0;
       width: 100%;
       height: 100%;
-      background: #22262D;
-      opacity: 0.8;
+      background: #212932;
       -webkit-border-radius: 0.4em;
       border-radius: 0.4em;
       background-clip: padding-box;
@@ -886,8 +885,7 @@ html, body {
     background-position: center;
     background-size: cover; }
     .home .recents:before {
-      background: #22262D;
-      opacity: 0.8;
+      background: #212932;
       content: '';
       position: absolute;
       top: 0;
@@ -961,7 +959,7 @@ html, body {
           left: 0;
           width: 100%;
           height: 100%;
-          background: #22262D;
+          background: #212932;
           opacity: 0.8;
           z-index: -1; }
         .home .landing-home .inputs h3 {
@@ -972,7 +970,7 @@ html, body {
           float: right;
           height: 30px;
           vertical-align: top;
-          color: #22262D;
+          color: #212932;
           font-size: 0.6875px;
           font-size: 1.1em;
           line-height: 1.54em;
@@ -1044,7 +1042,7 @@ html, body {
       width: 80%;
       margin: 0 10%; }
     .home .tag-line {
-      height: 50em;
+      height: 40em;
       padding: 10em 0; }
       .home .tag-line:before {
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ceb59d+0,ceb59d+100&amp;1+0,0+100 */
@@ -1097,8 +1095,8 @@ html, body {
       top: 0;
       left: 0;
       background-color: rgba(38, 68, 89, 0.6);
-      -webkit-border-radius: 0.3em;
-      border-radius: 0.3em;
+      -webkit-border-radius: 0.2em;
+      border-radius: 0.2em;
       background-clip: padding-box;
       /* stops bg color from leaking outside the border: */ }
     .tours .hero h3 {
@@ -1137,7 +1135,7 @@ html, body {
       left: 0;
       width: 100%;
       height: 100%;
-      background: #22262D;
+      background: #212932;
       opacity: 0.8;
       z-index: -1;
       -webkit-border-radius: 0.3em;
@@ -1151,42 +1149,179 @@ html, body {
       text-align: left;
       padding: 1em 0; }
   .tours .tour-desc {
+    margin: 2em 5%;
+    display: block;
     width: 90%;
     position: relative;
-    margin: 2em 5%;
+    overflow: hidden; }
+  .tours .tour-box {
+    width: 100%;
     overflow: hidden;
-    z-index: 1; }
-  .tours .accordian {
     position: relative;
-    overflow: hidden;
-    display: block; }
-    .tours .accordian h3 {
+    margin: 1em 0; }
+  .tours .mini-hero {
+    min-height: 18em; }
+    .tours .mini-hero h4 {
+      display: block;
+      text-align: center;
+      font-size: 1.75px;
+      font-size: 2.8em;
+      line-height: 3.92em;
+      margin: 1.4em 0 0.8em;
+      line-height: 0.7em;
+      position: relative; }
+    .tours .mini-hero p {
+      display: block;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
+      line-height: 1.5em;
+      position: relative;
+      width: 70%;
+      margin: 2em 15% 3em; }
+    .tours .mini-hero .divider {
+      width: 200px;
+      height: 2px;
+      margin: 1em auto;
+      background: #d4c9ad;
+      position: relative; }
+  .tours .tour-info {
+    width: 100%;
+    margin: 1em 0;
+    background: #212932; }
+    .tours .tour-info .sub-info {
+      width: 40%;
+      margin: 3.5em 2%;
+      display: inline-block;
+      vertical-align: top; }
+    .tours .tour-info ul {
+      text-align: center;
+      margin: 1em 0;
+      font-size: 0.4375px;
+      font-size: 0.7em;
+      line-height: 0.98em; }
+    .tours .tour-info h5 {
+      text-align: center;
       font-size: 0.9375px;
       font-size: 1.5em;
-      line-height: 2.1em;
-      line-height: 1.5em;
-      width: 100%;
-      text-align: center;
+      line-height: 2.1em; }
+    .tours .tour-info li {
+      display: block;
       position: relative;
-      display: block; }
-      .tours .accordian h3.closed {
-        transition: background-color 500ms ease;
-        transition: opacity 500ms ease;
-        opacity: 1; }
-      .tours .accordian h3.open {
-        transition: opacity 500ms ease-out;
-        opacity: 0; }
-    .tours .accordian p {
-      font-size: 0.5px;
-      font-size: 0.8em;
-      line-height: 1.12em; }
-    .tours .accordian .tour-box {
+      font-family: "Roadgeek", san-serif; }
+    .tours .tour-info p {
+      display: inline-block;
+      width: 50%;
+      margin: 1em 2%;
+      padding: 0.5em;
+      font-size: 0.65625px;
+      font-size: 1.05em;
+      line-height: 1.47em;
+      line-height: 1.5em; }
+  .tours .taco {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    background: url("../img/chilantro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+    .tours .taco:before {
+      content: '';
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
       width: 100%;
-      margin: 2em 0;
-      position: relative;
-      overflow: hidden; }
-    .tours .accordian .taco {
-      position: relative; }
+      height: 100%;
+      background-color: rgba(23, 41, 54, 0.6);
+      z-index: -1; }
+  .tours .wine {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    background: url("../img/wine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+    .tours .wine:before {
+      content: '';
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(23, 41, 54, 0.6);
+      z-index: -1; }
+  .tours .marg {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    background: url("../img/marg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+    .tours .marg:before {
+      content: '';
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(23, 41, 54, 0.6);
+      z-index: -1; }
+  .tours .pub {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    background: url("../img/dash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+    .tours .pub:before {
+      content: '';
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(23, 41, 54, 0.6);
+      z-index: -1; }
 
 @media screen and (min-width: 600px) {
   .tours .hero {
@@ -1217,146 +1352,7 @@ html, body {
     margin: 1em 2%;
     display: inline-block;
     vertical-align: top; } }
-@media screen and (min-width: 600px) {
-  .tours .accordion {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    z-index: 1; }
-    .tours .accordion .tour-box {
-      width: 70%;
-      margin: 2em 15%;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0.05rem 0.15rem 0.3rem 0.001rem black; }
-    .tours .accordion .taco {
-      position: relative; }
-      .tours .accordion .taco.opened:before {
-        content: '';
-        background: url("../img/turf1.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 13.5em;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-      .tours .accordion .taco.close:before {
-        content: '';
-        background: url("../img/turf1.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10em;
-        opacity: 0.5;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-    .tours .accordion .wine {
-      position: relative; }
-      .tours .accordion .wine.opened:before {
-        content: '';
-        background: url("../img/secondst.JPG");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 13.5em;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-      .tours .accordion .wine.close:before {
-        content: '';
-        background: url("../img/secondst.JPG");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10em;
-        opacity: 0.5;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-    .tours .accordion .margs {
-      position: relative; }
-      .tours .accordion .margs.opened:before {
-        content: '';
-        background: url("../img/marg.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 13.5em;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-      .tours .accordion .margs.close:before {
-        content: '';
-        background: url("../img/marg.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10em;
-        opacity: 0.5;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-    .tours .accordion .pub {
-      position: relative; }
-      .tours .accordion .pub.opened:before {
-        content: '';
-        background: url("../img/dash.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 13.5em;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-      .tours .accordion .pub.close:before {
-        content: '';
-        background: url("../img/dash.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10em;
-        opacity: 0.5;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; } }
+
 @media screen and (min-width: 900px) {
   .tours .content {
     width: 80%;
@@ -1447,7 +1443,7 @@ html, body {
       left: 0;
       width: 100%;
       height: 100%;
-      background: #22262D;
+      background: #212932;
       opacity: 0.8;
       z-index: -1;
       -webkit-border-radius: 0.3em;
