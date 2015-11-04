@@ -39,7 +39,7 @@
             left:0;
               background-color: darken(rgba(46,82,107,0.6),5%);
             // z-index: -1;
-          @include border-radius(0.3em);
+          @include border-radius(0.2em);
 
         }
         h3 {
@@ -91,54 +91,173 @@
             @include padding(1em 0);
         }
     }
+
     .tour-desc {
+        @include margin(2em 5%);
+        display: block;
         width: 90%;
         position: relative;
-        @include margin(2em 5%);
         overflow: hidden;
-        z-index: 1;
     }
-    .accordian {
+    .tour-box {
+        width: 100%;
+        overflow:hidden;
         position: relative;
-        overflow: hidden;
-        display: block;
-        h3 {
-            @include font(1.5);
-            line-height: 1.5em;
-            width: 100%;
-            text-align: center;
-            position: relative;
+        @include margin(1em 0);
+
+    }
+    .mini-hero {
+        min-height: 18em;
+        h4 {
             display: block;
-            &.closed {
-              transition: background-color 500ms ease;
-              transition: opacity 500ms ease;
-              opacity: 1;
-            }
-            &.open {
-                transition: opacity 500ms ease-out;
-                opacity: 0;
-            }
+            text-align: center;
+            @include font(2.8);
+            @include margin(1.4em 0 0.8em 0);
+            line-height: 0.7em;
+            position: relative;
         }
         p {
-            @include font(0.8);
-        }
-        .tour-box {
-            width: 100%;
-            @include margin(2em 0);
+            display: block;
+            @include font(1.1);
+            line-height: 1.5em;
             position: relative;
-            overflow: hidden;
+            width: 70%;
+            @include margin(2em 15% 3em 15%);
         }
-        .taco {
+        .divider {
+            width: 200px;
+            height:2px;
+            @include margin(1em auto);
+            background: $fontcolor;
             position: relative;
-            &.opened:before {
-     
-            }
-            &.close:before {
-    
-            }
+        }
+    }
+    .tour-info {
+        width: 100%;
+        @include margin(1em 0);
+        background:$brandcolor2;
+        .sub-info {
+            width: 40%;
+            @include margin(3.5em 2%);
+            display: inline-block;
+            vertical-align: top;
+
+        }
+        ul {
+            // display: inline-block;
+            text-align: center;
+            @include margin(1em 0);
+            @include font(0.7);
+        }
+        h5{
+            text-align: center;
+            @include font(1.5);
+        }
+        li {
+            // @include margin(0.1em 0 0.1em 2em);
+            display: block;
+            position: relative;
+            font-family: $h-font;
+        }
+        p {
+            display: inline-block;
+            width: 50%;
+            @include margin(1em 2%);
+            @include padding(0.5em);
+            @include font(1.05);
+            line-height: 1.5em;
 
         }
     }
+    .taco {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        z-index: 1;
+        background: url('../img/chilantro.jpg');
+        background-size: cover;
+        background-repeat:no-repeat;
+        @include border-radius(0.3em);
+        &:before {
+            content: '';
+            @include border-radius(0.3em);
+            position: absolute;
+            overflow: hidden;
+            top:0;
+            left:0;
+            width: 100%;
+            height:100%;
+            background-color: darken(rgba(46,82,107,0.6),15%);
+            z-index: -1;  
+        } 
+    }
+    .wine {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        z-index: 1;
+        background: url('../img/wine.jpg');
+        background-size: cover;
+        background-repeat:no-repeat;
+        @include border-radius(0.3em);
+        &:before {
+            content: '';
+            @include border-radius(0.3em);
+            position: absolute;
+            overflow: hidden;
+            top:0;
+            left:0;
+            width: 100%;
+            height:100%;
+            background-color: darken(rgba(46,82,107,0.6),15%);
+            z-index: -1;  
+        } 
+    }
+    .marg {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        z-index: 1;
+        background: url('../img/marg.jpg');
+        background-size: cover;
+        background-repeat:no-repeat;
+        @include border-radius(0.3em);
+        &:before {
+            content: '';
+            @include border-radius(0.3em);
+            position: absolute;
+            overflow: hidden;
+            top:0;
+            left:0;
+            width: 100%;
+            height:100%;
+            background-color: darken(rgba(46,82,107,0.6),15%);
+            z-index: -1;  
+        } 
+    }
+    .pub {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        z-index: 1;
+        background: url('../img/dash.jpg');
+        background-size: cover;
+        background-repeat:no-repeat;
+        @include border-radius(0.3em);
+        &:before {
+            content: '';
+            @include border-radius(0.3em);
+            position: absolute;
+            overflow: hidden;
+            top:0;
+            left:0;
+            width: 100%;
+            height:100%;
+            background-color: darken(rgba(46,82,107,0.6),15%);
+            z-index: -1;  
+        } 
+    }
+    
 
 
 }
@@ -159,250 +278,221 @@
 
 
 @media screen and (min-width:600px) {
-.tours {
-    .hero {
+    .tours {
+        .hero {
 
-        width: 100%;
-      @include margin(0 0 0 0);
-      background-position: center;
-        // background: url('../img/ride.jpg');
-        // text-align: center;
-        // @include margin(5em 5%);
-        // display: block;
-        // width: 90%;
-        // position: relative;
-        // overflow: hidden;
-        // @include padding(4em 1em);
-        // background-repeat:no-repeat;
-        // background-position: 100% 80%;
-        // background-size: cover;
-        // // z-index: 1;
-        // @include border-radius(0.3em);
+            width: 100%;
+            @include margin(0 0 0 0);
+            background-position: center;
 
-        // &:before {
-        //     content: '';
+            h3 {
+                display: block;
+                @include font(2.75);
+                line-height: 1em;
+                position: relative;
+                @include margin(1.5em 0 1em 0);
+                opacity: 0.85;
+                // color: lighten($buttoncolor,20%);
+
+
+            }
+            h2 {
+                display: block;
+                @include font(10);
+                line-height: 0.7em;
+                position: relative;
+                @include margin(0 0 0.5em 0);
+
+                // color: lighten($buttoncolor,20%);
+                opacity: 0.75;
+
+            }
+        }
+        .experience {
+            @media screen and (min-width:700px) {
+                p {
+                    width: 45%;
+                    @include margin(1em 2%);
+                    display: inline-block;
+                    vertical-align: top;
+
+                }
+            }
+        }
+        // .accordion {
+        //     position: relative;
         //     overflow: hidden;
-        //     width: 100%;
-        //     height: 100%;
-        //     position: absolute;
-        //     top:0;
-        //     left:0;
-        //       background-color: darken(rgba(46,82,107,0.6),5%);
-        //     // z-index: -1;
-        //   @include border-radius(0.3em);
+        //     display: block;
+        //     // // clear: both;
+        //     z-index: 1;
 
+        //     .tour-box {
+        //         width: 70%;
+        //         @include margin(2em 15%);
+        //         position: relative;
+        //         overflow: hidden;
+        //         box-shadow: 0.05rem 0.15rem 0.3rem 0.001rem darken($brandcolor,40%);
+        //     }
+        //     .taco {
+        //         position: relative;
+        //         &.opened:before {
+        //             content: '';
+        //             background: url('../img/turf1.jpg');
+        //             background-size: cover;
+        //             background-repeat:no-repeat;
+        //             background-position: top;
+        //             position: absolute;
+        //             overflow: hidden;
+        //             top:0;
+        //             left:0;
+        //             width: 100%;
+        //             // height:100%;
+        //             height:13.5em;
+        //             opacity: 1;
+        //             z-index: -1;
+        //             transition: opacity 500ms ease,
+        //                         height 700ms ease 200ms;      
+        //         }
+        //         &.close:before {
+        //             content: '';
+        //             background: url('../img/turf1.jpg');
+        //             background-size: cover;
+        //             background-repeat:no-repeat;
+        //             background-position: bottom;
+        //             position: absolute;
+        //             overflow: hidden;
+        //             top:0;
+        //             left:0;
+        //             width: 100%;
+        //             height:10em;
+        //             // max-height:15em;
+        //             opacity: 0.5;
+        //             z-index: -1;
+        //             transition: opacity 500ms ease,
+        //                         height 700ms ease 200ms;      
+        //         }
+
+        //     }
+        //     .wine {
+        //         position: relative;
+        //         &.opened:before {
+        //             content: '';
+        //             background: url('../img/secondst.JPG');
+        //             background-size: cover;
+        //             background-repeat:no-repeat;
+        //             background-position: top;
+        //             position: absolute;
+        //             overflow: hidden;
+        //             top:0;
+        //             left:0;
+        //             width: 100%;
+        //             // height:100%;
+        //             height:13.5em;
+        //             opacity: 1;
+        //             z-index: -1;
+        //             transition: opacity 500ms ease,
+        //                         height 700ms ease 200ms;      
+        //         }
+        //         &.close:before {
+        //             content: '';
+        //             background: url('../img/secondst.JPG');
+        //             background-size: cover;
+        //             background-repeat:no-repeat;
+        //             background-position: bottom;
+        //             position: absolute;
+        //             overflow: hidden;
+        //             top:0;
+        //             left:0;
+        //             width: 100%;
+        //             height:10em;
+        //             // max-height:15em;
+        //             opacity: 0.5;
+        //             z-index: -1;
+        //             transition: opacity 500ms ease,
+        //                         height 700ms ease 200ms;      
+        //         }
+        //     }
+        //     .margs {
+        //         position: relative;
+        //         // overflow: hidden;
+        //         &.opened:before {
+        //             content: '';
+        //             background: url('../img/marg.jpg');
+        //             background-size: cover;
+        //             background-repeat:no-repeat;
+        //             background-position: top;
+        //             position: absolute;
+        //             overflow: hidden;
+        //             top:0;
+        //             left:0;
+        //             width: 100%;
+        //             // height:100%;
+        //             height:13.5em;
+        //             opacity: 1;
+        //             z-index: -1;
+        //             transition: opacity 500ms ease,
+        //                         height 700ms ease 200ms;      
+        //         }
+        //         &.close:before {
+        //             content: '';
+        //             background: url('../img/marg.jpg');
+        //             background-size: cover;
+        //             background-repeat:no-repeat;
+        //             background-position: bottom;
+        //             position: absolute;
+        //             overflow: hidden;
+        //             top:0;
+        //             left:0;
+        //             width: 100%;
+        //             height:10em;
+        //             // max-height:15em;
+        //             opacity: 0.5;
+        //             z-index: -1;
+        //             transition: opacity 500ms ease,
+        //                         height 700ms ease 200ms;      
+        //         }
+        //     }
+        //     .pub {
+        //         position: relative;
+        //         &.opened:before {
+        //             content: '';
+        //             background: url('../img/dash.jpg');
+        //             background-size: cover;
+        //             background-repeat:no-repeat;
+        //             background-position: top;
+        //             position: absolute;
+        //             overflow: hidden;
+        //             top:0;
+        //             left:0;
+        //             width: 100%;
+        //             // height:100%;
+        //             height:13.5em;
+        //             opacity: 1;
+        //             z-index: -1;
+        //             transition: opacity 500ms ease,
+        //                         height 700ms ease 200ms;      
+        //         }
+        //         &.close:before {
+        //             content: '';
+        //             background: url('../img/dash.jpg');
+        //             background-size: cover;
+        //             background-repeat:no-repeat;
+        //             background-position: bottom;
+        //             position: absolute;
+        //             overflow: hidden;
+        //             top:0;
+        //             left:0;
+        //             width: 100%;
+        //             height:10em;
+        //             // max-height:15em;
+        //             opacity: 0.5;
+        //             z-index: -1;
+        //             transition: opacity 500ms ease,
+        //                         height 700ms ease 200ms;      
+        //         }
+        //     }
         // }
-
-        h3 {
-            display: block;
-            @include font(2.75);
-            line-height: 1em;
-            position: relative;
-            @include margin(1.5em 0 1em 0);
-            opacity: 0.85;
-            // color: lighten($buttoncolor,20%);
-
-
-        }
-        h2 {
-            display: block;
-            @include font(10);
-            line-height: 0.7em;
-            position: relative;
-            @include margin(0 0 0.5em 0);
-
-            // color: lighten($buttoncolor,20%);
-            opacity: 0.75;
-
-        }
     }
-    .experience {
-        @media screen and (min-width:700px) {
-            p {
-                width: 45%;
-                @include margin(1em 2%);
-                display: inline-block;
-                vertical-align: top;
-
-            }
-        }
-    }
-    .accordion {
-        position: relative;
-        overflow: hidden;
-        display: block;
-        // // clear: both;
-        z-index: 1;
-
-        .tour-box {
-            width: 70%;
-            @include margin(2em 15%);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0.05rem 0.15rem 0.3rem 0.001rem darken($brandcolor,40%);
-        }
-        .taco {
-            position: relative;
-            &.opened:before {
-                content: '';
-                background: url('../img/turf1.jpg');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: top;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                // height:100%;
-                height:13.5em;
-                opacity: 1;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-            &.close:before {
-                content: '';
-                background: url('../img/turf1.jpg');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: bottom;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                height:10em;
-                // max-height:15em;
-                opacity: 0.5;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-
-        }
-        .wine {
-            position: relative;
-            &.opened:before {
-                content: '';
-                background: url('../img/secondst.JPG');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: top;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                // height:100%;
-                height:13.5em;
-                opacity: 1;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-            &.close:before {
-                content: '';
-                background: url('../img/secondst.JPG');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: bottom;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                height:10em;
-                // max-height:15em;
-                opacity: 0.5;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-        }
-        .margs {
-            position: relative;
-            // overflow: hidden;
-            &.opened:before {
-                content: '';
-                background: url('../img/marg.jpg');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: top;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                // height:100%;
-                height:13.5em;
-                opacity: 1;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-            &.close:before {
-                content: '';
-                background: url('../img/marg.jpg');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: bottom;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                height:10em;
-                // max-height:15em;
-                opacity: 0.5;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-        }
-        .pub {
-            position: relative;
-            &.opened:before {
-                content: '';
-                background: url('../img/dash.jpg');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: top;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                // height:100%;
-                height:13.5em;
-                opacity: 1;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-            &.close:before {
-                content: '';
-                background: url('../img/dash.jpg');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: bottom;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                height:10em;
-                // max-height:15em;
-                opacity: 0.5;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-        }
-    }
-}
-
-
 }
 
 
@@ -432,6 +522,7 @@
         &:before {
             // @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.6),5%),0%,40%);
             @include gradient-hori(darken(rgba(46,82,107,0.8),85%), darken(rgba(46,82,107,0.6),5%),0%,40%);
+            // background: darken(rgba(46,82,107,0.8),65%);
         }
         @media screen and (min-width:1200px) {
             height: 35em;

@@ -97,7 +97,7 @@
 	      	height:100%;
 	      	background: $brandcolor2;
 
-	     	opacity: 0.8;
+	     	// opacity: 0.8;
 	      	// z-index: -1;
 	    	@include border-radius(0.4em);
 	    }
@@ -109,11 +109,7 @@
 	    }
 	}
 	.tour-links {
-        // display: block; 
         text-align: center;
-        // @include clearfix;
-        // @include margin(1em 5%);
-        // width: 90%;
         position: relative;
         overflow: hidden;
         z-index: 1;
@@ -134,10 +130,6 @@
             	height: 100%;
             	display: block;
               opacity: 0.8;
-            	// color:lighten($buttoncolor,15%);
-            	// text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
-            	//  			2px 2px 0.5px darken($buttoncolor,15%),
-            	//  			3px 3px 0.5px darken($buttoncolor,25%);
           	}
           	&.taco {
             	position: relative;
@@ -164,10 +156,7 @@
           
           	&.wine {
               	@include border-radius(0.4em);
-            	// a {
-             //  		@include font(5);
-            	// 	line-height: 1.5em;
-            	// }
+
             	position: relative;
             	overflow: hidden;
             	z-index: 1;
@@ -229,7 +218,7 @@
         background-size: cover;
         &:before {
 	      	background: $brandcolor2;
-	      	opacity: 0.8;
+	      	// opacity: 0.8;
           	content: '';
           	position: absolute;
           	top:0;
@@ -439,7 +428,7 @@
       @include margin(0 10%);
     }
     .tag-line { 
-      height:50em;
+      height:40em;
       @include padding(10em 0 10em 0);
       &:before {
         // @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.7),15%),0%,40%);
