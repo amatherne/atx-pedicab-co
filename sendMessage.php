@@ -1,5 +1,5 @@
 <?php
-require '../twilio-php-master/Services/Twilio.php';
+require 'twilio-php-master/Services/Twilio.php';
 
 $fullName .= $_GET["full_name"];
 $phone .= $_GET["phone"];
