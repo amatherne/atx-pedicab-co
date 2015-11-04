@@ -1,10 +1,10 @@
 <?php
-require '../twilio-php-master/Services/Twilio.php';
+require 'twilio-php-master/Services/Twilio.php';
 
-$fullName .= $_GET["full_name"];
-$phone .= $_GET["phone"];
-$destination .= $_GET["destination"];
-$current_location .= $_GET["current_location"];
+// $fullName .= $_GET["full_name"];
+// $phone .= $_GET["phone"];
+// $destination .= $_GET["destination"];
+// $current_location .= $_GET["current_location"];
 
 $body = array(
       "fullName" => $_GET["full_name"],
