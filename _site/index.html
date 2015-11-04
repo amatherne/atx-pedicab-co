@@ -292,28 +292,30 @@
               <h3>TAKE A PEDICAB</h3>
             </div>
             <form class="inputs" action="sendMessage.php" method="get">
-
+              <fieldset>
               <!-- passenger select -->
               
               <div class="info">
                 <h3>Just fill out this easy form!</h3>
-                <input type="text" id="input" for="" placeholder="Your Name/Call Sign">
+                <input type="text" name="full_name" for="" placeholder="Your Name/Call Sign">
                 <h3>Total number of Passengers.</h3>
-                <input type="text" id="input" for="" placeholder="3 Passengers MAX per cab!">
+                <input type="text" name="party_size" for="" placeholder="3 Passengers MAX per cab!">
                 <h3>Current Locale.</h3>
-                <input type="text" id="input" for="" placeholder="Current/Pickup Location">
+                <input type="text" name="current_location" for="" placeholder="Current/Pickup Location">
                 <h3>Where are y'all going?</h3>
-                <input type="text" id="input" for="" placeholder="Destination (optional)">
+                <input type="text" name="destination" for="" placeholder="Destination (optional)">
                 <h3>When do you need us?</h3>
-                <input type="text" id="input" for="" placeholder="Leave Blank for Instant Pickup!">
+                <input type="text" name="time" for="" placeholder="Leave Blank for Instant Pickup!">
                 <h3>Can we get them digits?</h3>
-                <input type="text" id="input" for="" placeholder="Confirmation Phone Number">
+                <input type="text" name="phone" for="" placeholder="Confirmation Phone Number">
               </div>
+                         <!-- Call Button -->
+              <div class="call">
+                <button type="submit" name="submit" id="call"><span>Call Cab</span><img src="/atx-pedicab-co/img/pedicab.png"></button>     
+              </div>
+              </fieldset>
             </form>
-           <!-- Call Button -->
-            <div class="call">
-              <button type="submit" name="submit" id="call"><span>Call Cab</span><img src="/atx-pedicab-co/img/pedicab.png"></button>     
-            </div>
+
           </div>
 
           
