@@ -3,6 +3,7 @@
   <channel>
     <title>Austin Pedicab Co.</title>
     <description>An Austin Pedicab Booking and Tour Service.</description>
+<<<<<<< HEAD
     <link>https://amatherne.github.io/atx-pedicab-co/</link>
     <atom:link href="https://amatherne.github.io/atx-pedicab-co/feed.xml" rel="self" type="application/rss+xml"/>
 <<<<<<< HEAD
@@ -48,6 +49,13 @@
     <lastBuildDate>Wed, 04 Nov 2015 15:02:26 -0600</lastBuildDate>
 >>>>>>> ffc769710832cff6d07d829a111399322fd5ae3f
     <generator>Jekyll v2.5.3</generator>
+=======
+    <link>atxpedicab.com/</link>
+    <atom:link href="atxpedicab.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 05 Nov 2015 01:09:00 -0600</pubDate>
+    <lastBuildDate>Thu, 05 Nov 2015 01:09:00 -0600</lastBuildDate>
+    <generator>Jekyll v3.0.0</generator>
+>>>>>>> ba98cd3b19ea470e77a3dbea11580704a4f9c029
     
   </channel>
 </rss>
