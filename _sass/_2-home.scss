@@ -346,8 +346,8 @@
       .call {
         display: block;
         float:right;
-        width: 40%;
-        @include margin(3.5em 5% 1em 5%);
+        width: 90%;
+        @include margin(1em 5%);
         position: relative;
         padding-bottom:-5em;
         button {

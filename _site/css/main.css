@@ -984,8 +984,8 @@ html, body {
     .home .call {
       display: block;
       float: right;
-      width: 40%;
-      margin: 3.5em 5% 1em;
+      width: 90%;
+      margin: 1em 5%;
       position: relative;
       padding-bottom: -5em; }
       .home .call button {
@@ -1064,21 +1064,15 @@ html, body {
   width: 100%;
   position: relative;
   overflow: hidden; }
-  .tours .divider {
-    width: 80%;
-    height: 2px;
-    margin: 1.5em 10%;
-    position: relative;
-    background: #d4c9ad; }
   .tours .hero {
     background: url("../img/ride.jpg");
     text-align: center;
-    margin: 2em 5%;
+    margin: 1em auto;
     display: block;
-    width: 90%;
+    width: 94%;
     position: relative;
     overflow: hidden;
-    padding: 4em 1em;
+    padding: 1em 0;
     background-repeat: no-repeat;
     background-position: 80% 80%;
     background-size: cover;
@@ -1099,29 +1093,49 @@ html, body {
       border-radius: 0.2em;
       background-clip: padding-box;
       /* stops bg color from leaking outside the border: */ }
+    .tours .hero .divider {
+      width: 300px;
+      height: 2px;
+      margin: 3em auto;
+      background: #d4c9ad;
+      position: relative;
+      opacity: 0.8; }
     .tours .hero h3 {
       display: block;
-      font-size: 1.71875px;
-      font-size: 2.75em;
-      line-height: 3.85em;
-      line-height: 1em;
+      font-size: 1.4375px;
+      font-size: 2.3em;
+      line-height: 3.22em;
+      line-height: 1.7em;
       position: relative;
-      margin: -0.5em 0 0.5em;
-      opacity: 0.85; }
+      margin: -0.2em 0 0.7em;
+      opacity: 1; }
+      @media screen and (min-width: 400px) {
+        .tours .hero h3 {
+          font-size: 1.4375px;
+          font-size: 2.3em;
+          line-height: 3.22em;
+          line-height: 1.7em; } }
     .tours .hero h2 {
       display: block;
-      font-size: 6.25px;
-      font-size: 10em;
-      line-height: 14em;
-      line-height: 0.7em;
+      font-size: 2.3125px;
+      font-size: 3.7em;
+      line-height: 5.18em;
+      line-height: 1.5em;
       position: relative;
-      opacity: 0.75; }
+      margin: 0.1em 0 -0.2em;
+      opacity: 1; }
+      @media screen and (min-width: 400px) {
+        .tours .hero h2 {
+          font-size: 2.5px;
+          font-size: 4em;
+          line-height: 5.6em;
+          line-height: 1.7em; } }
   .tours .experience {
     text-align: center;
-    margin: 2em 5% 0;
+    margin: 1em auto 2em;
     padding: 0 1.5em;
     display: block;
-    width: 90%;
+    width: 94%;
     position: relative;
     z-index: 1;
     -webkit-border-radius: 0.3em;
@@ -1143,22 +1157,23 @@ html, body {
       background-clip: padding-box;
       /* stops bg color from leaking outside the border: */ }
     .tours .experience p {
-      font-size: 0.6875px;
-      font-size: 1.1em;
-      line-height: 1.54em;
+      font-size: 0.75px;
+      font-size: 1.2em;
+      line-height: 1.68em;
       text-align: left;
+      position: relative;
       padding: 1em 0; }
   .tours .tour-desc {
-    margin: 2em 5%;
+    margin: 1em auto;
     display: block;
-    width: 90%;
+    width: 94%;
     position: relative;
     overflow: hidden; }
   .tours .tour-box {
     width: 100%;
     overflow: hidden;
     position: relative;
-    margin: 1em 0; }
+    margin: 1em 0 2em; }
   .tours .mini-hero {
     min-height: 18em; }
     .tours .mini-hero h4 {
@@ -1178,7 +1193,8 @@ html, body {
       line-height: 1.5em;
       position: relative;
       width: 70%;
-      margin: 2em 15% 3em; }
+      max-width: 365px;
+      margin: 2em auto 3em; }
     .tours .mini-hero .divider {
       width: 200px;
       height: 2px;
@@ -1187,11 +1203,11 @@ html, body {
       position: relative; }
   .tours .tour-info {
     width: 100%;
-    margin: 1em 0;
+    margin: 0.5em 0 1em;
     background: #212932; }
     .tours .tour-info .sub-info {
       width: 40%;
-      margin: 3.5em 2%;
+      margin: 1em 2%;
       display: inline-block;
       vertical-align: top; }
     .tours .tour-info ul {
@@ -1200,6 +1216,11 @@ html, body {
       font-size: 0.4375px;
       font-size: 0.7em;
       line-height: 0.98em; }
+    .tours .tour-info h3 {
+      text-align: center;
+      font-size: 1.25px;
+      font-size: 2em;
+      line-height: 2.8em; }
     .tours .tour-info h5 {
       text-align: center;
       font-size: 0.9375px;
@@ -1335,31 +1356,48 @@ html, body {
       line-height: 3.85em;
       line-height: 1em;
       position: relative;
-      margin: 1.5em 0 1em;
-      opacity: 0.85; }
+      margin: 1.5em 0 1em; }
     .tours .hero h2 {
       display: block;
-      font-size: 6.25px;
-      font-size: 10em;
-      line-height: 14em;
-      line-height: 0.7em;
+      font-size: 3.125px;
+      font-size: 5em;
+      line-height: 7em;
+      line-height: 1.4em;
       position: relative;
-      margin: 0 0 0.5em;
-      opacity: 0.75; } }
-@media screen and (min-width: 600px) and (min-width: 700px) {
-  .tours .experience p {
-    width: 45%;
-    margin: 1em 2%;
+      margin: 0; }
+    .tours .hero .divider {
+      width: 300px;
+      height: 2px; }
+  .tours .experience {
+    margin: 3em auto 2em;
+    padding: 1em; }
+    .tours .experience p {
+      width: 80%;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 0.75px;
+      font-size: 1.2em;
+      line-height: 1.68em; }
+  .tours .mini-hero {
+    width: 100%;
+    height: 6em; }
+  .tours .tour-info p {
     display: inline-block;
-    vertical-align: top; } }
-
+    width: 45%;
+    margin: 0.5em auto 1em 2em;
+    padding: 1em;
+    font-size: 0.75px;
+    font-size: 1.2em;
+    line-height: 1.68em;
+    line-height: 1.5em; } }
 @media screen and (min-width: 900px) {
   .tours .content {
     width: 80%;
     margin: 0 10%; }
   .tours .hero {
-    height: 30em;
-    width: 100%; }
+    height: 50em;
+    width: 100%;
+    padding: 10em 0; }
     .tours .hero:before {
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ceb59d+0,ceb59d+100&amp;1+0,0+100 */
       background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(38, 68, 89, 0.6) 40%);
@@ -1376,18 +1414,30 @@ html, body {
       /* W3C */ } }
   @media screen and (min-width: 900px) and (min-width: 1200px) {
     .tours .hero {
-      height: 35em; } }
+      height: 60em; } }
 @media screen and (min-width: 900px) {
-  .tours .accordion {
-    width: 42%;
+    .tours .hero h2 {
+      margin: 1em auto 0; }
+  .tours .tour-box .mini-hero {
+    width: 90%;
+    margin: 0 5%;
+    height: 5em; } }
+@media screen and (min-width: 900px) and (min-width: 1200px) {
+  .tours .tour-box {
+    width: 48%;
     display: inline-block;
-    margin: 0 4%;
-    float: left; }
-    .tours .accordion .tour-box {
-      width: 70%;
-      margin: 2em 3% 2em 7%; } }
+    float: left;
+    margin: 1em 2% 2em 0; }
+    .tours .tour-box .mini-hero {
+      height: 4.5em;
+      width: 100%;
+      margin: 0; }
+    .tours .tour-box:nth-of-type(2n) {
+      margin: 1em 0 2em 2%; } }
+
 .about-us {
   background: #2E526B;
+  background-color: #1f3747;
   width: 100%;
   position: relative;
   overflow: hidden; }
@@ -1399,37 +1449,53 @@ html, body {
     background: #d4c9ad; }
   .about-us .about-hero {
     background: url("../img/about-hero.png");
-    background-size: cover;
+    text-align: center;
+    margin: 1em auto;
+    display: block;
+    width: 94%;
+    position: relative;
+    overflow: hidden;
+    padding: 1em 0;
     background-repeat: no-repeat;
-    background-position: right top;
-    width: 90%;
-    margin: 2em 5%;
-    z-index: 9999;
+    background-position: 80% 80%;
+    background-size: cover;
     -webkit-border-radius: 0.3em;
     border-radius: 0.3em;
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */ }
+    .about-us .about-hero:before {
+      content: '';
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(38, 68, 89, 0.6);
+      -webkit-border-radius: 0.2em;
+      border-radius: 0.2em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
     .about-us .about-hero h3 {
       text-align: center;
       display: block;
-      font-size: 4.375px;
-      font-size: 7em;
-      line-height: 9.8em;
-      line-height: 0.7em;
-      padding: 0.3em 0;
-      background-color: rgba(31, 55, 71, 0.8);
+      font-size: 1.875px;
+      font-size: 3em;
+      line-height: 4.2em;
+      line-height: 1.6em;
+      padding: 2em 0;
       height: 100%;
       position: relative;
       -webkit-border-radius: 0.05em;
       border-radius: 0.05em;
       background-clip: padding-box;
-      /* stops bg color from leaking outside the border: */
-      opacity: 0.75; }
+      /* stops bg color from leaking outside the border: */ }
   .about-us .mission {
     text-align: center;
-    margin: 2em 5% 0;
+    margin: 1em auto 2em;
+    padding: 0 1.5em;
     display: block;
-    width: 90%;
+    width: 94%;
     position: relative;
     z-index: 1;
     -webkit-border-radius: 0.3em;
@@ -1455,205 +1521,294 @@ html, body {
       font-size: 1.2em;
       line-height: 1.68em;
       text-align: left;
-      padding: 1em; }
-  .about-us .accordion {
-    position: relative;
-    overflow: hidden;
+      position: relative;
+      padding: 1em 0; }
+  .about-us .about-desc {
+    margin: 1em auto;
     display: block;
-    z-index: 1; }
-    .about-us .accordion .riders {
-      width: 90%;
-      margin: 2em 5%;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0.05rem 0.15rem 0.3rem 0.001rem black; }
-    .about-us .accordion .matt {
-      position: relative; }
-      .about-us .accordion .matt.opened:before {
-        content: '';
-        background: url("../img/matt-lg.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 18em;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-      .about-us .accordion .matt.close:before {
-        content: '';
-        background: url("../img/matt-lg.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 15em;
-        opacity: 0.5;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-    .about-us .accordion .quinton {
-      position: relative; }
-      .about-us .accordion .quinton.opened:before {
-        content: '';
-        background: url("../img/quinton-lg.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 18em;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-      .about-us .accordion .quinton.close:before {
-        content: '';
-        background: url("../img/quinton-lg.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 15em;
-        opacity: 0.5;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-    .about-us .accordion .rob {
-      position: relative; }
-      .about-us .accordion .rob.opened:before {
-        content: '';
-        background: url("../img/rob.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 18em;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-      .about-us .accordion .rob.close:before {
-        content: '';
-        background: url("../img/rob.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 15em;
-        opacity: 0.5;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-    .about-us .accordion .austin {
-      position: relative; }
-      .about-us .accordion .austin.opened:before {
-        content: '';
-        background: url("../img/austin.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 18em;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-      .about-us .accordion .austin.close:before {
-        content: '';
-        background: url("../img/austin.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 15em;
-        opacity: 0.5;
-        z-index: -1;
-        transition: opacity 500ms ease, height 700ms ease 200ms; }
-    .about-us .accordion h3 {
-      font-size: 0.875px;
-      font-size: 1.4em;
-      line-height: 1.96em;
-      line-height: 1.5em;
+    width: 94%;
+    position: relative;
+    overflow: hidden; }
+  .about-us .rider-box {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 1em 0 2em; }
+  .about-us .mini-hero {
+    width: 100%;
+    min-height: 18em;
+    position: relative; }
+    .about-us .mini-hero:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
+      background: #354251;
+      opacity: 0.5;
+      z-index: -1; }
+  .about-us .rider-info {
+    width: 100%;
+    margin: 0.5em 0 1em;
+    background: #212932;
+    padding: 1em; }
+    .about-us .rider-info .sub-info {
+      width: 70%;
+      margin: 1em auto; }
+    .about-us .rider-info .exp,
+    .about-us .rider-info .market {
+      max-width: 270px;
+      position: relative;
+      margin: 0 auto 2em; }
+    .about-us .rider-info ul {
+      text-align: left;
+      margin: 1em 0;
+      width: 60%;
+      margin: 0.3em auto 1.5em;
+      position: relative; }
+    .about-us .rider-info h4 {
       text-align: center;
+      font-size: 1.75px;
+      font-size: 2.8em;
+      line-height: 3.92em;
+      line-height: 1em;
+      margin: 0.5em 0;
+      position: relative; }
+    .about-us .rider-info h5 {
+      text-align: center;
+      font-size: 0.75px;
+      font-size: 1.2em;
+      line-height: 1.68em; }
+    .about-us .rider-info li {
+      display: block;
       position: relative;
-      display: block; }
-      .about-us .accordion h3.closed {
-        transition: background-color 500ms ease;
-        transition: opacity 500ms ease;
-        opacity: 1;
-        padding: 0.7em 0;
-        transition: padding 500ms ease-in; }
-      .about-us .accordion h3.open {
-        transition: background-color 500ms ease;
-        background-color: rgba(23, 41, 54, 0);
-        transition: opacity 500ms ease-out;
-        opacity: 0;
-        padding: 3.5em 0;
-        transition: padding 500ms ease-in; }
-    .about-us .accordion .submenu {
-      display: none;
-      margin: 0;
-      overflow: hidden;
+      font-family: "Roadgeek", san-serif;
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
+      line-height: 1.5em; }
+    .about-us .rider-info p {
+      display: inline-block;
+      margin: 1em auto;
+      padding: 1em;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
+      line-height: 1.5em; }
+    .about-us .rider-info sup {
+      font-size: 0.46875px;
+      font-size: 0.75em;
+      line-height: 1.05em;
+      vertical-align: super;
+      display: inline-block; }
+    .about-us .rider-info .divider {
+      width: 70%;
+      height: 2px;
+      margin: 0.7em auto;
+      position: relative;
+      background: #d4c9ad; }
+  .about-us .matt {
+    background: url("../img/matt-lg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin: 1em auto 0.5em;
+    z-index: 1;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+  .about-us .adam {
+    background: url("../img/quinton-lg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin: 1em auto 0.5em;
+    z-index: 1;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+  .about-us .austin {
+    background: url("../img/austin.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin: 1em auto 0.5em;
+    z-index: 1;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+  .about-us .rob {
+    background: url("../img/rob.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin: 1em auto 0.5em;
+    z-index: 1;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+
+@media screen and (min-width: 600px) {
+  .about-us .mission {
+    margin: 3em auto 2em;
+    padding: 1em; }
+    .about-us .mission p {
+      width: 80%;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 0.75px;
+      font-size: 1.2em;
+      line-height: 1.68em;
+      padding: 1em 0; }
+  .about-us .about-desc {
+    width: 80%;
+    margin: 0 auto; }
+  .about-us .about-hero {
+    width: 100%;
+    height: 30em;
+    margin: 0;
+    background-position: top; }
+    .about-us .about-hero h3 {
+      display: block;
+      font-size: 3.75px;
+      font-size: 6em;
+      line-height: 8.4em;
+      line-height: 1.2em;
+      position: relative;
+      padding: 1em 0; }
+  .about-us .mini-hero {
+    height: 30em; }
+  .about-us .rider-info {
+    clear: both;
+    overflow: hidden; }
+    .about-us .rider-info .exp,
+    .about-us .rider-info .market {
+      width: 50%;
+      display: inline-block;
+      float: left;
+      max-width: 270px;
+      position: relative;
+      margin: 0 auto 2em; }
+    .about-us .rider-info p {
+      width: 80%;
+      margin: 1em 10%;
+      padding: 0 1em; }
+    .about-us .rider-info .sub-info {
+      width: 80%;
+      margin: 2em 10%; } }
+@media screen and (min-width: 900px) {
+  .about-us .content {
+    width: 80%;
+    margin: 0 10%; }
+  .about-us .about-hero {
+    height: 50em;
+    width: 100%;
+    padding: 10em 0; }
+    .about-us .about-hero:before {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ceb59d+0,ceb59d+100&amp;1+0,0+100 */
+      background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(38, 68, 89, 0.6) 40%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left, right, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(40%, rgba(38, 68, 89, 0.6)));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(38, 68, 89, 0.6) 40%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(38, 68, 89, 0.6) 40%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(38, 68, 89, 0.6) 40%);
+      /* IE10+ */
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(38, 68, 89, 0.6) 40%);
+      /* W3C */ }
+  .about-us .about-desc {
+    width: 100%; }
+  .about-us .rider-box .mini-hero {
+    width: 90%;
+    margin: 0 5%;
+    height: 8em; } }
+@media screen and (min-width: 900px) and (min-width: 950px) {
+  .about-us .rider-box {
+    width: 48%;
+    display: inline-block;
+    float: left;
+    margin: 1em 2% 2em 0; }
+    .about-us .rider-box .mini-hero {
+      height: 4.5em;
       width: 100%;
-      clear: both;
-      background: #1f3747;
-      padding: 0.7em;
-      box-shadow: 0em 0em 1em 0.1em black; }
-      .about-us .accordion .submenu li {
-        font-size: 0.5px;
-        font-size: 0.8em;
-        line-height: 1.12em;
-        margin: 0.5em 0; }
-      .about-us .accordion .submenu p {
-        font-size: 0.625px;
-        font-size: 1em;
-        line-height: 1.4em;
-        line-height: 1.5em;
-        padding: 1em; }
-      .about-us .accordion .submenu h4 {
-        text-align: center;
-        font-size: 1.5625px;
-        font-size: 2.5em;
-        line-height: 3.5em;
-        line-height: 1.6em; }
-      .about-us .accordion .submenu .markets {
-        font-size: 0.625px;
-        font-size: 1em;
-        line-height: 1.4em;
-        width: 80%;
-        margin: 0.2em 5% 0.2em 15%; }
-        .about-us .accordion .submenu .markets li {
-          font-family: "Melbourne bold", san-serif; }
-        .about-us .accordion .submenu .markets sup {
-          font-size: 0.46875px;
-          font-size: 0.75em;
-          line-height: 1.05em;
-          vertical-align: super;
-          display: inline-block; }
+      margin: 0; }
+    .about-us .rider-box:nth-of-type(2n) {
+      margin: 1em 0 2em 2%; } }
+
+.partners {
+  background: url("../img/cranes.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: relative;
+  z-index: 0; }
+  .partners:before {
+    content: '';
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(38, 68, 89, 0.6);
+    z-index: -1; }
+  .partners h2 {
+    text-align: center;
+    display: block;
+    font-size: 1.875px;
+    font-size: 3em;
+    line-height: 4.2em;
+    line-height: 1.6em;
+    padding: 4em 0;
+    z-index: 2; }
+
+@media screen and (min-width: 900px) {
+  .partners {
+    height: 50em; }
+    .partners h2 {
+      font-size: 3.125px;
+      font-size: 5em;
+      line-height: 7em;
+      padding: 2em 0; } }
+.contact {
+  background: url("../img/sunset.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: relative;
+  z-index: 0; }
+  .contact:before {
+    content: '';
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(38, 68, 89, 0.6);
+    z-index: -1; }
+  .contact h2 {
+    text-align: center;
+    display: block;
+    font-size: 1.875px;
+    font-size: 3em;
+    line-height: 4.2em;
+    line-height: 1.6em;
+    padding: 4em 0;
+    z-index: 2; }
+
+@media screen and (min-width: 900px) {
+  .contact {
+    height: 50em; }
+    .contact h2 {
+      font-size: 3.125px;
+      font-size: 5em;
+      line-height: 7em;
+      padding: 2em 0; } }

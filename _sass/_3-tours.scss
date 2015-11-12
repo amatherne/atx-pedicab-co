@@ -6,23 +6,18 @@
     position: relative;
     // z-index: 1;
     overflow: hidden;
-    .divider {
-        width: 80%;
-        height:2px;
-        @include margin(1.5em 10%);
-        position: relative;
-        background: $fontcolor;
-    }
+
+    
 
     .hero {
         background: url('../img/ride.jpg');
         text-align: center;
-        @include margin(2em 5%);
+        @include margin(1em auto);
         display: block;
-        width: 90%;
+        width: 94%;
         position: relative;
         overflow: hidden;
-        @include padding(4em 1em);
+        @include padding(1em 0);
         background-repeat:no-repeat;
         background-position: 80% 80%;
         background-size: cover;
@@ -42,33 +37,50 @@
           @include border-radius(0.2em);
 
         }
+        .divider {
+            width: 300px;
+            height:2px;
+            @include margin(3em auto);
+            background: $fontcolor;
+            position: relative;
+          opacity: 0.8;
+        }
         h3 {
             display: block;
-            @include font(2.75);
-            line-height: 1em;
+            @include font(2.3);
+            line-height: 1.7em;
             position: relative;
-            @include margin(-0.5em 0 0.5em 0);
-            opacity: 0.85;
+            @include margin(-0.2em 0 0.7em 0);
+            opacity: 1;
             // color: lighten($buttoncolor,20%);
-
+            @media screen and (min-width:400px) {
+                @include font(2.3);
+                line-height: 1.7em;
+            }
 
         }
         h2 {
             display: block;
-            @include font(10);
-            line-height: 0.7em;
+            @include font(3.7);
+            line-height: 1.5em;
             position: relative;
             // color: lighten($buttoncolor,20%);
-            opacity: 0.75;
+            @include margin(0.1em 0 -0.2em 0);
+
+            opacity: 1;
+            @media screen and (min-width:400px) {
+                @include font(4);
+                line-height: 1.7em;
+            }
 
         }
     }
     .experience {
         text-align: center;
-        @include margin(2em 5% 0 5%);
+        @include margin(1em auto 2em);
         @include padding(0 1.5em);
         display: block;
-        width: 90%;
+        width: 94%;
         position: relative;
         z-index: 1;
         @include border-radius(0.3em);
@@ -85,17 +97,25 @@
             z-index: -1;
           @include border-radius(0.3em);
         }
+        // p {
+        //     @include font(1.1);
+        //     text-align: left;
+        //     @include padding(1em 0);
+        // }
         p {
-            @include font(1.1);
+            @include font(1.2);
             text-align: left;
+            position: relative;
             @include padding(1em 0);
+
+
         }
     }
 
     .tour-desc {
-        @include margin(2em 5%);
+        @include margin(1em auto);
         display: block;
-        width: 90%;
+        width: 94%;
         position: relative;
         overflow: hidden;
     }
@@ -103,7 +123,7 @@
         width: 100%;
         overflow:hidden;
         position: relative;
-        @include margin(1em 0);
+        @include margin(1em 0 2em);
 
     }
     .mini-hero {
@@ -122,7 +142,8 @@
             line-height: 1.5em;
             position: relative;
             width: 70%;
-            @include margin(2em 15% 3em 15%);
+            max-width: 365px;
+            @include margin(2em auto 3em auto);
         }
         .divider {
             width: 200px;
@@ -134,11 +155,11 @@
     }
     .tour-info {
         width: 100%;
-        @include margin(1em 0);
+        @include margin(0.5em 0 1em 0);
         background:$brandcolor2;
         .sub-info {
             width: 40%;
-            @include margin(3.5em 2%);
+            @include margin(1em 2%);
             display: inline-block;
             vertical-align: top;
 
@@ -149,10 +170,14 @@
             @include margin(1em 0);
             @include font(0.7);
         }
-        h5{
+        h3{
+            text-align: center;
+            @include font(2);
+        }h5{
             text-align: center;
             @include font(1.5);
         }
+
         li {
             // @include margin(0.1em 0 0.1em 2em);
             display: block;
@@ -291,207 +316,62 @@
                 line-height: 1em;
                 position: relative;
                 @include margin(1.5em 0 1em 0);
-                opacity: 0.85;
+                // opacity: 0.85;
                 // color: lighten($buttoncolor,20%);
 
 
             }
             h2 {
                 display: block;
-                @include font(10);
-                line-height: 0.7em;
+                @include font(5);
+                line-height: 1.4em;
                 position: relative;
-                @include margin(0 0 0.5em 0);
+                @include margin(0);
 
                 // color: lighten($buttoncolor,20%);
-                opacity: 0.75;
+                // opacity: 0.75;
 
+            }
+            .divider {
+                width: 300px;
+                height:2px;
+                // @include margin(0 auto 2em);
+                // background: $fontcolor;
+                // position: relative;
+              // opacity: 0.8;
             }
         }
         .experience {
-            @media screen and (min-width:700px) {
-                p {
-                    width: 45%;
-                    @include margin(1em 2%);
-                    display: inline-block;
-                    vertical-align: top;
+            @include margin(3em auto 2em);
+            
+            @include padding(1em);
+            p {
+                width: 80%;
+                // @include margin(1em auto);
+                display: inline-block;
+                vertical-align: top;
+                @include font(1.2);
+                // @include padding(1em);
 
-                }
             }
         }
-        // .accordion {
-        //     position: relative;
-        //     overflow: hidden;
-        //     display: block;
-        //     // // clear: both;
-        //     z-index: 1;
+        .mini-hero {
+                width: 100%;
+                // @include margin(0 5%);
+                height: 6em;
+            }
+        .tour-info {
+            
+            p {
+                display: inline-block;
+                width: 45%;
+                @include margin(0.5em auto 1em 2em);
+                @include padding(1em);
+                @include font(1.2);
+                line-height: 1.5em;
 
-        //     .tour-box {
-        //         width: 70%;
-        //         @include margin(2em 15%);
-        //         position: relative;
-        //         overflow: hidden;
-        //         box-shadow: 0.05rem 0.15rem 0.3rem 0.001rem darken($brandcolor,40%);
-        //     }
-        //     .taco {
-        //         position: relative;
-        //         &.opened:before {
-        //             content: '';
-        //             background: url('../img/turf1.jpg');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: top;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             // height:100%;
-        //             height:13.5em;
-        //             opacity: 1;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //         &.close:before {
-        //             content: '';
-        //             background: url('../img/turf1.jpg');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: bottom;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             height:10em;
-        //             // max-height:15em;
-        //             opacity: 0.5;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-
-        //     }
-        //     .wine {
-        //         position: relative;
-        //         &.opened:before {
-        //             content: '';
-        //             background: url('../img/secondst.JPG');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: top;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             // height:100%;
-        //             height:13.5em;
-        //             opacity: 1;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //         &.close:before {
-        //             content: '';
-        //             background: url('../img/secondst.JPG');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: bottom;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             height:10em;
-        //             // max-height:15em;
-        //             opacity: 0.5;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //     }
-        //     .margs {
-        //         position: relative;
-        //         // overflow: hidden;
-        //         &.opened:before {
-        //             content: '';
-        //             background: url('../img/marg.jpg');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: top;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             // height:100%;
-        //             height:13.5em;
-        //             opacity: 1;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //         &.close:before {
-        //             content: '';
-        //             background: url('../img/marg.jpg');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: bottom;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             height:10em;
-        //             // max-height:15em;
-        //             opacity: 0.5;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //     }
-        //     .pub {
-        //         position: relative;
-        //         &.opened:before {
-        //             content: '';
-        //             background: url('../img/dash.jpg');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: top;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             // height:100%;
-        //             height:13.5em;
-        //             opacity: 1;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //         &.close:before {
-        //             content: '';
-        //             background: url('../img/dash.jpg');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: bottom;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             height:10em;
-        //             // max-height:15em;
-        //             opacity: 0.5;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //     }
-        // }
+            }
+        }
     }
 }
 
@@ -500,7 +380,7 @@
 // ===============================================================  
 
 
-//             Tablet Media Query
+//             Desktop Media Query
 
 
 // ==============================================================
@@ -508,68 +388,58 @@
 
 @media screen and (min-width:900px) {
 
-.tours {
-    // width: 80%;
-    // @include padding(0 10%);
-    .content {
-      width: 80%;
-      @include margin(0 10%);
-    }
-    .hero {
-        height:30em;
-        width: 100%;
-        // @include padding(10em 0 10em 0);
-        &:before {
-            // @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.6),5%),0%,40%);
-            @include gradient-hori(darken(rgba(46,82,107,0.8),85%), darken(rgba(46,82,107,0.6),5%),0%,40%);
-            // background: darken(rgba(46,82,107,0.8),65%);
+    .tours {
+        // width: 80%;
+        // @include padding(0 10%);
+        .content {
+          width: 80%;
+          @include margin(0 10%);
         }
-        @media screen and (min-width:1200px) {
-            height: 35em;
+        .hero {
+            height:50em;
+            width: 100%;
+          @include padding(10em 0 10em 0);
+            &:before {
+                // @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.6),5%),0%,40%);
+                @include gradient-hori(darken(rgba(46,82,107,0.8),85%), darken(rgba(46,82,107,0.6),5%),0%,40%);
+                // background: darken(rgba(46,82,107,0.8),65%);
+            }
+            @media screen and (min-width:1200px) {
+                height: 60em;
+            }
+            h2 {
+                @include margin(1em auto 0 auto)
+            }
         }
-    }
-    // .experience {
-    //     text-align: center;
-    //     @include margin(2em 4% 0 4%);
-    //     display: inline-block;
-    //     width: 42%;
-    //     float: left;
-    //     position: relative;
-    //     z-index: 1;
-    //     @include border-radius(0.3em);
-    //     // @include padding(1em 1.5em);
-    //     &:before {
-    //         content: '';
-    //         position: absolute;
-    //         top:0;
-    //         left:0;
-    //         width: 100%;
-    //         height:100%;
-    //         background: $brandcolor2;
-    //       opacity: 0.8;
-    //         z-index: -1;
-    //       @include border-radius(0.3em);
-    //     }
-    //     p {
-    //         @include font(1.2);
-    //         text-align: left;
-    //         @include padding(1em);
-    //     }
-    // }
+        .experience {
 
-    .accordion {
-        width: 42%;
-        display: inline-block;
-        @include margin(0 4% 0 4%);
-        float: left;
-        // @include padding(0 5%);
+        }
         .tour-box {
-            width: 70%;
-            @include margin(2em 3% 2em 7%);
-            // float: left;
+            .mini-hero {
+                width: 90%;
+                @include margin(0 5%);
+                height: 5em;
+            }
+            @media screen and (min-width:1200px) {
+                width: 48%;
+                display: inline-block;
+                float: left;
+                    @include margin(1em 2% 2em 0);
+                
+                .mini-hero {
+                    height: 4.5em;
+                    width: 100%;
+                    @include margin(0 0);
+
+                }
+                &:nth-of-type(2n) {
+                    @include margin(1em 0 2em 2%);
+
+                    
+                }
+            }
         }
     }
-}
 
 
 
