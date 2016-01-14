@@ -15,57 +15,13 @@
 
     {% include footer.html %}
     </div>
-
-<!--========================= Landing Overlay =================-->
-
-    <div class="overlay overlay-contentpush landing">
-
-      <button type="button" class="overlay-close"><span>Close</span><img src="{{ site.baseurl }}/img/cross.png"></button>
-            <div class="tag-line">
-              <h2>DON'T WALK</h2>
-              <div class="divider"></div>
-              <h3>Take A Pedicab</h3>
-            </div>
-            <form class="inputs" action="sendMessage.php" method="get">
-              <fieldset>
-              <!-- passenger select -->
-              
-              <div class="info">
-                <h3>Just fill out this easy form!</h3>
-                <input type="text" name="full_name" for="" placeholder="Your Name/Call Sign">
-                <h3>Total number of Passengers.</h3>
-                <input type="text" name="party_size" for="" placeholder="3 Passengers MAX per cab!">
-                <h3>Current Locale.</h3>
-                <input type="text" name="current_location" for="" placeholder="Current/Pickup Location">
-                <h3>Where are y'all going?</h3>
-                <input type="text" name="destination" for="" placeholder="Destination (optional)">
-                <h3>When do you need us?</h3>
-                <input type="text" name="time" for="" placeholder="Leave Blank for Instant Pickup!">
-                <h3>Can we get them digits?</h3>
-                <input type="text" name="phone" for="" placeholder="Confirmation Phone Number">
-              </div>
-                         <!-- Call Button -->
-              <div class="call">
-                <button type="submit" name="submit" id="call"><span>Call Cab</span><img src="{{ site.baseurl }}/img/pedicab.png"></button>     
-              </div>
-              </fieldset>
-            </form>
-
-          </div>
-
-          
-
-
-
-
-              <!-- This is the end of the landing page -->
-
-
-
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>  -->
+<script type="text/javascript" src="{{ site.baseurl }}/js/all.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/moment.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/combodate.js"></script>
 <script type="text/javascript" src="{{ site.baseurl }}/js/modernizer.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/js/snap.svg.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/classie.js"></script>
+<!-- <script type="text/javascript" src="{{ site.baseurl }}/js/snap.svg.min.js"></script> -->
 <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.js"></script>
   </body>
 

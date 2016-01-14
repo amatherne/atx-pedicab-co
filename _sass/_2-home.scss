@@ -1,28 +1,31 @@
 .home {
-    background-color: darken(rgba(46,82,107,1),10%);
-
-
+    background-color: darken(rgba(46,82,107,1),5%);
+    position: relative;
   	width: 100%;
   	position: relative;
   	overflow: hidden;
+    .contain {
+      max-width: 900px;
+      @include margin(0 auto);
+    }
 	.cab-hail {
 		display: none;
 	}
   .landing-home {
     display: none;
   }
-	.call {
-		display: none;
-	}
+	// .call {
+	// 	display: none;
+	// }
 	.tag-line {
 	    text-align: center;
-	    @include margin(1em auto);
+	    @include margin(0 auto);
 	    display: block;
-	    width: 94%;
+	    width: 100%;
 	    position: relative;
 	    overflow: hidden;
-	    @include padding(1em 0);
-	    background: url('../img/kids.jpg');
+	    // @include padding(4em 3em);
+	    // background: url('../img/kids.jpg');
       background: url('../img/secondst.JPG');
       
 
@@ -30,7 +33,7 @@
 	    background-position: 80% 80%;
 	    background-size: cover;
 	    // z-index: 1;
-	    @include border-radius(0.4em);
+	    // @include border-radius(0.4em);
 
 	    &:before {
 	        content: '';
@@ -44,35 +47,41 @@
                   background-color: darken(rgba(46,82,107,0.6),5%);
 
 	        // z-index: -1;
-	    	@include border-radius(0.4em);
+	    	// @include border-radius(0.4em);
 
 	    }
 	    h2 {
+          @include padding(0 0);
+          @include margin(1em auto 0);
 	      	display: block;
-	      	@include font(2.3);
-	      	line-height: 1.7em;
+	      	@include font(4);
+	      	line-height: 1em;
           position: relative;
           opacity: 1;
           @media screen and (min-width:400px) {
-            @include font(3);
-            line-height: 1.7em;
+            @include font(4.5);
+            line-height: 1em;
           }
 	    }
 	    h3 {
-	      	@include font(1.4);
-	      	line-height: 1.5em;
+	      	@include font(2.5);
+          @include padding(0);
+	      	line-height: 1em;
           position: relative;
           opacity: 1;
+          @include margin(0 auto 3em);
           @media screen and (min-width:400px) {
-            @include font(1.8);
-            line-height: 3em;
+            @include font(2.8);
+            line-height: 1em;
           }
-
 	    }
+      .para {
+        display: none;
+      }
 	    .divider {
 	      	width: 300px;
 	      	height:2px;
-	      	@include margin(1em auto);
+	      	@include margin(0 auto);
 	      	background: $fontcolor;
 	      	position: relative;
           opacity: 0.8;
@@ -81,13 +90,13 @@
 
 	.blurb {
 	    text-align: center;
-	    @include margin(2em auto 2em auto);
+	    @include margin(0);
 	    display: block;
-	    width: 94%;
+	    width: 100%;
 	    position: relative;
 	    // z-index: 1;
-	    @include border-radius(0.4em);
-	    @include padding(2em 2.5em);
+	    // @include border-radius(0.4em);
+	    @include padding(2em 0);
 	    &:before {
 	      	content: '';
 	      	position: absolute;
@@ -95,142 +104,146 @@
 	      	left:0;
 	      	width: 100%;
 	      	height:100%;
-	      	background: $brandcolor2;
+	      	// background:darken($brandcolor2,0%);
+          background:darken($brandcolor,8%);
+
+    // background-color: darken(rgba(46,82,107,1),5%);
+
 
 	     	// opacity: 0.8;
 	      	// z-index: -1;
-	    	@include border-radius(0.4em);
+	    	// @include border-radius(0.4em);
 	    }
 	    p {
-	      	@include font(1.2);
+	      	@include font(1.05);
 	      	text-align: left;
           position: relative;
-
+          display: inline-block;
+          width:80%;
+          max-width: 350px;
+          @include margin(1em auto);
 	    }
 	}
-	.tour-links {
+  .mini-hero {
+      // min-height: 18em;
+      //     font-family: "roadgeek";
+      h4{
+          font-family: "roadgeek";
+        
+      }
+      h4 {
+        display: block;
         text-align: center;
+        @include font(4);
+        @include margin(1em 0 0 0);
+        line-height: 0.7em;
         position: relative;
-        overflow: hidden;
-        z-index: 1;
-        button {
-          	background: none;
-          	position: relative;
-          	border:none;
-          	width:80%;
-          	overflow: hidden;
-          	@include margin(1em auto);
-          	// padding:0;
-          	a {
-            	font-family: "roadgeek";
-            	@include font(5);
-            	line-height: 1.3em;
-              @include padding(0.5em 0);
-            	width: 100%;
-            	height: 100%;
-            	display: block;
-              opacity: 0.8;
-          	}
-          	&.taco {
-            	position: relative;
-            	overflow: hidden;
-            	z-index: 1;
-            	background: url('../img/chilantro.jpg');
-              	background-size: cover;
-              	background-repeat:no-repeat;
-              	background-position: 0% 40%;
-              	@include border-radius(0.4em);
-            	&:before {
-              		content: '';
-              		@include border-radius(0.4em);
-              		position: absolute;
-              		overflow: hidden;
-              		top:0;
-              		left:0;
-              		width: 100%;
-              		height:100%;
-              		background-color: darken(rgba(46,82,107,0.6),5%);
-                	z-index: -1;  
-            	}
-          	}
-          
-          	&.wine {
-              	@include border-radius(0.4em);
+        letter-spacing:3px;
 
-            	position: relative;
-            	overflow: hidden;
-            	z-index: 1;
-            	background: url('../img/wine.jpg');
-              	background-size: cover;
-              	background-repeat:no-repeat;
-              	background-position: center;
-            	&:before {
-              		@include border-radius(0.4em);
-              		content: '';
-              		position: absolute;
-              		overflow: hidden;
-              		top:0;
-              		left:0;
-              		width: 100%;
-              		height:100%;
-              		background-color: darken(rgba(46,82,107,0.6),5%);
-                	z-index: -1;  
-            	}
-         	 }
 
-          	&.margs {
-            	position: relative;
-            	overflow: hidden;
-            	z-index: 1;
-            	background: url('../img/marg.jpg');
-            	background-size: cover;
-              	background-repeat:no-repeat;
-              	background-position: 0% 10%;
-              	@include border-radius(0.4em);
-            	&:before {
-              		@include border-radius(0.4em);
-              		content: '';
-              		position: absolute;
-              		overflow: hidden;
-              		top:0;
-              		left:0;
-              		width: 100%;
-              		height:100%;
-              		background-color: darken(rgba(46,82,107,0.6),5%);
-                	z-index: -1;  
-            	}
+      }
 
-          	}
-        }
-    }
+      p {
+        display: block;
+        @include font(1.1);
+        line-height: 1.4em;
+        position: relative;
+        width: 60%;
+        max-width: 365px;
+        // color:;
+        @include margin(2em auto 2em auto);
+        // @include padding(1em);
+
+      }
+      .divider {
+        width: 60%;
+        height:2px;
+        @include margin(0 20%);
+        background: $fontcolor;
+        position: relative;
+      }
+      a {
+          width: 50%;
+          @include margin(1em auto);
+          @include padding(0.4em 1em);
+          position: relative;
+          font-family: $h-font;
+          color: $brandcolor;
+          border: none;
+          background:darken(#67B692,0%);
+          @include font(1.4);
+          line-height: 1.8em;
+          opacity: 1;
+          display: block;
+          letter-spacing: 1.5px;
+          text-align:center;
+          &:hover {
+            background: lighten(#67B692,5%);
+          }
+          @media screen and (min-width:400px) {
+            @include font(1.4);
+            line-height: 1.4em;
+          }
+      }
+  }
+  .side-info {
+    display: none;
+  }
+  .taco {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      z-index: 1;
+      background: url('../img/turf1.jpg');
+        background: url('../img/prettytaco1.jpg');
+      
+      background-size: cover;
+      background-position:bottom center;
+      background-repeat:no-repeat;
+      @include border-radius(0.3em);
+      &:before {
+          content: '';
+          @include border-radius(0.3em);
+          position: absolute;
+          overflow: hidden;
+          top:0;
+          left:0;
+          width: 100%;
+          height:100%;
+          // background-color: darken(rgba(46,82,107,0.6),15%);
+          background-color: darken(rgba(46,82,107,0.6),5%);
+
+          z-index: -1;  
+      } 
+  }
 	.recents {
 	    text-align: center;
-	    @include margin(2em auto 2em auto);
+	    @include margin(0 0);
 	    display: block;
-	    width: 94%;
+	    width: 100%;
 	    position: relative;
 	    overflow: hidden;
 	    z-index: 1;
-	    @include padding(2em 1.1em);
-	    // background: url('../img/parade.jpg');
-        background-repeat:no-repeat;
-        background-position:center;
-        background-size: cover;
-        &:before {
-	      	background: $brandcolor2;
-	      	// opacity: 0.8;
-          	content: '';
-          	position: absolute;
-          	top:0;
-          	left:0;
-          	width: 100%;
-          	height:100%;
-          	z-index: -1;
-          	@include border-radius(0.4em);
-        }
+	    @include padding(1em);
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size: cover;
+      &:before {
+        background:darken($brandcolor,8%);
+      	content: '';
+      	position: absolute;
+      	top:0;
+      	left:0;
+      	width: 100%;
+      	height:100%;
+      	z-index: -1;
+      }
 	    h3 {
-	      	@include font(2.4);
-	      	line-height: 1.4em;
+	      	@include font(2.1);
+	      	line-height: 1em;
+          // text-align:left;
+          width: 80%;
+          @include margin(0.5em 10%);
 	    }
 	    .divider {
 	      	width: 80%;
@@ -238,12 +251,21 @@
 	      	@include margin(1em 10%);
 	      	background: $fontcolor;
 	    }
-	    p {
-	      	@include padding(1em);
-	      	@include font(1.2);
-	      	line-height: 1.4;
-	      	text-align: left;
-	    }
+	    // p {
+	    //   	@include padding(1em);
+	    //   	@include font(1.2);
+	    //   	line-height: 1.4;
+	    //   	text-align: left;
+	    // }
+      p {
+          @include font(1.05);
+          text-align: left;
+          position: relative;
+          display: inline-block;
+          width:80%;
+          max-width: 350px;
+          @include margin(1em auto);
+      }
 	    .name {
 	      	@include font(0.9);
 	      	@include margin(-1.2em 0.5em 0 0.5em);
@@ -279,126 +301,135 @@
 
     .tag-line {
       width: 100%;
+      // height:25em;
       @include margin(0 0 0 0);
-      background-position: top;
-
-    }
-
-    .landing-home {
-      width:47%;
-      float: left;
-      display: block;
-      position: relative;
-      @include margin(1em 1% 1em 2%);
-      background:none;
-      .inputs {
-        z-index: 10;
-        overflow: hidden;
-        width: 100%;
-        @include margin(2em 0);
-        @include padding(1.5em);
-        @include border-radius(0.4em);
-
-        position: relative;
-          &:before {
-          content: '';
-          position: absolute;
-          top:0;
-          left:0;
-          width: 100%;
-          height:100%;
-          background: $brandcolor2;
-          opacity: 0.8;
-          z-index: -1;
+      background-position: bottom;
+      h3 {
+        @include margin(0 auto 1em);
+      }
+      @media screen and (min-width:700px) {
+        h2 {
+            @include padding(0 0);
+            @include margin(1em 45% 0 2%);
+            @include font(4);
+            width:50%;
+            line-height: 1em;
         }
         h3 {
-          width: 90%;
-          @include margin(0 5%);
-        }
-        input {
-          width: 90%;
-          float: right;
-          height:30px;
-          vertical-align: top;
-          color: $brandcolor2;
-          @include font(1.1);
-          @include margin(0.5em 5% 1.5em 5%);
-          @include padding(0.7em);
-          font-family: $h-font;
-          @include border-radius(0.2em);
-
-        }
-      }
-      // .dropdown {
-      //   @include font(0.8);
-      // }
-
-      // .inputs {
-      //   width: 100%;
-      //   overflow: hidden;
-      //   border-radius:none;
-      //   @include padding(0.5em);
-      // }
-      // input {
-      //   width: 70%;
-      // }
-    }
-      .call {
-        display: block;
-        float:right;
-        width: 90%;
-        @include margin(1em 5%);
-        position: relative;
-        padding-bottom:-5em;
-        button {
-            background-color: darken($highlightcolor,5%);
-          @include font(2);
-          color:$fontcolor;
-          // padding:0.5em;
-          @include padding(0.2em 0 0 0);
-          width: 100%;
-          // @include margin(0 0 -5em 0);
-          @include transition(background-color 10ms ease-in 0s);
-          @include border-radius(0.2em);
-
-          img {
-            vertical-align: middle;
-          // @include margin(0.3em null null null);
-          @include padding(0.3em 0 0.5em 0);
-            width: 35%;
-            display: inline-block;
-          }
-          span {
-            // padding: null 0.2em null 0;
-            // width: 45%;
-            display: inline-block;
-
-            @include font(1.9);
+            @include font(2.5);
+            @include padding(0);
+            @include margin(0 45% 1em 2%);
+            width:50%;
             line-height: 1em;
-            @include padding(0.5em 0.3em 0 0);
-          }
-          &.complete {
-            @include transition(background-color 10ms ease-in 0s);
-          background:darken($buttoncolor,10%);
-          }
         }
       }
+      .tag-blurb {
+        width:100%;
+        max-width: 900px;
+        display: block;
+        // @include padding(1em);
+        @include margin(0 auto 2em);
+        
+        p {
+            @include font(1.05);
+            text-align: left;
+            position: relative;
+            display: inline-block;
+            width:80%;
+            max-width: 350px;
+            @include margin(1em auto);
+        }
+
+        .para {
+          width: 80%;
+          @include margin(1em 0);
+          display: inline-block;
+          vertical-align: top;
+          @media screen and (min-width:700px) {
+            width: 45%;
+            @include margin(1em auto);
+          }
+
+        }
+      }
+
+    }
     .blurb {
-      width:47%;
-      float:right;
-      @include margin(3em 2% 0 1%);
+
+      display:none;
 
     }
     
     .tour-links {
-      clear: both;
+      // clear: both;
+      @media screen and (min-width:700px) {
+
+      .mini-hero {
+
+        @include padding(3em 2em);
+         h4 {
+            display: block;
+            text-align: center;
+            // @include font(4);
+            @include margin(1em 2% 0.5em 52%);
+            width:45%;
+            // float:right;
+         }
+         p {
+          // float:right;
+          display: block;
+          @include font(1.1);
+          line-height: 1.4em;
+          position: relative;
+          width: 30%;
+          max-width: 365px;
+          // color:;
+          @include margin(1em 10% 1em 60%);
+          // @include padding(1em);
+         }
+         a {
+          display: block;
+          width:20%;
+          // float:right;
+          @include margin(1em 15% 1em 65%);
+         }
+      }
+      
+
+      }
+    }
+    .recents {
+      @include padding(3em 1em);
+      @media screen and (min-width:700px) {
+        h3 {
+          text-align:left;
+        }
+        // display: inline-block;
+        // width: 66%;
+      }
     }
     .quotes {
-      @include margin(1em 10%);
+      width: 70%;
+      @include margin(1em 0);
+      display: inline-block;
+      vertical-align: top;
+
       @media screen and (min-width:700px) {
-          width: 45%;
-          @include margin(0 2%);
+        // width: 40%;
+        // @include margin(1em auto);
+        width:45%;
+        display: inline-block;
+        @include margin(0 0);
+      }
+
+      p {
+          @include font(1.05);
+          text-align: left;
+          position: relative;
           display: inline-block;
+          width:80%;
+          max-width: 350px;
+          @include margin(1em auto);
       }
     }
   }
@@ -424,15 +455,20 @@
 
     @include padding(0);
     .content {
-      width: 80%;
-      @include margin(0 10%);
+      width: 100%;
+      @include margin(0);
     }
+    // .blurb, .recents {
+    //   width: 100%;
+    //   @include padding(5em 15%);
+    // }
     .tag-line { 
-      height:40em;
-      @include padding(10em 0 10em 0);
+      @include padding(3em 1em);
+      // height:40em;
+      // @include padding(10em 0 10em 0);
       &:before {
         // @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.7),15%),0%,40%);
-            @include gradient-hori(darken(rgba(46,82,107,0.8),85%), darken(rgba(46,82,107,0.7),15%),0%,40%);
+            // @include gradient-hori(darken(rgba(46,82,107,0.8),85%), darken(rgba(46,82,107,0.7),15%),0%,40%);
 
       }
       .divider {
@@ -440,7 +476,71 @@
       }
 
     }
-
+    // .tour-links {
+    //   @media screen and (min-width:1000px) {
+    //     .taco {
+    //       background-position: center;
+    //       width: 60%;
+    //       height:30em;
+    //       content:'';
+    //       display: inline-block;
+    //       @include margin(0);
+    //     }
+    //     .mini-hero {
+    //       @include padding(5em 1em);
+    //       display: none;
+    //     }
+    //     .side-info {
+    //       float: right;
+    //       width: 40%;
+    //       display: inline-block;
+    //       @include padding(3em 2em);
+    //       h4 {
+    //           display: block;
+    //           text-align: center;
+    //           @include font(4);
+    //           line-height: 1em;
+    //           @include margin(1em auto 0.5em);
+    //           width:100%;
+    //           // float:right;
+    //        }
+    //        p {
+    //         // float:right;
+    //         display: block;
+    //         @include font(1.1);
+    //         line-height: 1.4em;
+    //         position: relative;
+    //         width: 60%;
+    //         max-width: 365px;
+    //         // color:;
+    //         @include margin(1em 20% 1em);
+    //         // @include padding(1em);
+    //        }
+    //        a {
+    //         display: block;
+    //         width:50%;
+    //         // float:right;
+    //         @include margin(2em 25% 1em);
+    //         @include padding(0.4em 1em);
+    //         position: relative;
+    //         font-family: $h-font;
+    //         color: $brandcolor;
+    //         border: none;
+    //         background:darken(#67B692,0%);
+    //         @include font(1.4);
+    //         line-height: 1.8em;
+    //         opacity: 1;
+    //         display: block;
+    //         letter-spacing: 1.5px;
+    //         text-align:center;
+    //         &:hover {
+    //           background: lighten(#67B692,5%);
+    //         }
+    //        }
+    //     }
+    //   }
+    // }
+    
 
   }
 

@@ -14,8 +14,8 @@ $body = array(
     );
  
 // set your AccountSid and AuthToken from www.twilio.com/user/account
-$AccountSid = "ACda3fd5771ba41df60da703e30cb52752";
-$AuthToken = "c5fcfb015f376026ec768037395e8f6e";
+$AccountSid = "AC7de339a5bb1df0af37f3d9ca5a3698e3";
+$AuthToken = "AC828e2639a6f515b18a5913ed4b26ed90";
 
 $client = new Services_Twilio($AccountSid, $AuthToken);
 
@@ -28,14 +28,14 @@ if($body["destination"] == "" || is_null($body["destination"])) {
 }
 
 $messageToClient = $client->account->messages->create(array(
-    "From" => "+15126435879",
+    "From" => "+15126436565",
     "To" => "+1" . $body["phone"],
     "Body" => "\r\n \r\n" . "\r\n Reservation for " . $body["fullName"] . " to " . $body["destination"] . " for your party of " . $body["partySize"] . " is complete!"
 ));
 
 $messageToDispatcher = $client->account->messages->create(array(
-    "From" => "+15126435879",
-    "To" => "+12259376324",
+    "From" => "+15126436565",
+    "To" => "+18328688357",
     "Body" => "\r\n " . "\r\n Name: " . $body["fullName"] . "\r\n Phone: " . $body["phone"] . "\r\n Current Loc: " . $body["currentLocation"] . "\r\n Party Size: " . $body["partySize"] . "\r\n Time: " . $body["time"] . "\r\n Destination: " . $body["destination"] 
 ));
 
@@ -55,5 +55,5 @@ $messageToDispatcher = $client->account->messages->create(array(
 
       <a href="http://www.atxpedicab.com"><button>Return to Home</button></a>
     </div>
-<!--   </body>
-</html> -->
+  </body>
+</html>
