@@ -1,6 +1,6 @@
-
-
-
+$(function(){
+    $('#datetime12').combodate();  
+});
 
 
 // Drop Nav
@@ -19,291 +19,79 @@ $(document).ready(function() {
   });
 });
 
-// drop menu
-
-$(document).ready(function() {
-  $(".dropdown-button").click(function() {
-    var $button, $menu, $desc;
-    $desc = $('.dropdown-description');
-    $button = $(this);
-    $menu = $button.siblings(".dropdown-menu");
-    $menu.toggleClass("show-menu");
-    $menu.children("li").click(function() {
-      $menu.removeClass("show-menu");
-      $button.siblings('.dropdown-description').html($(this).html());
-    });
-  });
-});
 
 
 
 
 
-// width marker
-$(window).resize(function() {
-  $('.show-width').html('<p>' + $(window).width() + 'px' + '</p>');
-});
+// $('radio03').addEvent('change',function(E){
+//     if(E.target.checked){
+//         enableInput();
+//     }
+// });
 
-
-
-( function( window ) {
-
-'use strict';
-
-// class helper functions from bonzo https://github.com/ded/bonzo
-
-function classReg( className ) {
-  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
-}
-
-// classList support for class management
-// altho to be fair, the api sucks because it won't accept multiple classes at once
-var hasClass, addClass, removeClass;
-
-if ( 'classList' in document.documentElement ) {
-  hasClass = function( elem, c ) {
-    return elem.classList.contains( c );
-  };
-  addClass = function( elem, c ) {
-    elem.classList.add( c );
-  };
-  removeClass = function( elem, c ) {
-    elem.classList.remove( c );
-  };
-}
-else {
-  hasClass = function( elem, c ) {
-    return classReg( c ).test( elem.className );
-  };
-  addClass = function( elem, c ) {
-    if ( !hasClass( elem, c ) ) {
-      elem.className = elem.className + ' ' + c;
-    }
-  };
-  removeClass = function( elem, c ) {
-    elem.className = elem.className.replace( classReg( c ), ' ' );
-  };
-}
-
-function toggleClass( elem, c ) {
-  var fn = hasClass( elem, c ) ? removeClass : addClass;
-  fn( elem, c );
-}
-
-var classie = {
-  // full names
-  hasClass: hasClass,
-  addClass: addClass,
-  removeClass: removeClass,
-  toggleClass: toggleClass,
-  // short names
-  has: hasClass,
-  add: addClass,
-  remove: removeClass,
-  toggle: toggleClass
-};
-
-// transport
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( classie );
-} else {
-  // browser global
-  window.classie = classie;
-}
-
-})( window );
-
-
-(function() {
-  var container = document.querySelector( 'div.container' ),
-    triggerBttn = document.getElementById( 'trigger-overlay' ),
-    overlay = document.querySelector( 'div.overlay' ),
-    closeBttn = overlay.querySelector( 'button.overlay-close' );
-    transEndEventNames = {
-      'WebkitTransition': 'webkitTransitionEnd',
-      'MozTransition': 'transitionend',
-      'OTransition': 'oTransitionEnd',
-      'msTransition': 'MSTransitionEnd',
-      'transition': 'transitionend'
-    },
-    transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-    support = { transitions : Modernizr.csstransitions };
-
-  function toggleOverlay() {
-    if( classie.has( overlay, 'open' ) ) {
-      classie.remove( overlay, 'open' );
-      classie.remove( container, 'overlay-open' );
-      classie.add( overlay, 'close' );
-      var onEndTransitionFn = function( ev ) {
-        if( support.transitions ) {
-          if( ev.propertyName !== 'visibility' ) return;
-          this.removeEventListener( transEndEventName, onEndTransitionFn );
-        }
-        classie.remove( overlay, 'close' );
-      };
-      if( support.transitions ) {
-        overlay.addEventListener( transEndEventName, onEndTransitionFn );
-      }
-      else {
-        onEndTransitionFn();
-      }
-    }
-    else if( !classie.has( overlay, 'close' ) ) {
-      classie.add( overlay, 'open' );
-      classie.add( container, 'overlay-open' );
-    }
-  }
-
-  triggerBttn.addEventListener( 'click', toggleOverlay );
-  closeBttn.addEventListener( 'click', toggleOverlay );
-  
-
-          // if ($(window).width() < 550) {
-          //     toggleOverlay();
-          // }
-
-
-  
-    // toggleOverlay();
-})();
-/**
- * jquery.wait - insert simple delays into your jquery method chains
- * @author Matthew Lee matt@madleedesign.com
- */
-
-(function ($) {
-    function jQueryDummy ($real, delay, _fncQueue) {
-        // A Fake jQuery-like object that allows us to resolve the entire jQuery
-        // method chain, pause, and resume execution later.
-
-        var dummy = this;
-        this._fncQueue = (typeof _fncQueue === 'undefined') ? [] : _fncQueue;
-        this._delayCompleted = false;
-        this._$real = $real;
-
-        if (typeof delay === 'number' && delay >= 0 && delay < Infinity)
-            this.timeoutKey = window.setTimeout(function () {
-                dummy._performDummyQueueActions();
-            }, delay);
-
-        else if (delay !== null && typeof delay === 'object' && typeof delay.promise === 'function')
-            delay.then(function () {
-                dummy._performDummyQueueActions();
-            });
-
-        else if (typeof delay === 'string')
-            $real.one(delay, function () {
-                dummy._performDummyQueueActions();
-            });
-
-        else
-            return $real;
-    }
-
-    jQueryDummy.prototype._addToQueue = function(fnc, arg){
-        // When dummy functions are called, the name of the function and
-        // arguments are put into a queue to execute later
-
-        this._fncQueue.unshift({ fnc: fnc, arg: arg });
-
-        if (this._delayCompleted)
-            return this._performDummyQueueActions();
-        else
-            return this;
-    };
-
-    jQueryDummy.prototype._performDummyQueueActions = function(){
-        // Start executing queued actions.  If another `wait` is encountered,
-        // pass the remaining stack to a new jQueryDummy
-
-        this._delayCompleted = true;
-
-        var next;
-        while (this._fncQueue.length > 0) {
-            next = this._fncQueue.pop();
-
-            if (next.fnc === 'wait') {
-                next.arg.push(this._fncQueue);
-                return this._$real = this._$real[next.fnc].apply(this._$real, next.arg);
-            }
-
-            this._$real = this._$real[next.fnc].apply(this._$real, next.arg);
-        }
-
-        return this;
-    };
-
-    $.fn.wait = function(delay, _queue) {
-        // Creates dummy object that dequeues after a times delay OR promise
-
-        return new jQueryDummy(this, delay, _queue);
-    };
-
-    for (var fnc in $.fn) {
-        // Add shadow methods for all jQuery methods in existence.  Will not
-        // shadow methods added to jQuery _after_ this!
-        // skip non-function properties or properties of Object.prototype
-
-        if (typeof $.fn[fnc] !== 'function' || !$.fn.hasOwnProperty(fnc))
-            continue;
-
-        jQueryDummy.prototype[fnc] = (function (fnc) {
-            return function(){
-                var arg = Array.prototype.slice.call(arguments);
-                return this._addToQueue(fnc, arg);
-            };
-        })(fnc);
-    }
-})(jQuery);
-
-
-
-$( 'button' ).click(function() {
-  $( this ).toggleClass( "complete" );
-});
-
-$('#find-me.find-me').click(function(){
+// $$('.normal').each(function(radio){
+//     radio.addEvent('change',function(E){
+//          if(E.target.checked){
+//              disableInput();
+//          }
+//     });
+// });
     
-  $("input").wait(500).val('The Iron Yard?');
+
+// function enableInput(){
+//     $('custom-party-size').set('disabled','');
+//     $('custom-party-size').setStyle('background-color','#fff');
+// }
+
+// function disableInput(){
+//     $('custom-party-size').set('disabled','disabled');
+//     $('custom-party-size').setStyle('background-color','#d4d4d4');
+// }
+
+
+
+// // drop menu
+
+// $(document).ready(function() {
+//   $(".dropdown-button").click(function() {
+//     var $button, $menu, $desc;
+//     $desc = $('.dropdown-description');
+//     $button = $(this);
+//     $menu = $button.siblings(".dropdown-menu");
+//     $menu.toggleClass("show-menu");
+//     $menu.children("li").click(function() {
+//       $menu.removeClass("show-menu");
+//       $button.siblings('.dropdown-description').html($(this).html());
+//     });
+//   });
+// });
+
+
+
+
+
+// // width marker
+// $(window).resize(function() {
+//   $('.show-width').html('<p>' + $(window).width() + 'px' + '</p>');
+// });
+
+
+
+
+// $( 'button' ).click(function() {
+//   $( this ).toggleClass( "complete" );
+// });
+
+// $('#find-me.find-me').click(function(){
     
-});
+//   $("input").wait(500).val('The Iron Yard?');
+    
+// });
 
-$( "#highlight.dropdown-button" ).click(function() {
-  $( this ).toggleClass( "active" );
-});
-
-
-
-
-$('.js-accordion-trigger').bind('click', function(e){
-  jQuery(this).parent().find('.submenu').slideToggle('ease');
-  jQuery(this).parent().toggleClass('is-expanded');
-  if($('.js-accordion-trigger').is('is-expanded')) {
-        $('.js-accordion-trigger').removeAttr('is-expanded');
-      }
-  jQuery(this).siblings('#submenu').find('closed').slideToggle('ease');
-  jQuery(this).siblings('#submenu').toggleClass('open');
-  jQuery(this).siblings('#submenu').toggleClass('closed');
-  if($('.js-accordion-trigger').is('open')) {
-        $('.js-accordion-trigger').slideToggle('ease');
-      }
-  jQuery(this).children('#guide').find('closed').slideToggle('ease');
-  jQuery(this).children('#guide').toggleClass('open');
-  jQuery(this).children('#guide').toggleClass('closed');
-  if($('.js-accordion-trigger').is('open')) {
-        $('.js-accordion-trigger').slideToggle('ease');
-      }
-  jQuery(this).parent('#guide-img').find('close').slideToggle('ease');
-  jQuery(this).parent('#guide-img').toggleClass('opened');
-  jQuery(this).parent('#guide-img').toggleClass('close');
-  if($('.js-accordion-trigger').is('opened')) {
-        $('.js-accordion-trigger').slideToggle('ease');
-      }
-  
-  e.preventDefault();
-});
-
+// $( "#highlight.dropdown-button" ).click(function() {
+//   $( this ).toggleClass( "active" );
+// });
 
 
 
@@ -330,6 +118,109 @@ $(function() {
 
 
 
+
+
+(function(document) {
+    "use strict";
+    
+    var hidden_el  = document.getElementsByClassName("hidden-content"),
+        control_el = document.getElementsByClassName("toggle-content");
+        
+    if (hidden_el.length < 1 || control_el.length < 1) {
+        return;
+    }
+
+    // Get the elements
+    hidden_el  = hidden_el[0];
+    control_el = control_el[0];
+
+    control_el.onclick = function() {
+        var element_classes = (" "+hidden_el.className+" ").replace(/[\n\t\r]/g, " "),
+            remove_class    = "slide-down",
+            add_class       = "slide-up",
+            is_showing      = element_classes.indexOf(" "+remove_class+" ") > -1;
+
+        if ( ! is_showing) {
+            // Switch variable values
+            remove_class = [add_class, add_class = remove_class][0];
+        }
+
+        // Remove the previous class (if present) and add the new class
+        hidden_el.className = (element_classes.replace(" "+remove_class+" ", "") + " "+add_class+" ").trim();
+
+        return false;
+    };
+})(document);
+
+
+(function(document) {
+    "use strict";
+    
+    var hidden_el  = document.getElementsByClassName("hidden-content-two"),
+        control_el = document.getElementsByClassName("toggle-content-two");
+        
+    if (hidden_el.length < 1 || control_el.length < 1) {
+        return;
+    }
+
+    // Get the elements
+    hidden_el  = hidden_el[0];
+    control_el = control_el[0];
+
+    control_el.onclick = function() {
+        var element_classes = (" "+hidden_el.className+" ").replace(/[\n\t\r]/g, " "),
+            remove_class    = "slide-down",
+            add_class       = "slide-up",
+            is_showing      = element_classes.indexOf(" "+remove_class+" ") > -1;
+
+        if ( ! is_showing) {
+            // Switch variable values
+            remove_class = [add_class, add_class = remove_class][0];
+        }
+
+        // Remove the previous class (if present) and add the new class
+        hidden_el.className = (element_classes.replace(" "+remove_class+" ", "") + " "+add_class+" ").trim();
+
+        return false;
+    };
+})(document);
+
+
+
+
+(function(document) {
+    "use strict";
+    
+    var hidden_el  = document.getElementsByClassName("hidden-content-three"),
+        control_el = document.getElementsByClassName("toggle-content-three");
+        
+    if (hidden_el.length < 1 || control_el.length < 1) {
+        return;
+    }
+
+    // Get the elements
+    hidden_el  = hidden_el[0];
+    control_el = control_el[0];
+
+    control_el.onclick = function() {
+        var element_classes = (" "+hidden_el.className+" ").replace(/[\n\t\r]/g, " "),
+            remove_class    = "slide-down",
+            add_class       = "slide-up",
+            is_showing      = element_classes.indexOf(" "+remove_class+" ") > -1;
+
+        if ( ! is_showing) {
+            // Switch variable values
+            remove_class = [add_class, add_class = remove_class][0];
+        }
+
+        // Remove the previous class (if present) and add the new class
+        hidden_el.className = (element_classes.replace(" "+remove_class+" ", "") + " "+add_class+" ").trim();
+
+        return false;
+    };
+})(document);
+
+
 function formcheck() {
   var fields = $(".ss-item-required")
         .find("select, textarea, input").serializeArray();
@@ -341,3 +232,6 @@ function formcheck() {
   console.log(fields);
 }
 
+$('input[type="checkbox"]').on('change', function() {
+   $('input[type="checkbox"]').not(this).prop('checked', false);
+});

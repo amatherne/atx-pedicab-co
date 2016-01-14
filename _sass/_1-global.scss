@@ -240,29 +240,73 @@ body,
     
 
 }
+
 header {
     position: relative;
-    top:3em;
+    top:0;
     width: 100%;
-    background:lighten($brandcolor2,0%);
-    height:8em;
-    z-index: 1;
-    clear: both;
-    // overflow: hidden;
+    background:$brandcolor2;
+    // background: url('../img/austin-tx-6th-street-rainy-night-01-XL.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: bottom center;
+    // &:after {
+    //   background: rgba(46,82,107,1);
+    //   position: absolute;
+    //   top:0;
+    //   left:0;
+    //   width:100%;
+    //   height:100%;
+    //   content:'';
+    //   overflow: hidden;
+    //   z-index: -1;
+
+    // }
+    z-index: 10;
+    box-shadow: 2px 2px 2px $brandcolor2;
+
     h1 > a {
-      @include padding(0.2em 4% 1em 4%);
+      @include padding(0);
+      @include margin(0.2em 12.5% 0);
       display: inline-block;
-      text-align: left;
-      @include font(1.5);
-      float:left;
-      // width: 72%;
+      text-align: center;
+      @include font(1.4);
+      // float:right;
+      width: 75%;
       position: relative;
-      // color:lighten($buttoncolor,15%);
-      //         text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
-      //               2px 2px 0.5px darken($buttoncolor,15%),
-      //               3px 3px 0.5px darken($buttoncolor,25%);
+      font-family: "roadgeek";
+
+      letter-spacing:6px;
+    }
+}
+button {
+    width: 75%;
+    @include margin(0 auto);
+    @include padding(0.4em 1em);
+    position: relative;
+    font-family: $h-font;
+    color: $brandcolor;
+    border: none;
+    background:darken(#67B692,0%);
+    @include font(1.4);
+    line-height: 1.8em;
+    opacity: 1;
+    display: block;
+    float:right;
+    letter-spacing: 1.5px;
+
+    // @include margin(1em 5%);
+    text-align:center;
+    // box-shadow: 3px 3px 0px 0px $brandcolor;
+    &:hover {
+      background: lighten(#67B692,5%);
 
 
+    }
+
+    @media screen and (min-width:400px) {
+      @include font(1.4);
+      line-height: 1.4em;
 
     }
 }
@@ -271,32 +315,43 @@ header.navigation {
   // Mobile view
 
   .navigation-menu-button {
+    float: left;
     display: inline-block;
-    // margin:1.4em 1em 1em 0;
-    @include margin(1.7em 1em 2.05em 0);
-    @include padding(0.1em);
-    float: right;
-    width: 50px;
-    position: relative;
-    // z-index: 10;
+    // width: 50px;
+      width: 25%;
+
+    position: absolute;
+    top:4.25em;
+    left:0;
+    z-index: 10;
     text-align: center;
-    background: lighten($brandcolor2,30%);
-    // border: 2px solid lighten($brandcolor2,0%);
-    @include border-radius(0.3em);
     overflow: hidden;
-    // height:55px;
-    @include font(1.3);
+    @include font(1.06);
+    letter-spacing: 1.5px;
     font-family: "roadgeek";
+    background:darken($brandcolor,0%);
+    @include padding(0.54em 0);
+    @media screen and (min-width:400px) {
+      top:4.2em;
+      @include padding(0.273em 0);
+
+    }
+
+
     &:hover {
-    // background: lighten($brandcolor2,10%);
+    background: lighten($brandcolor,10%);
 
     }
     .menuword {
-      display: none;
-    }
+      // display: none;
+      // display: inline-block;
+      // @include margin(0);
+      @include font(1.3);
+      font-family: $h-font;
+      }
     img {
       // @include margin(-0.05em 0 0 0);
-      width: 100%;
+      width: 70%;
       float: left;
     }
   }
@@ -306,236 +361,85 @@ header.navigation {
 
   ul.navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
-    clear: both;
+    // clear: both;
     display: none;
     // background:lighten($brandcolor2,20%);
+    background:darken($brandcolor,10%);
     width: 100%;
     overflow: hidden;
-    z-index: 10;
-    top:1em;
-    // @include margin(1em 0 0 0);
+    z-index: 100;
+    top:0;
+    // left:15%;
+    // right:15%;
+    left:0;
+    // position: absolute;
+    position: relative;
+    box-shadow: 2px 2px 2px $brandcolor2;
+
+
     &.show {
       display: block;
     }
   }
 
 //   // The nav items
+  li {
+    line-height: 1px;
+  }
+  li:hover {
+      background:lighten($brandcolor,5%);
+      transition: background 300ms ease;
+      a {
+      background:lighten($brandcolor,5%);
+      transition: background 300ms ease;
 
+
+      }
+  }
   .nav-link {
+    line-height: 1.5;
     position: relative;
-    // @include margin(1em 0 0 0);
-    z-index: 10;
-    background:lighten($brandcolor2,20%);
-    width: 20%;
-    display: inline-block;
-    float: left;
+    @include padding(0 40% 0 4%);
+    @include margin(0 0);
+    z-index: 100;
+    // background:lighten($brandcolor2,20%);
+    background:darken($brandcolor,10%);
+
+    width: 100%;
+    // display: block;
+    // float: left;
     span {
-      display: block;
-      @include font(0.55);
+      position: relative;
+      display: inline-block;
+      letter-spacing: 1.1px;
+      @include font(0.6);
+      line-height: 0;
       font-family: "roadgeek";
-      text-align: center;
-      @include margin(-1.5em auto 0.5em auto);
+      @include padding(0 4%);
+      text-align:center;
     }
     img {
-      @include margin(0.2em 15%);
-      width: 70%;
+      @include margin(0.3em 0);
+      vertical-align: middle;
+
+      display: inline-block;
+      width: 8%;
     }
-    &:hover {
-      // background:lighten($brandcolor2,30%);
-    }
+
   }
 }
 
 .page-content {
-  @include margin(3em 0 0 0);
+  // @include margin(6em 0 0 0);
+  // @include margin(4.5em 0 0 0);
+  position: relative;
 
   @media screen and (min-width:600px) {
-    @include margin(0);
+    // @include margin(5em 0 0 0);
     // position: relative;
   }
   @media screen and (min-width:900px) {
     // @include margin(-40em 0 0 0);
-  }
-
-}
-
-
-
-
-
-// <!--===========================================================
-// ===============================================================  
-
-
-//             Landing
-
-
-// ==============================================================
-// ===========================================================-->
-
-
-.landing {
-    background: url("../img/frosttower-sm-2.png");
-    background-size:cover;
-    background-position:top center;
-    background-repeat:no-repeat;
-    width: 100%;
-    // height:-100em;
-    overflow: hidden;
-    position: relative;
-    padding-top:3em;
-    // margin-bottom:-3em;
-    clear: both;
-    &:before {
-      content: '';
-      position: absolute;
-      top:0;
-      left:0;
-      width: 100%;
-      height:150%;
-      overflow: hidden;
-      background: #061644;
-      
-      opacity: 0.8;
-    }
-
-  .tag-line {
-    text-align: center;
-    @include border-radius(0.4em);
-    @include margin(2em 5%);
-    display: block;
-    width: 90%;
-    position: relative;
-    overflow: hidden;
-    z-index: 10;
-    padding:1em 0;
-    background: url('../img/secondst.JPG');
-      background-repeat:no-repeat;
-      background-position: 80% 80%;
-      background-size: cover;
-      z-index: 1;
-
-      &:before {
-          content: '';
-          overflow: hidden;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top:0;
-          left:0;
-          background-color: darken(rgba(46,82,107,0.6),5%);
-          // background: rgba(34,38,45,0.8);
-          
-          z-index: -1;
-        }
-    
-
-
-    
-    h2 {
-      @include font(3.8);
-      @include margin(-1.5em auto);
-      @media screen and (min-width:400px) {
-        @include font(4.7);
-        @include margin(-2.5em auto);
-      }
-      z-index: 99;
-      position: relative;
-      display: block;
-    }
-    h3 {
-      @include font(3);
-    @include margin(-1em auto);
-      z-index: 99;
-      position: relative;
-      
-    }
-    .divider {
-      width: 60%;
-      height:2px;
-    @include margin(1em 20%);
-      background: $fontcolor;
-    }
-  }
-
-  .inputs {
-    z-index: 10;
-    overflow: hidden;
-    width: 90%;
-    @include margin(2em 5%);
-    @include padding(1.5em);
-    @include border-radius(0.4em);
-
-    position: relative;
-      &:before {
-      content: '';
-      position: absolute;
-      top:0;
-      left:0;
-      width: 100%;
-      height:100%;
-      // background: $brandcolor2;
-      background-color: darken(rgba(46,82,107,1),10%);
-
-      opacity: 0.7;
-      z-index: -1;
-    }
-    h3 {
-      width: 80%;
-      @include margin(0 10%);
-    }
-    input {
-      width: 80%;
-      float: right;
-      height:30px;
-      vertical-align: top;
-      color: $brandcolor2;
-      @include font(1.1);
-      @include margin(0.5em 10% 1.5em 10%);
-      @include padding(0.7em);
-      font-family: $h-font;
-      @include border-radius(0.2em);
-
-    }
-  }
-
-  .call {
-    width: 90%;
-    @include margin(1em 5%);
-    position: relative;
-    padding-bottom:-5em;
-    button {
-        background-color: darken($highlightcolor,5%);
-      @include font(2);
-      color:$fontcolor;
-      // padding:0.5em;
-      @include padding(0.2em 0 0 0);
-      width: 100%;
-      // @include margin(0 0 -5em 0);
-      @include transition(background-color 10ms ease-in 0s);
-      @include border-radius(0.2em);
-
-      img {
-        vertical-align: middle;
-      // @include margin(0.3em null null null);
-      @include padding(0.3em 0 0.5em 0);
-        width: 35%;
-        display: inline-block;
-      }
-      span {
-        // padding: null 0.2em null 0;
-        // width: 45%;
-        display: inline-block;
-
-        @include font(1.9);
-        line-height: 1em;
-        @include padding(0.5em 0.3em 0 0);
-      }
-      &.complete {
-        @include transition(background-color 10ms ease-in 0s);
-      background:darken($buttoncolor,10%);
-      }
-    }
   }
 
 }
@@ -554,26 +458,32 @@ header.navigation {
 
 
 footer {
-  background:$brandcolor2;
+  // background:$brandcolor2;
+  background:darken($brandcolor,10%);
+
   width: 100%;
   overflow: hidden;
   clear: both;
   position: relative;
+  font-family: "roadgeek";
+
   h2 {
     @include font(2);
     text-align: center;
     @include margin(1em auto);
+      letter-spacing:6px;
+
   }
   h4 {
     @include font(1);
     text-align: center;
     @include margin(2em 0.5em);
   }
-  ul {
+  .bottom-nav {
     clear: both;
     width: 100%;
     overflow: hidden;
-    display: block;
+    display: none;
   }
   .nav-link {
     position: relative;
@@ -618,79 +528,95 @@ footer {
 // ===========================================================-->
 
   @media screen and (min-width:600px) {
-  .ph-number {
-    position: absolute;
-    // top:2.7em;
-    // right:-0.2em;
-    // width: 35%;
-    // padding: 0.5em auto;
-    left:3.2em;
-    top:3.3em;
-    width: 180px;
-        background:transparent;
-    a {
-      width: 100%;
-      background:transparent;
-      border:none;
-    //   float: right;
-    //   @include font(2);
-      color: $fontcolor;
 
-    }
-    span {
-      display: initial;
-      font-family: "roadgeek";
-      @include font(1);
-
-    }
-    // .book-button, h2 > a{
-    //   text-align: center;
-    //   display: inline-block;
-    //   width: 50%;
-    //   float: right;
-    //   font-family: "roadgeek";
-    //   border:none;
-    //   height: 2.5em;
-    // }
-    .book-button{ 
-      display: none;
-    }
-  }
   header {
-    top:0;
-    height:10em;
-    @media screen and (min-width:800px){
-      height: 10em;
+    position: relative;
+    // @media screen and (min-width:800px){
+    //   height: 10em;
+    // }
+    h1 > a {
+      @include padding(0);
+      display: inline-block;
+      // text-align: right;
+      @include font(1.8);
+      float:left;
+      clear:both;
+      text-align:center;
+      @include margin(0.2em 12.5% 0);
+      width: 75%;
+      position: relative;
+      font-family: "roadgeek";
+      // letter-spacing: 1.3px;
+      @media screen and (min-width:700px) {
+        @include margin(0.2em 2.5% 0);
+        width: 45%;
+      }
     }
   }
+  button {
+    width: 50%;
+    @include margin(0.5em 25%);
+    @include padding(0.4em 1em);
+    position: relative;
+    font-family: $h-font;
+    color: $brandcolor;
+    border: none;
+    background:darken(#67B692,0%);
+    @include font(1.4);
+    line-height: 1.8em;
+    opacity: 1;
+    display: inline-block;
+    float:right;
+    // clear:both;
+    letter-spacing: 1.5px;
+    // @include margin(1em 5%);
+    text-align:center;
+    // box-shadow: 3px 3px 0px 0px $brandcolor;
+    &:hover {
+      background: lighten(#67B692,5%);
+    }
+
+
+    @media screen and (min-width:700px) {
+      width: 45%;
+      @include margin(1.6em 2.5%);
+    }
+ }
   header.navigation {
+
     .navigation-menu-button {
 
       display: none;
     }
     ul.navigation-menu {
-      display: inline-block;
+
+      display: block;
       position: relative;
       // height: 3.1em;
-      @include margin(-2em 0 0 0);
-      @media screen and (min-width:800px){
-        width:75%;
-        @include margin(-1.5em 12.5% 0 12.5%);
-      }
+      @include margin(0);
+      @include padding(0 20%);
+      // @media screen and (min-width:800px){
+        // width:75%;
+      //   @include margin(-1.5em 12.5% 0 12.5%);
+      // }
     }
     .nav-link {
-      // position: relative;
+      position: relative;
       background-color:transparent;
-      // width: 20%;
-      // display: inline-block;
-      // float: left;
+      width: 20%;
+      // height:2em;
+      display: inline-block;
+      float: left;
+      @include padding(0);
+      text-align:center;
+
       span {
         display: inline-block;
-        @include font(0.55);
-        text-align: left;
-        float: right;
-        @include margin(1em 3% 0 3%);
-        width: 50%;
+        @include font(0.5);
+        // text-align: center;
+        // @include padding(-2em 1em);
+        // float: right;
+        // width: 20%;
         // vertical-align: middle;
 
       }
@@ -699,6 +625,7 @@ footer {
         width: 40px;
         display: inline-block;
         // vertical-align: middle;
+        display: none;
 
       }
       &:hover {
@@ -712,21 +639,21 @@ footer {
     }
   }
   footer {
-    @media screen and (min-width:750px) {
-      @include padding(0 2em);
+    @media screen and (min-width:600px) {
+      @include padding(2em 2em);
     }
     h2 {
       @include font(1.3);
       // width: 30%;
-      text-align: left;
-      float: left;
+      // text-align: left;
+      // float: left;
       @include margin(1em 0 1em 2em);
     }
     h4 {
       @include font(1);
       // width: 30%;
-      text-align: left;
-      clear:left;
+      // text-align: left;
+      // clear:left;
       @include margin(1em 0 0 3em);
     }
     ul {
@@ -753,42 +680,42 @@ footer {
 // ===========================================================-->
 
 @media screen and (min-width:900px) {
-  .ph-number {
-    left:3.2em;
-    top:5em;
-    width: 180px;
+  // .ph-number {
+  //   left:3.2em;
+  //   top:5em;
+  //   width: 180px;
 
-  }
-  header {
-    background:transparent;
-    position: absolute;
-    // overflow: visible;
+  // }
+  // header {
+  //   background:transparent;
+  //   position: absolute;
+  //   // overflow: visible;
 
-  }
-  header.navigation {
-    ul.navigation-menu {
-      // width:50%;
-      display: block;
-      @include margin(-2em 0 0 1em);
-      .nav-link {
-        clear: both;
-        @include margin(0 3% -0.7em 3%);
+  // }
+  // header.navigation {
+  //   ul.navigation-menu {
+  //     // width:50%;
+  //     display: block;
+  //     @include margin(-2em 0 0 1em);
+  //     .nav-link {
+  //       clear: both;
+  //       @include margin(0 3% -0.7em 3%);
         
         
 
-      }
+  //     }
 
-    }
-  }
+  //   }
+  // }
   footer {
-      @include padding(0 15%);
+      @include padding(3em 15%);
 
   }
+
+
 
 
 
 }
-
-
 
 

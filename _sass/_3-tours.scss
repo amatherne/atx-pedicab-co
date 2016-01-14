@@ -1,33 +1,30 @@
 .tours {
     background: $brandcolor;
     background-color: darken(rgba(46,82,107,1),10%);
+    background:darken($brandcolor,8%);
+
 
     width: 100%;
     position: relative;
     // z-index: 1;
     overflow: hidden;
-    .divider {
-        width: 80%;
-        height:2px;
-        @include margin(1.5em 10%);
-        position: relative;
-        background: $fontcolor;
-    }
+
+    
 
     .hero {
         background: url('../img/ride.jpg');
         text-align: center;
-        @include margin(2em 5%);
+        @include margin(0 auto);
         display: block;
-        width: 90%;
+        width: 100%;
         position: relative;
         overflow: hidden;
-        @include padding(4em 1em);
+        @include padding(1em 0);
         background-repeat:no-repeat;
         background-position: 80% 80%;
         background-size: cover;
         // z-index: 1;
-        @include border-radius(0.3em);
+        // @include border-radius(0.3em);
 
         &:before {
             content: '';
@@ -37,42 +34,122 @@
             position: absolute;
             top:0;
             left:0;
-              background-color: darken(rgba(46,82,107,0.6),5%);
+              background-color: darken(rgba(46,82,107,0.6),15%);
             // z-index: -1;
-          @include border-radius(0.2em);
+          // @include border-radius(0.2em);
 
+        }
+        .divider {
+            width: 300px;
+            height:2px;
+            @include margin(3em auto);
+            background: $fontcolor;
+            position: relative;
+          opacity: 0.8;
+        }
+        .para {
+            display: none;
+          }
+        h2 {
+          @include padding(0 0);
+          @include margin(1em auto 0);
+            display: block;
+            @include font(4);
+            line-height: 1em;
+          position: relative;
+          opacity: 1;
+          @media screen and (min-width:400px) {
+            @include font(4.5);
+            line-height: 1em;
+          }
         }
         h3 {
-            display: block;
-            @include font(2.75);
+            @include font(2.5);
+          @include padding(0);
             line-height: 1em;
-            position: relative;
-            @include margin(-0.5em 0 0.5em 0);
-            opacity: 0.85;
-            // color: lighten($buttoncolor,20%);
-
-
+          position: relative;
+          opacity: 1;
+          @include margin(0 auto 3em);
+          @media screen and (min-width:400px) {
+            @include font(2.8);
+            line-height: 1em;
+          }
         }
-        h2 {
-            display: block;
-            @include font(10);
-            line-height: 0.7em;
-            position: relative;
-            // color: lighten($buttoncolor,20%);
-            opacity: 0.75;
+        // h3 {
+        //     display: block;
+        //     @include font(2.3);
+        //     line-height: 1.7em;
+        //     position: relative;
+        //     @include margin(-0.2em 0 0.7em 0);
+        //     opacity: 1;
+        //     // color: lighten($buttoncolor,20%);
+        //     @media screen and (min-width:400px) {
+        //         @include font(2.3);
+        //         line-height: 1.7em;
+        //     }
 
-        }
+        // }
+        // h2 {
+        //     display: block;
+        //     @include font(3.7);
+        //     line-height: 1.5em;
+        //     position: relative;
+        //     // color: lighten($buttoncolor,20%);
+        //     @include margin(0.1em 0 -0.2em 0);
+
+        //     opacity: 1;
+        //     @media screen and (min-width:400px) {
+        //         @include font(4);
+        //         line-height: 1.7em;
+        //     }
+
+        // }
     }
-    .experience {
+    // .experience {
+    //     text-align: center;
+    //     @include margin(1em auto 2em);
+    //     @include padding(0 1.5em);
+    //     display: block;
+    //     width: 94%;
+    //     position: relative;
+    //     z-index: 1;
+    //     // @include border-radius(0.3em);
+    //     // @include padding(1em 1.5em);
+    //     &:before {
+    //         content: '';
+    //         position: absolute;
+    //         top:0;
+    //         left:0;
+    //         width: 100%;
+    //         height:100%;
+    //         background: $brandcolor2;
+    //       opacity: 0.8;
+    //         z-index: -1;
+    //       // @include border-radius(0.3em);
+    //     }
+    //     // p {
+    //     //     @include font(1.1);
+    //     //     text-align: left;
+    //     //     @include padding(1em 0);
+    //     // }
+    //     p {
+    //         @include font(1.2);
+    //         text-align: left;
+    //         position: relative;
+    //         @include padding(1em 0);
+
+
+    //     }
+    // }
+    .blurb {
         text-align: center;
-        @include margin(2em 5% 0 5%);
-        @include padding(0 1.5em);
+        @include margin(0);
         display: block;
-        width: 90%;
+        width: 100%;
         position: relative;
-        z-index: 1;
-        @include border-radius(0.3em);
-        // @include padding(1em 1.5em);
+        // z-index: 1;
+        // @include border-radius(0.4em);
+        @include padding(2em 0);
         &:before {
             content: '';
             position: absolute;
@@ -80,22 +157,31 @@
             left:0;
             width: 100%;
             height:100%;
-            background: $brandcolor2;
-          opacity: 0.8;
-            z-index: -1;
-          @include border-radius(0.3em);
+            // background:darken($brandcolor2,0%);
+          background:darken($brandcolor,8%);
+
+    // background-color: darken(rgba(46,82,107,1),5%);
+
+
+            // opacity: 0.8;
+            // z-index: -1;
+            // @include border-radius(0.4em);
         }
         p {
-            @include font(1.1);
+            @include font(1.05);
             text-align: left;
-            @include padding(1em 0);
+          position: relative;
+          display: inline-block;
+          width:80%;
+          max-width: 350px;
+          @include margin(1em auto);
         }
     }
 
     .tour-desc {
-        @include margin(2em 5%);
+        @include margin(0 auto);
         display: block;
-        width: 90%;
+        width: 100%;
         position: relative;
         overflow: hidden;
     }
@@ -103,16 +189,19 @@
         width: 100%;
         overflow:hidden;
         position: relative;
-        @include margin(1em 0);
+        @include margin(0 auto);
+        border-bottom:2px solid $brandcolor2;
 
     }
     .mini-hero {
-        min-height: 18em;
+        width:50%;
+        float:left;
+        position: relative;
         h4 {
             display: block;
             text-align: center;
             @include font(2.8);
-            @include margin(1.4em 0 0.8em 0);
+            @include margin(2em 0 0.6em 0);
             line-height: 0.7em;
             position: relative;
         }
@@ -122,7 +211,8 @@
             line-height: 1.5em;
             position: relative;
             width: 70%;
-            @include margin(2em 15% 3em 15%);
+            max-width: 365px;
+            @include margin(1em auto 6em auto);
         }
         .divider {
             width: 200px;
@@ -134,11 +224,17 @@
     }
     .tour-info {
         width: 100%;
-        @include margin(1em 0);
+        @include margin(0 auto);
         background:$brandcolor2;
+        background:darken($brandcolor,8%);
+
+        // background:blue;
+        @include padding(2em 1em);
+        clear:both;
+        position: relative;
         .sub-info {
-            width: 40%;
-            @include margin(3.5em 2%);
+            width: 80%;
+            @include margin(1em 10%);
             display: inline-block;
             vertical-align: top;
 
@@ -149,10 +245,15 @@
             @include margin(1em 0);
             @include font(0.7);
         }
-        h5{
+        h3{
+            text-align: center;
+            @include font(2);
+            display: none;
+        }h5{
             text-align: center;
             @include font(1.5);
         }
+
         li {
             // @include margin(0.1em 0 0.1em 2em);
             display: block;
@@ -160,12 +261,19 @@
             font-family: $h-font;
         }
         p {
-            display: inline-block;
-            width: 50%;
-            @include margin(1em 2%);
-            @include padding(0.5em);
+            // display: inline-block;
+            // width: 50%;
+            // @include margin(1em 0 1em 5%);
+            // @include padding(0.5em);
+            // @include font(1.05);
+            // line-height: 1.5em;
             @include font(1.05);
-            line-height: 1.5em;
+            text-align: left;
+          position: relative;
+          display: inline-block;
+          width:80%;
+          max-width: 350px;
+          @include margin(1em 10%);
 
         }
     }
@@ -174,13 +282,13 @@
         overflow: hidden;
         width: 100%;
         z-index: 1;
-        background: url('../img/chilantro.jpg');
+        background: url('../img/prettytaco1.jpg');
         background-size: cover;
         background-repeat:no-repeat;
-        @include border-radius(0.3em);
+        // @include border-radius(0.3em);
         &:before {
             content: '';
-            @include border-radius(0.3em);
+            // @include border-radius(0.3em);
             position: absolute;
             overflow: hidden;
             top:0;
@@ -199,10 +307,10 @@
         background: url('../img/wine.jpg');
         background-size: cover;
         background-repeat:no-repeat;
-        @include border-radius(0.3em);
+        // @include border-radius(0.3em);
         &:before {
             content: '';
-            @include border-radius(0.3em);
+            // @include border-radius(0.3em);
             position: absolute;
             overflow: hidden;
             top:0;
@@ -221,10 +329,10 @@
         background: url('../img/marg.jpg');
         background-size: cover;
         background-repeat:no-repeat;
-        @include border-radius(0.3em);
+        // @include border-radius(0.3em);
         &:before {
             content: '';
-            @include border-radius(0.3em);
+            // @include border-radius(0.3em);
             position: absolute;
             overflow: hidden;
             top:0;
@@ -243,10 +351,10 @@
         background: url('../img/dash.jpg');
         background-size: cover;
         background-repeat:no-repeat;
-        @include border-radius(0.3em);
+        // @include border-radius(0.3em);
         &:before {
             content: '';
-            @include border-radius(0.3em);
+            // @include border-radius(0.3em);
             position: absolute;
             overflow: hidden;
             top:0;
@@ -257,6 +365,7 @@
             z-index: -1;  
         } 
     }
+
     
 
 
@@ -280,218 +389,170 @@
 @media screen and (min-width:600px) {
     .tours {
         .hero {
-
-            width: 100%;
-            @include margin(0 0 0 0);
-            background-position: center;
-
-            h3 {
-                display: block;
-                @include font(2.75);
+          width: 100%;
+          // height:25em;
+          @include margin(0 0 0 0);
+          background-position: bottom;
+          h3 {
+            @include margin(0 auto 1em);
+          }
+          @media screen and (min-width:700px) {
+            h2 {
+                @include padding(0 0);
+                @include margin(1em 45% 0 2%);
+                @include font(4);
+                width:50%;
                 line-height: 1em;
+            }
+            h3 {
+                @include font(2.5);
+                @include padding(0);
+                @include margin(0 45% 1em 2%);
+                width:50%;
+                line-height: 1em;
+            }
+          }
+          .hero-blurb {
+            width:100%;
+            max-width: 900px;
+            display: block;
+            // @include padding(1em);
+            @include margin(0 auto 2em);
+            
+            p {
+                @include font(1.05);
+                text-align: left;
                 position: relative;
-                @include margin(1.5em 0 1em 0);
-                opacity: 0.85;
-                // color: lighten($buttoncolor,20%);
+                display: inline-block;
+                width:80%;
+                max-width: 350px;
+                @include margin(1em auto);
+            }
 
+            .para {
+              width: 80%;
+              @include margin(1em 0);
+              display: inline-block;
+              vertical-align: top;
+              @media screen and (min-width:700px) {
+                width: 45%;
+                @include margin(1em auto);
+              }
 
             }
-            h2 {
-                display: block;
-                @include font(10);
-                line-height: 0.7em;
-                position: relative;
-                @include margin(0 0 0.5em 0);
+          }
 
-                // color: lighten($buttoncolor,20%);
-                opacity: 0.75;
+        }
+        .blurb {
+          display:none;
+        }
+        @media screen and (min-width:750px) {
 
+            .mini-hero {
+                @include margin(3em 5%);
+                @include padding(3em 2em);
+                width: 40%;
+                min-height:23em;
+
+                 h4 {
+                    display: block;
+                    text-align: center;
+                    line-height: 1em;
+                    // @include font(4);
+                    @include margin(1em auto 0.5em);
+                    width:80%;
+                    // float:right;
+                 }
+                 p {
+                  // float:right;
+                  display: block;
+                  @include font(1.1);
+                  line-height: 1.4em;
+                  position: relative;
+                  width: 60%;
+                  max-width: 365px;
+                  // color:;
+                  @include margin(1em auto);
+                  // @include padding(1em);
+                 }
+                 a {
+                  display: block;
+                  width:50%;
+                  // float:right;
+                  @include margin(1em auto);
+                 }
             }
         }
-        .experience {
-            @media screen and (min-width:700px) {
-                p {
-                    width: 45%;
-                    @include margin(1em 2%);
+      
+
+      
+        .tour-info {
+            width: 100%;
+            display: inline-block;
+            @include margin(0 auto);
+            
+            p {
+                display: inline-block;
+                width: 50%;
+                @include margin(1em 25%);
+                @include padding(1em);
+                @include font(1.1);
+                line-height: 1.5em;
+
+            }
+            @media screen and (min-width:750px) {
+                width: 50%;
+                // min-height:33em;
+                @include margin(0 auto);
+                // background:$brandcolor2;
+                .sub-info {
+                    width: 100%;
+                    @include margin(1em auto);
                     display: inline-block;
                     vertical-align: top;
 
                 }
+                ul {
+                    // display: inline-block;
+                    text-align: center;
+                    @include margin(1em 0);
+                    @include font(0.7);
+                }
+                h3{
+                    text-align: center;
+                    @include font(2);
+                }h5{
+                    text-align: center;
+                    @include font(1.5);
+                }
+
+                li {
+                    // @include margin(0.1em 0 0.1em 2em);
+                    display: block;
+                    position: relative;
+                    font-family: $h-font;
+                }
+                p {
+                    // display: inline-block;
+                    // width: 80%;
+                    // @include margin(1em auto);
+                    // @include padding(0.5em);
+                    // @include font(1.05);
+                    // line-height: 1.5em;
+                    @include font(1.05);
+                    text-align: left;
+                  position: relative;
+                  display: inline-block;
+                  width:80%;
+                  max-width: 350px;
+                  @include margin(1em 10%);
+
+                }
+    
+
+
             }
         }
-        // .accordion {
-        //     position: relative;
-        //     overflow: hidden;
-        //     display: block;
-        //     // // clear: both;
-        //     z-index: 1;
-
-        //     .tour-box {
-        //         width: 70%;
-        //         @include margin(2em 15%);
-        //         position: relative;
-        //         overflow: hidden;
-        //         box-shadow: 0.05rem 0.15rem 0.3rem 0.001rem darken($brandcolor,40%);
-        //     }
-        //     .taco {
-        //         position: relative;
-        //         &.opened:before {
-        //             content: '';
-        //             background: url('../img/turf1.jpg');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: top;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             // height:100%;
-        //             height:13.5em;
-        //             opacity: 1;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //         &.close:before {
-        //             content: '';
-        //             background: url('../img/turf1.jpg');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: bottom;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             height:10em;
-        //             // max-height:15em;
-        //             opacity: 0.5;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-
-        //     }
-        //     .wine {
-        //         position: relative;
-        //         &.opened:before {
-        //             content: '';
-        //             background: url('../img/secondst.JPG');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: top;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             // height:100%;
-        //             height:13.5em;
-        //             opacity: 1;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //         &.close:before {
-        //             content: '';
-        //             background: url('../img/secondst.JPG');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: bottom;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             height:10em;
-        //             // max-height:15em;
-        //             opacity: 0.5;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //     }
-        //     .margs {
-        //         position: relative;
-        //         // overflow: hidden;
-        //         &.opened:before {
-        //             content: '';
-        //             background: url('../img/marg.jpg');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: top;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             // height:100%;
-        //             height:13.5em;
-        //             opacity: 1;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //         &.close:before {
-        //             content: '';
-        //             background: url('../img/marg.jpg');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: bottom;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             height:10em;
-        //             // max-height:15em;
-        //             opacity: 0.5;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //     }
-        //     .pub {
-        //         position: relative;
-        //         &.opened:before {
-        //             content: '';
-        //             background: url('../img/dash.jpg');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: top;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             // height:100%;
-        //             height:13.5em;
-        //             opacity: 1;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //         &.close:before {
-        //             content: '';
-        //             background: url('../img/dash.jpg');
-        //             background-size: cover;
-        //             background-repeat:no-repeat;
-        //             background-position: bottom;
-        //             position: absolute;
-        //             overflow: hidden;
-        //             top:0;
-        //             left:0;
-        //             width: 100%;
-        //             height:10em;
-        //             // max-height:15em;
-        //             opacity: 0.5;
-        //             z-index: -1;
-        //             transition: opacity 500ms ease,
-        //                         height 700ms ease 200ms;      
-        //         }
-        //     }
-        // }
     }
 }
 
@@ -500,7 +561,7 @@
 // ===============================================================  
 
 
-//             Tablet Media Query
+//             Desktop Media Query
 
 
 // ==============================================================
@@ -508,68 +569,87 @@
 
 @media screen and (min-width:900px) {
 
-.tours {
-    // width: 80%;
-    // @include padding(0 10%);
-    .content {
-      width: 80%;
-      @include margin(0 10%);
-    }
-    .hero {
-        height:30em;
-        width: 100%;
-        // @include padding(10em 0 10em 0);
-        &:before {
-            // @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.6),5%),0%,40%);
-            @include gradient-hori(darken(rgba(46,82,107,0.8),85%), darken(rgba(46,82,107,0.6),5%),0%,40%);
-            // background: darken(rgba(46,82,107,0.8),65%);
+    .tours {
+        // width: 80%;
+        // @include padding(0 10%);
+        .content {
+          width: 100%;
+          @include margin(0 0);
         }
-        @media screen and (min-width:1200px) {
-            height: 35em;
+        .hero {
+            // height:50em;
+            width: 100%;
+          @include padding(9em 0 3em);
+            &:before {
+                // @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.6),5%),0%,40%);
+                // @include gradient-hori(darken(rgba(46,82,107,0.8),85%), darken(rgba(46,82,107,0.6),5%),0%,40%);
+                // background: darken(rgba(46,82,107,0.8),65%);
+            }
+            @media screen and (min-width:1200px) {
+                // height: 60em;
+            }
+            // h2 {
+            //     @include margin(1em auto 0 auto)
+            // }
         }
-    }
-    // .experience {
-    //     text-align: center;
-    //     @include margin(2em 4% 0 4%);
-    //     display: inline-block;
-    //     width: 42%;
-    //     float: left;
-    //     position: relative;
-    //     z-index: 1;
-    //     @include border-radius(0.3em);
-    //     // @include padding(1em 1.5em);
-    //     &:before {
-    //         content: '';
-    //         position: absolute;
-    //         top:0;
-    //         left:0;
-    //         width: 100%;
-    //         height:100%;
-    //         background: $brandcolor2;
-    //       opacity: 0.8;
-    //         z-index: -1;
-    //       @include border-radius(0.3em);
-    //     }
-    //     p {
-    //         @include font(1.2);
-    //         text-align: left;
-    //         @include padding(1em);
-    //     }
-    // }
+        .experience {
 
-    .accordion {
-        width: 42%;
-        display: inline-block;
-        @include margin(0 4% 0 4%);
-        float: left;
-        // @include padding(0 5%);
-        .tour-box {
-            width: 70%;
-            @include margin(2em 3% 2em 7%);
-            // float: left;
         }
+        .tour-box {
+            width:90%;
+            @include margin(2em auto);
+            // max-width: 900px;
+            // float:left;
+        }
+            .mini-hero {
+                width: 40%;
+
+                @include margin(3em auto);
+                @include padding(2em 1em);
+
+                
+            }
+            .tour-info {
+                width: 60%;
+                // background:blue;
+
+                p {
+                    width: 40%;
+                              @include font(1.05);
+                        text-align: left;
+                      position: relative;
+                      display: inline-block;
+                      // width:80%;
+                      max-width: 350px;
+                      @include margin(2em 0 2em 12%);
+                      @include padding(2em);
+                }
+                .sub-info {
+                    width: 30%;
+                    @include margin(4em 12% 1em 0);
+                    display: inline-block;
+                }
+            }
+            // @media screen and (min-width:1200px) {
+            //     width: 48%;
+            //     display: inline-block;
+            //     float: left;
+            //         @include margin(1em 2% 2em 0);
+                
+            //     .mini-hero {
+            //         height: 4.5em;
+            //         width: 100%;
+            //         @include margin(0 0);
+
+            //     }
+            //     &:nth-of-type(2n) {
+            //         @include margin(1em 0 2em 2%);
+
+                    
+            //     }
+            // }
+        
     }
-}
 
 
 

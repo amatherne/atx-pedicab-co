@@ -1,53 +1,118 @@
 .about-us {
 	background: $brandcolor;
+    background-color: darken(rgba(46,82,107,1),10%);
+    background:darken($brandcolor,8%);
+
+
     width: 100%;
     position: relative;
     // z-index: 1;
     overflow: hidden;
-    .divider {
-        width: 80%;
-        height:2px;
-        @include margin(1.5em 10%);
-        position: relative;
-        background: $fontcolor;
-    }
+    @include margin(0);
+
     .about-hero {
 	    background: url('../img/about-hero.png');
-	    background-size: cover;
-	    background-repeat:no-repeat;
-	    background-position: right top;
-	    width: 90%;
-	    @include margin(2em 5%);
-	    // height:16em;
-	    z-index: 9999;
-	    @include border-radius(0.3em);
-	    h3 {
-	    	text-align: center;
-            display: block;
-            @include font(7);
-            line-height: 0.7em;
-            @include padding(0.3em 0);
-            background-color: darken(rgba(46,82,107,0.8),10%);
-			height: 100%;
-			position: relative;
-	    	@include border-radius(0.05em);
-            opacity: 0.75;
-	    	// color:lighten($buttoncolor,10%);
-            // text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
-            //         2px 2px 0.5px darken($buttoncolor,15%),
-            //         3px 3px 0.5px darken($buttoncolor,25%);
+        text-align: center;
+        @include margin(0 auto);
+        display: block;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        // @include padding(4em 3em);
+
+      
+
+        background-repeat:no-repeat;
+        background-position: 80% 80%;
+        background-size: cover;
+        background-position:right;
+        // z-index: 1;
+        // @include border-radius(0.4em);
+
+        &:before {
+            content: '';
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left:0;
+            // background-color: darken(rgba(46,82,107,0.6),15%);
+                  background-color: darken(rgba(46,82,107,0.6),15%);
+
+            // z-index: -1;
+            // @include border-radius(0.4em);
 
         }
+        h2 {
+          @include padding(0 0);
+          @include margin(2em auto);
+            display: block;
+            @include font(4);
+            line-height: 1em;
+          position: relative;
+          opacity: 1;
+          @media screen and (min-width:400px) {
+            @include font(4.5);
+            line-height: 1em;
+          }
+        }
+        h3 {
+            @include font(2.5);
+          @include padding(0);
+            line-height: 1em;
+          position: relative;
+          opacity: 1;
+          @include margin(0 auto 3em);
+          @media screen and (min-width:400px) {
+            @include font(2.8);
+            line-height: 1em;
+          }
+        }
+      .para {
+        display: none;
+      }
 	}
-	.mission {
-	    text-align: center;
-        @include margin(2em 5% 0 5%);
+	// .mission {
+	//     text-align: center;
+ //        @include margin(1em auto 2em);
+ //        @include padding(0 1.5em);
+ //        display: block;
+ //        width: 94%;
+ //        position: relative;
+ //        z-index: 1;
+ //        @include border-radius(0.3em);
+ //        // @include padding(1em 1.5em);
+ //        &:before {
+ //            content: '';
+ //            position: absolute;
+ //            top:0;
+ //            left:0;
+ //            width: 100%;
+ //            height:100%;
+ //            background: $brandcolor2;
+ //          	opacity: 0.8;
+ //            z-index: -1;
+ //          @include border-radius(0.3em);
+ //        }
+        
+ //        p {
+ //            @include font(1.2);
+ //            text-align: left;
+ //            position: relative;
+ //            @include padding(1em 0);
+ //        }
+ //    }
+    .blurb {
+        text-align: center;
+        @include margin(0);
         display: block;
-        width: 90%;
+        width: 100%;
         position: relative;
-        z-index: 1;
-        @include border-radius(0.3em);
-        // @include padding(1em 1.5em);
+        // z-index: 1;
+        // @include border-radius(0.4em);
+        @include padding(2em 0);
         &:before {
             content: '';
             position: absolute;
@@ -55,266 +120,191 @@
             left:0;
             width: 100%;
             height:100%;
-            background: $brandcolor2;
-          	opacity: 0.8;
-            z-index: -1;
-          @include border-radius(0.3em);
+            // background:darken($brandcolor2,0%);
+          background:darken($brandcolor,8%);
+
+    // background-color: darken(rgba(46,82,107,1),5%);
+
+
+            // opacity: 0.8;
+            // z-index: -1;
+            // @include border-radius(0.4em);
         }
-        
         p {
-            @include font(1.2);
+            @include font(1.05);
             text-align: left;
-            @include padding(1em);
+          position: relative;
+          display: inline-block;
+          width:80%;
+          max-width: 350px;
+          @include margin(1em auto);
         }
     }
-
-	 .accordion {
+    .about-desc {
+        @include margin(0 auto);
+        display: block;
+        width: 100%;
         position: relative;
         overflow: hidden;
-        display: block;
-        // // clear: both;
-        z-index: 1;
-		.riders {
-            width: 90%;
-            @include margin(2em 5%);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0.05rem 0.15rem 0.3rem 0.001rem darken($brandcolor,40%);
-        }
-
-		.matt {
-            position: relative;
-            &.opened:before {
-                content: '';
-                background: url('../img/matt-lg.png');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: top;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                // height:100%;
-                height:18em;
-                opacity: 1;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-            &.close:before {
-                content: '';
-                background: url('../img/matt-lg.png');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position:bottom;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                height:15em;
-                // max-height:15em;
-                opacity: 0.5;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-
-        }
-        .quinton {
-            position: relative;
-            &.opened:before {
-                content: '';
-                background: url('../img/quinton-lg.png');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: top;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                // height:100%;
-                height:18em;
-                opacity: 1;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-            &.close:before {
-                content: '';
-                background: url('../img/quinton-lg.png');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: top;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                height:15em;
-                // max-height:15em;
-                opacity: 0.5;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-
-        }
-        .rob {
-            position: relative;
-            &.opened:before {
-                content: '';
-                background: url('../img/rob.png');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: top;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                // height:100%;
-                height:18em;
-                opacity: 1;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-            &.close:before {
-                content: '';
-                background: url('../img/rob.png');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: top;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                height:15em;
-                // max-height:15em;
-                opacity: 0.5;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-
-        }
-        .austin {
-            position: relative;
-            &.opened:before {
-                content: '';
-                background: url('../img/austin.png');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: top;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                // height:100%;
-                height:18em;
-                opacity: 1;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-            &.close:before {
-                content: '';
-                background: url('../img/austin.png');
-                background-size: cover;
-                background-repeat:no-repeat;
-                background-position: top;
-                position: absolute;
-                overflow: hidden;
-                top:0;
-                left:0;
-                width: 100%;
-                height:15em;
-                // max-height:15em;
-                opacity: 0.5;
-                z-index: -1;
-                transition: opacity 500ms ease,
-                            height 700ms ease 200ms;      
-            }
-
-        }
-        h3 {
-            @include font(1.4);
-            line-height: 1.5em;
-            width: 100%;
+        .crew {
+            width: 75%;
+            @include margin(0.2em 12.5%);
+            @include font(3);
             text-align: center;
+
+        }
+    }
+    .rider-box {
+        width: 100%;
+        overflow:hidden;
+        position: relative;
+        @include margin(0 auto);
+        // border-bottom:2px solid $brandcolor2;
+    }
+    .mini-hero {
+        width: 100%;
+        min-height: 18em;
+        position: relative;
+        // h4 {
+        //     text-align: center;
+        //     display: block;
+        //     @include font(2);
+        //     line-height: 1.5em;
+        //     @include padding(6em 0 1em 0);
+        //     position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height:100%;
+                background: lighten($brandcolor2, 10%);
+                opacity: 0.5;
+                z-index: -1;
+            }
+        // }
+        
+    }
+    .rider-info {
+        width: 100%;
+        @include margin(0 auto);
+        // background:$brandcolor2;
+        background:darken($brandcolor,8%);
+
+        // background:blue;
+        @include padding(2em 1em);
+        clear:both;
+        position: relative;
+        .sub-info {
+            width: 70%;
+            @include margin(1em auto);
+        }
+
+        .exp,
+        .market {
+            max-width: 270px;
             position: relative;
+            @include margin(0 auto 2em);
+        }
+
+        ul {
+            // display: inline-block;
+            text-align: left;
+            @include margin(1em 0);
+            width: 60%;
+            @include margin(0.3em auto 1.5em);
+            position: relative;
+            // @include font(1);
+        }
+        h4{
+            text-align: center;
+            @include font(2.8);
+            line-height: 1em;
+            @include margin(0.5em 0);
+            position: relative;
+        }
+        h5{
+            text-align: center;
+            @include font(1.2);
+        }
+
+        li {
+            // @include margin(0.1em 0 0.1em 2em);
             display: block;
-            // opacity: 0.1;
-             // color:lighten($buttoncolor,15%);
-             //  text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
-             //        2px 2px 0.5px darken($buttoncolor,15%),
-             //        3px 3px 0.5px darken($buttoncolor,25%);
-            &.closed {
-              transition: background-color 500ms ease;
-              // background-color: darken(rgba(46,82,107,1),10%);
-              transition: opacity 500ms ease;
-              opacity: 1;
-              @include padding(0.7em 0);
-              transition: padding 500ms ease-in;
-	        }
-	        &.open {
-	            transition: background-color 500ms ease;
-	            background-color: darken(rgba(46,82,107,0),15%);
-	            transition: opacity 500ms ease-out;
-	            opacity: 0;
-	            @include padding(3.5em 0);
-	            transition: padding 500ms ease-in;
-	        }
+            position: relative;
+            font-family: $h-font;
+            @include font(1);
+            line-height: 1.5em;
         }
-		.submenu {
-            display: none;
-            @include margin(0);
-            overflow: hidden;
-            width: 100%;
-            clear: both;
-            background:darken(rgba(46,82,107,1),10%);
-            @include padding(0.7em);
-            box-shadow: 0em 0em 1em 0.1em darken($brandcolor,40%);
-			li {
-            	@include font(0.8);
-            	@include margin(0.5em 0);
-            }
-            p {
-                @include font(1);
-                line-height: 1.5em;
-                @include padding(1em);
-            }
+        p {
+            display: inline-block;
+            // width: 70%;
+            @include margin(1em auto);
+            @include padding(1em);
+            @include font(1.1);
+            line-height: 1.5em;
 
-            h4 {
-              text-align: center;
-              @include font(2.5);
-              line-height: 1.6em;
-              // color:lighten($buttoncolor,15%);
-              // text-shadow: 1px 1px 0.5px darken($buttoncolor,5%),
-              //       2px 2px 0.5px darken($buttoncolor,15%),
-              //       3px 3px 0.5px darken($buttoncolor,25%);
-            }
-            .markets {
-              @include font(1);
-              width: 80%;
-              @include margin(0.2em 5% 0.2em 15%);
-              li {
-                font-family: $linkfont;
-              }
-			  sup {
-			  	@include font(0.75);
-			  	vertical-align: super;
-			  	display: inline-block;
-			  }
-            }
         }
+        sup {
+            @include font(0.75);
+            vertical-align: super;
+            display: inline-block;
+        }
+        .divider {
+            width: 70%;
+            height:2px;
+            @include margin(0.7em auto);
+            position: relative;
+            background: $fontcolor;
+        }
+    }
+    .matt {
+        background: url('../img/matt1.jpg');
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: center top;
+        // width: 94%;
+        @include margin(1em auto 0.5em);
+        // height:16em;
+        z-index: 1;
+        @include border-radius(0.3em); 
+    }
+    .adam {
+        background: url('../img/steve.jpg');
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: center top;
+        // width: 94%;
+        @include margin(1em auto 0.5em);
+        // height:16em;
+        z-index: 1;
+        @include border-radius(0.3em); 
+    }
+    .austin {
+        background: url('../img/austin.png');
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: center top;
+        // width: 94%;
+        @include margin(1em auto 0.5em);
+        // height:16em;
+        z-index: 1;
+        @include border-radius(0.3em); 
+    }
+    .rob {
+        background: url('../img/rob.png');
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: center top;
+        // width: 94%;
+        @include margin(1em auto 0.5em);
+        // height:16em;
+        z-index: 1;
+        @include border-radius(0.3em); 
+    }
 
-	}
+	
 }
 
 
@@ -333,22 +323,161 @@
 
 
 @media screen and (min-width:600px) {
+    .about-us {
+        // .content {
+        //     width: 90%;
+        //     @include margin(0 5%);
+        // }
+        .blurb {
+            display: none;
+        }
+        .hero-blurb {
+            width:100%;
+            max-width: 900px;
+            display: block;
+            // @include padding(1em);
+            @include margin(0 auto 2em);
+            
+            p {
+                @include font(1.05);
+                text-align: left;
+                position: relative;
+                display: inline-block;
+                width:80%;
+                max-width: 350px;
+                @include margin(0.5em auto);
+            }
 
+            .para {
+              width: 80%;
+              @include margin(1em 0);
+              display: inline-block;
+              vertical-align: top;
+              @media screen and (min-width:700px) {
+                width: 45%;
+                @include margin(1em auto);
+              }
 
+            }
+          }
+        .about-desc {
+            width: 80%;
+            @include margin(0 auto);
+        }
+        .about-hero {
+            width: 100%;
+            // height: 30em;
+            @include margin(0 0 0 0);
+            background-position: top;
 
+            h2 {
+                display: block;
+                @include font(6);
+                line-height: 1.2em;
+                position: relative;
+                // @include padding(1em 0 0);
+                @include margin(1em 0 0.3em)
 
+            }
+        }
+        // .matt {
+        //     background-position: center;
+        //     // height:20em;
 
-
-
+        // }
+        .mini-hero {
+            height:30em;
+        }
+        .rider-info {
+            clear: both;
+            overflow: hidden;
+            .exp,
+            .market {
+                width: 50%;
+                display: inline-block;
+                float: left;
+                max-width: 270px;
+                position: relative;
+                @include margin(0 auto 2em);
+            }
+            p {
+                width: 80%;
+                @include margin(1em 10%);
+                @include padding(0 1em);
+            }
+            .sub-info {
+                width: 80%;
+                @include margin(2em 10%);
+            }
+        }
+    }
 }
 
 
 
+// <!--===========================================================
+// ===============================================================  
 
 
+//             Desktop Media Query
 
 
+// ==============================================================
+// ===========================================================-->
 
+@media screen and (min-width:900px) {
+    .about-us {
+        .content {
+          width: 80%;
+          @include margin(0 10%);
+        }
+        .about-hero {
+            height:50em;
+            width: 100%;
+            @include padding(10em 0 10em 0);
+            &:before {
+                // @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.6),5%),0%,40%);
+                // @include gradient-hori(darken(rgba(46,82,107,0.8),85%), darken(rgba(46,82,107,0.6),5%),0%,40%);
+                // background: darken(rgba(46,82,107,0.8),65%);
+            }
+        }
+        .about-desc {
+            width: 100%;
+            @include margin(3em 0);
+        }
+        .rider-box {
+            .mini-hero {
+                width: 80%;
+
+                @include margin(0 10%);
+                height: 25em;
+            }
+            @media screen and (min-width:950px) {
+                width: 48%;
+                display: inline-block;
+                float: left;
+                    @include margin(1em 2% 2em 0);
+                
+                .mini-hero {
+                    height: 30em;
+                    width: 100%;
+                    @include margin(0 0);
+
+                }
+                &:nth-of-type(2n) {
+                    @include margin(1em 0 2em 2%);
+
+                    
+                }
+            }
+            .rider-info {
+                // min-height:40em;
+            }
+        }
+    }
+
+
+}
 
 
 
