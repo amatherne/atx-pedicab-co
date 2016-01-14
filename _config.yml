@@ -3,7 +3,7 @@ title: Austin Pedicab Company
 email: your-email@domain.com
 description:  An Austin Based Pedicab Booking and Tour Service.
 baseurl: "amatherne.github.io" # the subpath of your site, e.g. /blog/
-# url: "atxpedicab.com" # the base hostname & protocol for your site
+url: "amatherne.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
