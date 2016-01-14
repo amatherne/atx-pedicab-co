@@ -127,6 +127,7 @@
   .mini-hero {
       // min-height: 18em;
       //     font-family: "roadgeek";
+      @include margin(2em 0);
       h4{
           font-family: "roadgeek";
         
@@ -164,7 +165,7 @@
       }
       a {
           width: 50%;
-          @include margin(1em auto);
+          @include margin(1em auto 3em);
           @include padding(0.4em 1em);
           position: relative;
           font-family: $h-font;
@@ -196,9 +197,9 @@
       z-index: 1;
       background: url('../img/turf1.jpg');
         background: url('../img/prettytaco1.jpg');
-      
+
       background-size: cover;
-      background-position:bottom center;
+      background-position:center;
       background-repeat:no-repeat;
       @include border-radius(0.3em);
       &:before {
@@ -371,7 +372,7 @@
             display: block;
             text-align: center;
             // @include font(4);
-            @include margin(1em 2% 0.5em 52%);
+            @include margin(1em 52% 0.5em 2%);
             width:45%;
             // float:right;
          }
@@ -384,17 +385,24 @@
           width: 30%;
           max-width: 365px;
           // color:;
-          @include margin(1em 10% 1em 60%);
+          @include margin(1em 60% 1em 10%);
           // @include padding(1em);
          }
          a {
           display: block;
           width:20%;
           // float:right;
-          @include margin(1em 15% 1em 65%);
+          @include margin(1em 65% 1em 15%);
          }
       }
       
+
+      }
+      @media screen and (min-width:1000px) {
+        .mini-hero {
+          @include padding(8em 2em);
+
+        }
 
       }
     }

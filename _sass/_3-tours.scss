@@ -34,7 +34,7 @@
             position: absolute;
             top:0;
             left:0;
-              background-color: darken(rgba(46,82,107,0.6),10%);
+              background-color: darken(rgba(46,82,107,0.6),15%);
             // z-index: -1;
           // @include border-radius(0.2em);
 
@@ -226,7 +226,7 @@
         width: 100%;
         @include margin(0 auto);
         background:$brandcolor2;
-          background:darken($brandcolor,8%);
+        background:darken($brandcolor,8%);
 
         // background:blue;
         @include padding(2em 1em);
@@ -449,9 +449,10 @@
         @media screen and (min-width:750px) {
 
             .mini-hero {
+                @include margin(3em 5%);
                 @include padding(3em 2em);
-                width: 60%;
-                min-height:35em;
+                width: 40%;
+                min-height:23em;
 
                  h4 {
                     display: block;
@@ -500,7 +501,7 @@
 
             }
             @media screen and (min-width:750px) {
-                width: 40%;
+                width: 50%;
                 // min-height:33em;
                 @include margin(0 auto);
                 // background:$brandcolor2;
@@ -578,14 +579,14 @@
         .hero {
             // height:50em;
             width: 100%;
-          @include padding(3em 0);
+          @include padding(9em 0 3em);
             &:before {
                 // @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.6),5%),0%,40%);
-                @include gradient-hori(darken(rgba(46,82,107,0.8),85%), darken(rgba(46,82,107,0.6),5%),0%,40%);
+                // @include gradient-hori(darken(rgba(46,82,107,0.8),85%), darken(rgba(46,82,107,0.6),5%),0%,40%);
                 // background: darken(rgba(46,82,107,0.8),65%);
             }
             @media screen and (min-width:1200px) {
-                height: 60em;
+                // height: 60em;
             }
             // h2 {
             //     @include margin(1em auto 0 auto)
@@ -601,28 +602,31 @@
             // float:left;
         }
             .mini-hero {
-                width: 30%;
+                width: 40%;
 
-                @include padding(1em 1em);
+                @include margin(3em auto);
+                @include padding(2em 1em);
+
                 
             }
             .tour-info {
-                width: 70%;
+                width: 60%;
                 // background:blue;
 
                 p {
-                    width: 50%;
+                    width: 40%;
                               @include font(1.05);
                         text-align: left;
                       position: relative;
                       display: inline-block;
                       // width:80%;
                       max-width: 350px;
-                      @include margin(1em auto);
+                      @include margin(2em 0 2em 12%);
                       @include padding(2em);
                 }
                 .sub-info {
-                    width: 50%;
+                    width: 30%;
+                    @include margin(4em 12% 1em 0);
                     display: inline-block;
                 }
             }
