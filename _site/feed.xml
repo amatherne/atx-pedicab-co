@@ -3,10 +3,10 @@
   <channel>
     <title>Austin Pedicab Company</title>
     <description>An Austin Based Pedicab Booking and Tour Service.</description>
-    <link>http://amatherne.github.io/atxpedicab/</link>
-    <atom:link href="http://amatherne.github.io/atxpedicab/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Jan 2016 17:25:00 -0600</pubDate>
-    <lastBuildDate>Thu, 14 Jan 2016 17:25:00 -0600</lastBuildDate>
+    <link>http://amatherne.github.io/atx-pedicab-co/</link>
+    <atom:link href="http://amatherne.github.io/atx-pedicab-co/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 14 Jan 2016 17:26:09 -0600</pubDate>
+    <lastBuildDate>Thu, 14 Jan 2016 17:26:09 -0600</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
   </channel>
