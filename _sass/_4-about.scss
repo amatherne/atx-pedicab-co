@@ -38,8 +38,8 @@
             position: absolute;
             top:0;
             left:0;
-            // background-color: darken(rgba(46,82,107,0.6),15%);
-                  background-color: darken(rgba(46,82,107,0.6),15%);
+            // background-color: darken(rgba(46,82,107,0.7),15%);
+                  background-color: darken(rgba(46,82,107,0.7),15%);
 
             // z-index: -1;
             // @include border-radius(0.4em);
@@ -193,7 +193,7 @@
         background:darken($brandcolor,8%);
 
         // background:blue;
-        @include padding(2em 1em);
+        @include padding(0 10%);
         clear:both;
         position: relative;
         .sub-info {
@@ -203,45 +203,62 @@
 
         .exp,
         .market {
-            max-width: 270px;
+
+            max-width: 300px;
             position: relative;
             @include margin(0 auto 2em);
+            border: 2px solid $fontcolor;
+        @include border-radius(0.3em); 
+
+            // @include padding(1em 0);
+            background-color: darken(rgba(46,82,107,0.6),15%);
+            
         }
 
         ul {
             // display: inline-block;
             text-align: left;
-            @include margin(1em 0);
-            width: 60%;
-            @include margin(0.3em auto 1.5em);
+            // @include margin(1em 0);
+            width:80%;
+            @include margin(0.5em auto);
             position: relative;
             // @include font(1);
         }
         h4{
-            text-align: center;
+            text-align: left;
+            width:80%;
             @include font(2.8);
             line-height: 1em;
-            @include margin(0.5em 0);
+            @include margin(1em auto 0);
             position: relative;
         }
         h5{
-            text-align: center;
-            @include font(1.2);
+            text-align: left;
+            @include font(1.4);
+            width:80%;
+            position: relative;
+            @include margin(0.5em auto 0);
+
         }
 
         li {
-            // @include margin(0.1em 0 0.1em 2em);
-            display: block;
+            // @include margin(0.1em 0 0.1em 5%);
+            display: list-item;
+            list-style-type: disc;
+            width:80%;
+            @include margin(0 auto);
             position: relative;
             font-family: $h-font;
             @include font(1);
             line-height: 1.5em;
+
         }
         p {
-            display: inline-block;
-            // width: 70%;
-            @include margin(1em auto);
-            @include padding(1em);
+            display: block;
+            width:80%;
+            max-width: 350px;
+            @include margin(2em auto);
+            @include padding(0);
             @include font(1.1);
             line-height: 1.5em;
 
@@ -252,9 +269,9 @@
             display: inline-block;
         }
         .divider {
-            width: 70%;
+            width: 100%;
             height:2px;
-            @include margin(0.7em auto);
+            @include margin(0.7em auto 1em);
             position: relative;
             background: $fontcolor;
         }
@@ -264,6 +281,9 @@
         background-size: cover;
         background-repeat:no-repeat;
         background-position: center top;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+
         // width: 94%;
         @include margin(1em auto 0.5em);
         // height:16em;
@@ -275,6 +295,8 @@
         background-size: cover;
         background-repeat:no-repeat;
         background-position: center top;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
         // width: 94%;
         @include margin(1em auto 0.5em);
         // height:16em;
@@ -286,6 +308,8 @@
         background-size: cover;
         background-repeat:no-repeat;
         background-position: center top;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
         // width: 94%;
         @include margin(1em auto 0.5em);
         // height:16em;
@@ -297,6 +321,8 @@
         background-size: cover;
         background-repeat:no-repeat;
         background-position: center top;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
         // width: 94%;
         @include margin(1em auto 0.5em);
         // height:16em;
@@ -331,12 +357,17 @@
         .blurb {
             display: none;
         }
+        .about-hero:before {
+            background-color: darken(rgba(46,82,107,0.8),15%);
+                
+            }
         .hero-blurb {
             width:100%;
             max-width: 900px;
             display: block;
             // @include padding(1em);
             @include margin(0 auto 2em);
+
             
             p {
                 @include font(1.05);
@@ -360,10 +391,10 @@
 
             }
           }
-        .about-desc {
-            width: 80%;
-            @include margin(0 auto);
-        }
+        // .about-desc {
+        //     width: 80%;
+        //     @include margin(0 auto);
+        // }
         .about-hero {
             width: 100%;
             // height: 30em;
@@ -380,6 +411,9 @@
 
             }
         }
+        .about-desc {
+            @include padding(2em 0);
+        }
         // .matt {
         //     background-position: center;
         //     // height:20em;
@@ -391,19 +425,23 @@
         .rider-info {
             clear: both;
             overflow: hidden;
+            @include margin(2em 0);
             .exp,
             .market {
-                width: 50%;
+                width: 45%;
                 display: inline-block;
                 float: left;
                 max-width: 270px;
                 position: relative;
-                @include margin(0 auto 2em);
+                @include margin(0 2% 2em 0);
+            }
+            .market {
+                @include margin(0 0 2em 2%);
             }
             p {
                 width: 80%;
                 @include margin(1em 10%);
-                @include padding(0 1em);
+                // @include padding(0 1em);
             }
             .sub-info {
                 width: 80%;
@@ -428,8 +466,8 @@
 @media screen and (min-width:900px) {
     .about-us {
         .content {
-          width: 80%;
-          @include margin(0 10%);
+          width: 70%;
+          @include margin(0 auto);
         }
         .about-hero {
             height:50em;
@@ -441,38 +479,50 @@
                 // background: darken(rgba(46,82,107,0.8),65%);
             }
         }
-        .about-desc {
-            width: 100%;
-            @include margin(3em 0);
-        }
+        // .about-desc {
+        //     width: 100%;
+        //     @include margin(3em 0);
+        // }
         .rider-box {
             .mini-hero {
-                width: 80%;
+                width: 70%;
 
-                @include margin(0 10%);
-                height: 25em;
+                @include margin(1em auto);
+                height: 27em;
             }
-            @media screen and (min-width:950px) {
-                width: 48%;
+            @media screen and (min-width:1300px) {
+                width: 50%;
                 display: inline-block;
+                height:55em;
                 float: left;
-                    @include margin(1em 2% 2em 0);
-                
+                @include margin(2em auto);
+                // &:nth-of-type(2n) {
+                //     @include margin(1em 0 2em 2%);   
+                // }
                 .mini-hero {
-                    height: 30em;
-                    width: 100%;
-                    @include margin(0 0);
+                    height: 20em;
+                    width: 70%;
+                    @include margin(0 auto);
 
                 }
-                &:nth-of-type(2n) {
-                    @include margin(1em 0 2em 2%);
 
-                    
+                .rider-info {
+                // @include padding(0 5%);
+
+                    // .exp,
+                    // .market {
+                    //     width:60%;
+                    //     max-width: 300px;
+                    //     position: relative;
+                    //     @include margin(0 20% 2em);
+                    //     border: 2px solid $fontcolor;
+                    //     @include padding(1em 0);
+                    //     background-color: darken(rgba(46,82,107,0.6),15%);
+                        
+                    // }   
                 }
             }
-            .rider-info {
-                // min-height:40em;
-            }
+
         }
     }
 

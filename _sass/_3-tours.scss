@@ -34,7 +34,7 @@
             position: absolute;
             top:0;
             left:0;
-              background-color: darken(rgba(46,82,107,0.6),15%);
+              background-color: darken(rgba(46,82,107,0.7),15%);
             // z-index: -1;
           // @include border-radius(0.2em);
 
@@ -190,7 +190,7 @@
         overflow:hidden;
         position: relative;
         @include margin(0 auto);
-        border-bottom:2px solid $brandcolor2;
+        // border-bottom:2px solid $brandcolor2;
 
     }
     .mini-hero {
@@ -199,20 +199,21 @@
         position: relative;
         h4 {
             display: block;
-            text-align: center;
-            @include font(2.8);
-            @include margin(2em 0 0.6em 0);
-            line-height: 0.7em;
+            text-align: left;
+            @include font(3.5);
+            @include margin(1.5em auto 0.2em);
+            line-height: 1em;
             position: relative;
+            width: 70%;
         }
         p {
             display: block;
-            @include font(1.1);
+            @include font(1.3);
             line-height: 1.5em;
             position: relative;
             width: 70%;
             max-width: 365px;
-            @include margin(1em auto 6em auto);
+            @include margin(1em 0 4em 15%);
         }
         .divider {
             width: 200px;
@@ -225,56 +226,74 @@
     .tour-info {
         width: 100%;
         @include margin(0 auto);
-        background:$brandcolor2;
+        // background:$brandcolor2;
         background:darken($brandcolor,8%);
 
         // background:blue;
-        @include padding(2em 1em);
+        @include padding(0.5em 15%);
         clear:both;
         position: relative;
         .sub-info {
-            width: 80%;
-            @include margin(1em 10%);
-            display: inline-block;
-            vertical-align: top;
+            max-width: 300px;
+            width:70%;
+            position: relative;
+            @include margin(0 auto 2em);
+            border: 2px solid $fontcolor;
+        @include border-radius(0.3em); 
+
+            // @include padding(1em 0);
+            background-color: darken(rgba(46,82,107,0.6),15%);
 
         }
         ul {
-            // display: inline-block;
-            text-align: center;
-            @include margin(1em 0);
-            @include font(0.7);
+            text-align: left;
+            // @include margin(1em 0);
+            width:70%;
+            @include margin(0.5em auto);
+            position: relative;
         }
         h3{
-            text-align: center;
-            @include font(2);
-            display: none;
-        }h5{
-            text-align: center;
-            @include font(1.5);
+            text-align: left;
+            width:80%;
+            @include font(2.8);
+            line-height: 1em;
+            @include margin(1em auto 0);
+            position: relative;
+        }
+        h5{
+            text-align: left;
+            @include font(1.4);
+            width:80%;
+            position: relative;
+            @include margin(0.5em auto 0);
         }
 
         li {
-            // @include margin(0.1em 0 0.1em 2em);
-            display: block;
+            display: list-item;
+            list-style-type: disc;
+            width:80%;
+            @include margin(0 auto);
             position: relative;
             font-family: $h-font;
+            @include font(1);
+            line-height: 1.5em;
         }
         p {
-            // display: inline-block;
-            // width: 50%;
-            // @include margin(1em 0 1em 5%);
-            // @include padding(0.5em);
-            // @include font(1.05);
-            // line-height: 1.5em;
-            @include font(1.05);
-            text-align: left;
-          position: relative;
-          display: inline-block;
-          width:80%;
-          max-width: 350px;
-          @include margin(1em 10%);
+            display: block;
+            width:80%;
+            max-width: 350px;
+            @include margin(2em auto);
+            @include padding(0);
+            @include font(1.1);
+            line-height: 1.5em;
 
+        }
+        .divider {
+            width: 100%;
+            height:2px;
+            @include margin(0.7em auto 1em);
+            position: relative;
+            background: $fontcolor;
         }
     }
     .taco {
@@ -286,6 +305,8 @@
         background-size: cover;
         background-repeat:no-repeat;
         // @include border-radius(0.3em);
+        @include border-radius(0.3em); 
+       
         &:before {
             content: '';
             // @include border-radius(0.3em);
@@ -295,7 +316,9 @@
             left:0;
             width: 100%;
             height:100%;
-            background-color: darken(rgba(46,82,107,0.6),15%);
+            background-color: darken(rgba(46,82,107,0.8),15%);
+            @include border-radius(0.3em); 
+
             z-index: -1;  
         } 
     }
@@ -308,6 +331,8 @@
         background-size: cover;
         background-repeat:no-repeat;
         // @include border-radius(0.3em);
+        @include border-radius(0.3em); 
+       
         &:before {
             content: '';
             // @include border-radius(0.3em);
@@ -317,7 +342,9 @@
             left:0;
             width: 100%;
             height:100%;
-            background-color: darken(rgba(46,82,107,0.6),15%);
+            background-color: darken(rgba(46,82,107,0.8),15%);
+            @include border-radius(0.3em); 
+
             z-index: -1;  
         } 
     }
@@ -330,6 +357,8 @@
         background-size: cover;
         background-repeat:no-repeat;
         // @include border-radius(0.3em);
+        @include border-radius(0.3em); 
+       
         &:before {
             content: '';
             // @include border-radius(0.3em);
@@ -339,7 +368,9 @@
             left:0;
             width: 100%;
             height:100%;
-            background-color: darken(rgba(46,82,107,0.6),15%);
+            background-color: darken(rgba(46,82,107,0.8),15%);
+            @include border-radius(0.3em); 
+
             z-index: -1;  
         } 
     }
@@ -352,6 +383,8 @@
         background-size: cover;
         background-repeat:no-repeat;
         // @include border-radius(0.3em);
+        @include border-radius(0.3em); 
+       
         &:before {
             content: '';
             // @include border-radius(0.3em);
@@ -361,7 +394,9 @@
             left:0;
             width: 100%;
             height:100%;
-            background-color: darken(rgba(46,82,107,0.6),15%);
+            background-color: darken(rgba(46,82,107,0.8),15%);
+            @include border-radius(0.3em); 
+
             z-index: -1;  
         } 
     }
@@ -393,6 +428,9 @@
           // height:25em;
           @include margin(0 0 0 0);
           background-position: bottom;
+          &:before {
+            background-color: darken(rgba(46,82,107,0.8),15%);
+          }
           h3 {
             @include margin(0 auto 1em);
           }
@@ -441,113 +479,108 @@
 
             }
           }
-
+        
+        }
+        .taco:before, 
+        .wine:before, 
+        .marg:before, 
+        .pub:before {
+            background-color: darken(rgba(46,82,107,0.8),15%);
         }
         .blurb {
           display:none;
         }
-        @media screen and (min-width:750px) {
+        // @media screen and (min-width:750px) {
 
             .mini-hero {
-                @include margin(3em 5%);
-                @include padding(3em 2em);
-                width: 40%;
-                min-height:23em;
-
-                 h4 {
-                    display: block;
-                    text-align: center;
-                    line-height: 1em;
-                    // @include font(4);
-                    @include margin(1em auto 0.5em);
+                @include padding(3em 0);
+                h4,p {
                     width:80%;
-                    // float:right;
-                 }
-                 p {
-                  // float:right;
-                  display: block;
-                  @include font(1.1);
-                  line-height: 1.4em;
-                  position: relative;
-                  width: 60%;
-                  max-width: 365px;
-                  // color:;
-                  @include margin(1em auto);
-                  // @include padding(1em);
-                 }
-                 a {
-                  display: block;
-                  width:50%;
-                  // float:right;
-                  @include margin(1em auto);
-                 }
+                    margin-left:10%;
+
+                }
             }
-        }
+        // }
+        //         @include margin(3em 5%);
+        //         @include padding(3em 2em);
+        //         width: 40%;
+        //         min-height:23em;
+
+        //          h4 {
+        //             display: block;
+        //             text-align: center;
+        //             line-height: 1em;
+        //             // @include font(4);
+        //             @include margin(1em auto 0.5em);
+        //             width:80%;
+        //             // float:right;
+        //          }
+        //          p {
+        //           // float:right;
+        //           display: block;
+        //           @include font(1.1);
+        //           line-height: 1.4em;
+        //           position: relative;
+        //           width: 60%;
+        //           max-width: 365px;
+        //           // color:;
+        //           @include margin(1em auto);
+        //           // @include padding(1em);
+        //          }
+        //          a {
+        //           display: block;
+        //           width:50%;
+        //           // float:right;
+        //           @include margin(1em auto);
+        //          }
+        //     }
+        // }
       
 
       
         .tour-info {
             width: 100%;
             display: inline-block;
-            @include margin(0 auto);
-            
-            p {
-                display: inline-block;
-                width: 50%;
-                @include margin(1em 25%);
-                @include padding(1em);
-                @include font(1.1);
-                line-height: 1.5em;
+            @include margin(1em auto);
+            @include padding(0.5em 10%);
 
+            h3 {
+                width: 100%;
+                @include margin(1em auto 0.5em);
             }
-            @media screen and (min-width:750px) {
-                width: 50%;
-                // min-height:33em;
-                @include margin(0 auto);
-                // background:$brandcolor2;
+            // p {
+            //     display: inline-block;
+            //     width: 50%;
+            //     @include margin(1em 25%);
+            //     @include padding(1em);
+            //     @include font(1.1);
+            //     line-height: 1.5em;
+
+            // }
                 .sub-info {
-                    width: 100%;
-                    @include margin(1em auto);
+                    width: 45%;
                     display: inline-block;
-                    vertical-align: top;
-
-                }
-                ul {
-                    // display: inline-block;
-                    text-align: center;
-                    @include margin(1em 0);
-                    @include font(0.7);
-                }
-                h3{
-                    text-align: center;
-                    @include font(2);
-                }h5{
-                    text-align: center;
-                    @include font(1.5);
-                }
-
-                li {
-                    // @include margin(0.1em 0 0.1em 2em);
-                    display: block;
+                    float: right;
+                    max-width: 270px;
                     position: relative;
-                    font-family: $h-font;
+                  @include margin(0 0 2em 2%);
+
+
                 }
                 p {
-                    // display: inline-block;
-                    // width: 80%;
-                    // @include margin(1em auto);
-                    // @include padding(0.5em);
-                    // @include font(1.05);
-                    // line-height: 1.5em;
                     @include font(1.05);
                     text-align: left;
                   position: relative;
+                  float:left;
                   display: inline-block;
-                  width:80%;
+                  width:45%;
                   max-width: 350px;
-                  @include margin(1em 10%);
+                    @include margin(0 2% 2em 0);
+                  
 
                 }
+            @media screen and (min-width:750px) {
+
     
 
 
@@ -570,90 +603,43 @@
 @media screen and (min-width:900px) {
 
     .tours {
-        // width: 80%;
-        // @include padding(0 10%);
+
         .content {
-          width: 100%;
-          @include margin(0 0);
+            width: 70%;
+            @include margin(0 auto);
         }
         .hero {
-            // height:50em;
             width: 100%;
-          @include padding(9em 0 3em);
-            &:before {
-                // @include gradient-hori(rgba(0,0,0,0.8), darken(rgba(46,82,107,0.6),5%),0%,40%);
-                // @include gradient-hori(darken(rgba(46,82,107,0.8),85%), darken(rgba(46,82,107,0.6),5%),0%,40%);
-                // background: darken(rgba(46,82,107,0.8),65%);
-            }
-            @media screen and (min-width:1200px) {
-                // height: 60em;
-            }
-            // h2 {
-            //     @include margin(1em auto 0 auto)
-            // }
-        }
-        .experience {
-
+            @include padding(9em 0 3em);
         }
         .tour-box {
-            width:90%;
+            width:80%;
             @include margin(2em auto);
-            // max-width: 900px;
-            // float:left;
+
         }
+        .mini-hero {
+            width: 90%;
+            @include margin(0 5%);
+            // @include padding(2em 1em);
+        }
+
+        @media screen and (min-width:1300px) {
+            .tour-box {
+                width: 45%;
+                display: inline-block;
+                height:55em;
+                float: left;
+                @include margin(2em 2.5%);
+            }
             .mini-hero {
-                width: 40%;
-
-                @include margin(3em auto);
-                @include padding(2em 1em);
-
-                
+                width:95%;
+                height:25em;
+                @include margin(0 auto);
+                position: relative;
+                @include padding(0);
             }
-            .tour-info {
-                width: 60%;
-                // background:blue;
-
-                p {
-                    width: 40%;
-                              @include font(1.05);
-                        text-align: left;
-                      position: relative;
-                      display: inline-block;
-                      // width:80%;
-                      max-width: 350px;
-                      @include margin(2em 0 2em 12%);
-                      @include padding(2em);
-                }
-                .sub-info {
-                    width: 30%;
-                    @include margin(4em 12% 1em 0);
-                    display: inline-block;
-                }
-            }
-            // @media screen and (min-width:1200px) {
-            //     width: 48%;
-            //     display: inline-block;
-            //     float: left;
-            //         @include margin(1em 2% 2em 0);
-                
-            //     .mini-hero {
-            //         height: 4.5em;
-            //         width: 100%;
-            //         @include margin(0 0);
-
-            //     }
-            //     &:nth-of-type(2n) {
-            //         @include margin(1em 0 2em 2%);
-
-                    
-            //     }
-            // }
-        
+        }
     }
-
-
-
-
 }
 
 

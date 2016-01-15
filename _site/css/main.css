@@ -206,7 +206,7 @@ header {
   position: relative;
   top: 0;
   width: 100%;
-  background: #212932;
+  background: #2E526B;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -333,7 +333,7 @@ header.navigation .nav-link {
   position: relative; }
 
 footer {
-  background: #1f3747;
+  background: #212932;
   width: 100%;
   overflow: hidden;
   clear: both;
@@ -416,7 +416,11 @@ footer {
     display: inline-block;
     float: right;
     letter-spacing: 1.5px;
-    text-align: center; }
+    text-align: center;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
     button:hover {
       background: #78be9e; } }
   @media screen and (min-width: 600px) and (min-width: 700px) {
@@ -504,6 +508,8 @@ footer {
   @media screen and (min-width: 400px) {
     .booking {
       margin: 0 auto; } }
+  .booking .booking-content {
+    position: relative; }
   .booking .divider {
     width: 80%;
     height: 2px;
@@ -531,6 +537,10 @@ footer {
     position: relative;
     z-index: 2;
     background: #67B692;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
     box-shadow: 3px 3px 0px 0px #1D3058; }
   .booking .radios {
     text-align: center;
@@ -539,15 +549,25 @@ footer {
     font-size: 0.6875px;
     font-size: 1.1em;
     line-height: 1.54em;
-    font-family: "Roadgeek", san-serif; }
+    font-family: "Roadgeek", san-serif;
+    position: relative;
+    margin: 1em 0; }
   .booking input[type=checkbox] {
     display: none; }
   .booking input[type=checkbox] + label {
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
     display: inline-block;
     padding: 0.7em;
     background: #67B692;
     box-shadow: 3px 3px 0px 0px #1D3058; }
   .booking input[type=checkbox]:checked + label {
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
     background-image: none;
     background-color: #9D375C;
     color: white; }
@@ -598,7 +618,11 @@ footer {
       font-size: 0.6em;
       line-height: 0.84em;
       overflow: hidden;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
   .booking .call {
     width: 60%;
     margin: 2em 20% 1em;
@@ -612,7 +636,11 @@ footer {
     -webkit-transition: background-color 300ms ease-in 0s;
     -moz-transition: background-color 300ms ease-in 0s;
     transition: background-color 300ms ease-in 0s;
-    border: none; }
+    border: none;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
     .booking .call img {
       display: none; }
     .booking .call.complete {
@@ -631,6 +659,39 @@ footer {
   .booking :-ms-input-placeholder {
     color: #2E526B; }
 
+@media screen and (min-width: 700px) {
+  .booking {
+    max-width: 900px; }
+    .booking .left {
+      width: 45%;
+      display: inline-block;
+      margin: 1em 1%;
+      float: left; }
+    .booking .divider {
+      display: none; }
+    .booking .toggle-content-three {
+      display: inline-block;
+      width: 45%;
+      float: right;
+      margin: 0 1%;
+      font-size: 1.25px;
+      font-size: 2em;
+      line-height: 2.8em;
+      color: #d4c9ad;
+      background: transparent;
+      box-shadow: none; }
+    .booking .hidden-content-three {
+      display: inline-block;
+      width: 45%;
+      margin: 1em 1%;
+      float: right; }
+      .booking .hidden-content-three input[type=text].input-reg {
+        margin: 0.1em 1% 1.7em; }
+    .booking .call {
+      display: inline-block;
+      width: 45%;
+      margin: 1em 1%;
+      float: right; } }
 .home {
   background-color: #264459;
   position: relative;
@@ -663,7 +724,7 @@ footer {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: rgba(38, 68, 89, 0.6); }
+      background-color: rgba(23, 41, 54, 0.7); }
     .home .tag-line h2 {
       padding: 0;
       margin: 1em auto 0;
@@ -775,7 +836,11 @@ footer {
       opacity: 1;
       display: block;
       letter-spacing: 1.5px;
-      text-align: center; }
+      text-align: center;
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
       .home .mini-hero a:hover {
         background: #78be9e; }
       @media screen and (min-width: 400px) {
@@ -812,7 +877,7 @@ footer {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(38, 68, 89, 0.6);
+      background-color: rgba(23, 41, 54, 0.7);
       z-index: -1; }
   .home .recents {
     text-align: center;
@@ -876,7 +941,8 @@ footer {
     .home .tag-line {
       width: 100%;
       margin: 0;
-      background-position: bottom; }
+      background-position: bottom;
+      background-color: rgba(23, 41, 54, 0.8); }
       .home .tag-line h3 {
         margin: 0 auto 1em; } }
     @media screen and (min-width: 600px) and (min-width: 700px) {
@@ -923,15 +989,19 @@ footer {
             margin: 1em auto; } }
 @media screen and (min-width: 600px) {
     .home .blurb {
-      display: none; } }
+      display: none; }
+    .home .taco:before {
+      background-color: rgba(23, 41, 54, 0.8); } }
   @media screen and (min-width: 600px) and (min-width: 700px) {
     .home .tour-links .mini-hero {
-      padding: 3em 2em; }
+      padding: 3em 0; }
+      .home .tour-links .mini-hero .contain {
+        padding: 1em 10%; }
       .home .tour-links .mini-hero h4 {
         display: block;
-        text-align: center;
-        margin: 1em 52% 0.5em 2%;
-        width: 45%; }
+        text-align: left;
+        margin: 1em 0 0.5em;
+        width: 70%; }
       .home .tour-links .mini-hero p {
         display: block;
         font-size: 0.6875px;
@@ -939,13 +1009,13 @@ footer {
         line-height: 1.54em;
         line-height: 1.4em;
         position: relative;
-        width: 30%;
+        width: 40%;
         max-width: 365px;
-        margin: 1em 60% 1em 10%; }
+        margin: 1em 70% 1em 0; }
       .home .tour-links .mini-hero a {
         display: block;
-        width: 20%;
-        margin: 1em 65% 1em 15%; } }
+        width: 30%;
+        margin: 1em 70% 1em 0; } }
   @media screen and (min-width: 600px) and (min-width: 1000px) {
     .home .tour-links .mini-hero {
       padding: 8em 2em; } }
@@ -1013,7 +1083,7 @@ footer {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: rgba(23, 41, 54, 0.6); }
+      background-color: rgba(23, 41, 54, 0.7); }
     .tours .hero .divider {
       width: 300px;
       height: 2px;
@@ -1089,31 +1159,31 @@ footer {
     width: 100%;
     overflow: hidden;
     position: relative;
-    margin: 0 auto;
-    border-bottom: 2px solid #212932; }
+    margin: 0 auto; }
   .tours .mini-hero {
     width: 50%;
     float: left;
     position: relative; }
     .tours .mini-hero h4 {
       display: block;
-      text-align: center;
-      font-size: 1.75px;
-      font-size: 2.8em;
-      line-height: 3.92em;
-      margin: 2em 0 0.6em;
-      line-height: 0.7em;
-      position: relative; }
+      text-align: left;
+      font-size: 2.1875px;
+      font-size: 3.5em;
+      line-height: 4.9em;
+      margin: 1.5em auto 0.2em;
+      line-height: 1em;
+      position: relative;
+      width: 70%; }
     .tours .mini-hero p {
       display: block;
-      font-size: 0.6875px;
-      font-size: 1.1em;
-      line-height: 1.54em;
+      font-size: 0.8125px;
+      font-size: 1.3em;
+      line-height: 1.82em;
       line-height: 1.5em;
       position: relative;
       width: 70%;
       max-width: 365px;
-      margin: 1em auto 6em; }
+      margin: 1em 0 4em 15%; }
     .tours .mini-hero .divider {
       width: 200px;
       height: 2px;
@@ -1123,47 +1193,70 @@ footer {
   .tours .tour-info {
     width: 100%;
     margin: 0 auto;
-    background: #212932;
     background: #223c4e;
-    padding: 2em 1em;
+    padding: 0.5em 15%;
     clear: both;
     position: relative; }
     .tours .tour-info .sub-info {
-      width: 80%;
-      margin: 1em 10%;
-      display: inline-block;
-      vertical-align: top; }
+      max-width: 300px;
+      width: 70%;
+      position: relative;
+      margin: 0 auto 2em;
+      border: 2px solid #d4c9ad;
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      background-color: rgba(23, 41, 54, 0.6); }
     .tours .tour-info ul {
-      text-align: center;
-      margin: 1em 0;
-      font-size: 0.4375px;
-      font-size: 0.7em;
-      line-height: 0.98em; }
-    .tours .tour-info h3 {
-      text-align: center;
-      font-size: 1.25px;
-      font-size: 2em;
-      line-height: 2.8em;
-      display: none; }
-    .tours .tour-info h5 {
-      text-align: center;
-      font-size: 0.9375px;
-      font-size: 1.5em;
-      line-height: 2.1em; }
-    .tours .tour-info li {
-      display: block;
-      position: relative;
-      font-family: "Roadgeek", san-serif; }
-    .tours .tour-info p {
-      font-size: 0.65625px;
-      font-size: 1.05em;
-      line-height: 1.47em;
       text-align: left;
+      width: 70%;
+      margin: 0.5em auto;
+      position: relative; }
+    .tours .tour-info h3 {
+      text-align: left;
+      width: 80%;
+      font-size: 1.75px;
+      font-size: 2.8em;
+      line-height: 3.92em;
+      line-height: 1em;
+      margin: 1em auto 0;
+      position: relative; }
+    .tours .tour-info h5 {
+      text-align: left;
+      font-size: 0.875px;
+      font-size: 1.4em;
+      line-height: 1.96em;
+      width: 80%;
       position: relative;
-      display: inline-block;
+      margin: 0.5em auto 0; }
+    .tours .tour-info li {
+      display: list-item;
+      list-style-type: disc;
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      font-family: "Roadgeek", san-serif;
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
+      line-height: 1.5em; }
+    .tours .tour-info p {
+      display: block;
       width: 80%;
       max-width: 350px;
-      margin: 1em 10%; }
+      margin: 2em auto;
+      padding: 0;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
+      line-height: 1.5em; }
+    .tours .tour-info .divider {
+      width: 100%;
+      height: 2px;
+      margin: 0.7em auto 1em;
+      position: relative;
+      background: #d4c9ad; }
   .tours .taco {
     position: relative;
     overflow: hidden;
@@ -1171,7 +1264,11 @@ footer {
     z-index: 1;
     background: url("../img/prettytaco1.jpg");
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
     .tours .taco:before {
       content: '';
       position: absolute;
@@ -1180,7 +1277,11 @@ footer {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(23, 41, 54, 0.6);
+      background-color: rgba(23, 41, 54, 0.8);
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
       z-index: -1; }
   .tours .wine {
     position: relative;
@@ -1189,7 +1290,11 @@ footer {
     z-index: 1;
     background: url("../img/wine.jpg");
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
     .tours .wine:before {
       content: '';
       position: absolute;
@@ -1198,7 +1303,11 @@ footer {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(23, 41, 54, 0.6);
+      background-color: rgba(23, 41, 54, 0.8);
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
       z-index: -1; }
   .tours .marg {
     position: relative;
@@ -1207,7 +1316,11 @@ footer {
     z-index: 1;
     background: url("../img/marg.jpg");
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
     .tours .marg:before {
       content: '';
       position: absolute;
@@ -1216,7 +1329,11 @@ footer {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(23, 41, 54, 0.6);
+      background-color: rgba(23, 41, 54, 0.8);
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
       z-index: -1; }
   .tours .pub {
     position: relative;
@@ -1225,7 +1342,11 @@ footer {
     z-index: 1;
     background: url("../img/dash.jpg");
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
     .tours .pub:before {
       content: '';
       position: absolute;
@@ -1234,7 +1355,11 @@ footer {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(23, 41, 54, 0.6);
+      background-color: rgba(23, 41, 54, 0.8);
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
       z-index: -1; }
 
 @media screen and (min-width: 600px) {
@@ -1242,6 +1367,8 @@ footer {
     width: 100%;
     margin: 0;
     background-position: bottom; }
+    .tours .hero:before {
+      background-color: rgba(23, 41, 54, 0.8); }
     .tours .hero h3 {
       margin: 0 auto 1em; } }
   @media screen and (min-width: 600px) and (min-width: 700px) {
@@ -1287,119 +1414,71 @@ footer {
           width: 45%;
           margin: 1em auto; } }
 @media screen and (min-width: 600px) {
+  .tours .taco:before,
+  .tours .wine:before,
+  .tours .marg:before,
+  .tours .pub:before {
+    background-color: rgba(23, 41, 54, 0.8); }
   .tours .blurb {
-    display: none; } }
-@media screen and (min-width: 600px) and (min-width: 750px) {
+    display: none; }
   .tours .mini-hero {
-    margin: 3em 5%;
-    padding: 3em 2em;
-    width: 40%;
-    min-height: 23em; }
-    .tours .mini-hero h4 {
-      display: block;
-      text-align: center;
-      line-height: 1em;
-      margin: 1em auto 0.5em;
-      width: 80%; }
-    .tours .mini-hero p {
-      display: block;
-      font-size: 0.6875px;
-      font-size: 1.1em;
-      line-height: 1.54em;
-      line-height: 1.4em;
-      position: relative;
-      width: 60%;
-      max-width: 365px;
-      margin: 1em auto; }
-    .tours .mini-hero a {
-      display: block;
-      width: 50%;
-      margin: 1em auto; } }
-@media screen and (min-width: 600px) {
+    padding: 3em 0; }
+    .tours .mini-hero h4, .tours .mini-hero p {
+      width: 80%;
+      margin-left: 10%; }
   .tours .tour-info {
     width: 100%;
     display: inline-block;
-    margin: 0 auto; }
-    .tours .tour-info p {
+    margin: 1em auto;
+    padding: 0.5em 10%; }
+    .tours .tour-info h3 {
+      width: 100%;
+      margin: 1em auto 0.5em; }
+    .tours .tour-info .sub-info {
+      width: 45%;
       display: inline-block;
-      width: 50%;
-      margin: 1em 25%;
-      padding: 1em;
-      font-size: 0.6875px;
-      font-size: 1.1em;
-      line-height: 1.54em;
-      line-height: 1.5em; } }
-  @media screen and (min-width: 600px) and (min-width: 750px) {
-    .tours .tour-info {
-      width: 50%;
-      margin: 0 auto; }
-      .tours .tour-info .sub-info {
-        width: 100%;
-        margin: 1em auto;
-        display: inline-block;
-        vertical-align: top; }
-      .tours .tour-info ul {
-        text-align: center;
-        margin: 1em 0;
-        font-size: 0.4375px;
-        font-size: 0.7em;
-        line-height: 0.98em; }
-      .tours .tour-info h3 {
-        text-align: center;
-        font-size: 1.25px;
-        font-size: 2em;
-        line-height: 2.8em; }
-      .tours .tour-info h5 {
-        text-align: center;
-        font-size: 0.9375px;
-        font-size: 1.5em;
-        line-height: 2.1em; }
-      .tours .tour-info li {
-        display: block;
-        position: relative;
-        font-family: "Roadgeek", san-serif; }
-      .tours .tour-info p {
-        font-size: 0.65625px;
-        font-size: 1.05em;
-        line-height: 1.47em;
-        text-align: left;
-        position: relative;
-        display: inline-block;
-        width: 80%;
-        max-width: 350px;
-        margin: 1em 10%; } }
-
-@media screen and (min-width: 900px) {
-  .tours .content {
-    width: 100%;
-    margin: 0; }
-  .tours .hero {
-    width: 100%;
-    padding: 9em 0 3em; }
-  .tours .tour-box {
-    width: 90%;
-    margin: 2em auto; }
-  .tours .mini-hero {
-    width: 40%;
-    margin: 3em auto;
-    padding: 2em 1em; }
-  .tours .tour-info {
-    width: 60%; }
+      float: right;
+      max-width: 270px;
+      position: relative;
+      margin: 0 0 2em 2%; }
     .tours .tour-info p {
-      width: 40%;
       font-size: 0.65625px;
       font-size: 1.05em;
       line-height: 1.47em;
       text-align: left;
       position: relative;
+      float: left;
       display: inline-block;
+      width: 45%;
       max-width: 350px;
-      margin: 2em 0 2em 12%;
-      padding: 2em; }
-    .tours .tour-info .sub-info {
-      width: 30%;
-      margin: 4em 12% 1em 0;
-      display: inline-block; } }
+      margin: 0 2% 2em 0; } }
+@media screen and (min-width: 900px) {
+  .tours .content {
+    width: 70%;
+    margin: 0 auto; }
+  .tours .hero {
+    width: 100%;
+    padding: 9em 0 3em; }
+  .tours .tour-box {
+    width: 80%;
+    margin: 2em auto; }
+  .tours .mini-hero {
+    width: 90%;
+    margin: 0 5%; } }
+@media screen and (min-width: 900px) and (min-width: 1300px) {
+  .tours .tour-box {
+    width: 45%;
+    display: inline-block;
+    height: 55em;
+    float: left;
+    margin: 2em 2.5%; }
+  .tours .mini-hero {
+    width: 95%;
+    height: 25em;
+    margin: 0 auto;
+    position: relative;
+    padding: 0; } }
+
 .about-us {
   background: #2E526B;
   background-color: #1f3747;
@@ -1428,7 +1507,7 @@ footer {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: rgba(23, 41, 54, 0.6); }
+      background-color: rgba(23, 41, 54, 0.7); }
     .about-us .about-hero h2 {
       padding: 0;
       margin: 2em auto;
@@ -1523,7 +1602,7 @@ footer {
     width: 100%;
     margin: 0 auto;
     background: #223c4e;
-    padding: 2em 1em;
+    padding: 0 10%;
     clear: both;
     position: relative; }
     .about-us .rider-info .sub-info {
@@ -1531,30 +1610,42 @@ footer {
       margin: 1em auto; }
     .about-us .rider-info .exp,
     .about-us .rider-info .market {
-      max-width: 270px;
+      max-width: 300px;
       position: relative;
-      margin: 0 auto 2em; }
+      margin: 0 auto 2em;
+      border: 2px solid #d4c9ad;
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      background-color: rgba(23, 41, 54, 0.6); }
     .about-us .rider-info ul {
       text-align: left;
-      margin: 1em 0;
-      width: 60%;
-      margin: 0.3em auto 1.5em;
+      width: 80%;
+      margin: 0.5em auto;
       position: relative; }
     .about-us .rider-info h4 {
-      text-align: center;
+      text-align: left;
+      width: 80%;
       font-size: 1.75px;
       font-size: 2.8em;
       line-height: 3.92em;
       line-height: 1em;
-      margin: 0.5em 0;
+      margin: 1em auto 0;
       position: relative; }
     .about-us .rider-info h5 {
-      text-align: center;
-      font-size: 0.75px;
-      font-size: 1.2em;
-      line-height: 1.68em; }
+      text-align: left;
+      font-size: 0.875px;
+      font-size: 1.4em;
+      line-height: 1.96em;
+      width: 80%;
+      position: relative;
+      margin: 0.5em auto 0; }
     .about-us .rider-info li {
-      display: block;
+      display: list-item;
+      list-style-type: disc;
+      width: 80%;
+      margin: 0 auto;
       position: relative;
       font-family: "Roadgeek", san-serif;
       font-size: 0.625px;
@@ -1562,9 +1653,11 @@ footer {
       line-height: 1.4em;
       line-height: 1.5em; }
     .about-us .rider-info p {
-      display: inline-block;
-      margin: 1em auto;
-      padding: 1em;
+      display: block;
+      width: 80%;
+      max-width: 350px;
+      margin: 2em auto;
+      padding: 0;
       font-size: 0.6875px;
       font-size: 1.1em;
       line-height: 1.54em;
@@ -1576,9 +1669,9 @@ footer {
       vertical-align: super;
       display: inline-block; }
     .about-us .rider-info .divider {
-      width: 70%;
+      width: 100%;
       height: 2px;
-      margin: 0.7em auto;
+      margin: 0.7em auto 1em;
       position: relative;
       background: #d4c9ad; }
   .about-us .matt {
@@ -1586,6 +1679,8 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
     margin: 1em auto 0.5em;
     z-index: 1;
     -webkit-border-radius: 0.3em;
@@ -1597,6 +1692,8 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
     margin: 1em auto 0.5em;
     z-index: 1;
     -webkit-border-radius: 0.3em;
@@ -1608,6 +1705,8 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
     margin: 1em auto 0.5em;
     z-index: 1;
     -webkit-border-radius: 0.3em;
@@ -1619,6 +1718,8 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
     margin: 1em auto 0.5em;
     z-index: 1;
     -webkit-border-radius: 0.3em;
@@ -1629,6 +1730,8 @@ footer {
 @media screen and (min-width: 600px) {
   .about-us .blurb {
     display: none; }
+  .about-us .about-hero:before {
+    background-color: rgba(23, 41, 54, 0.8); }
   .about-us .hero-blurb {
     width: 100%;
     max-width: 900px;
@@ -1654,9 +1757,6 @@ footer {
         width: 45%;
         margin: 1em auto; } }
 @media screen and (min-width: 600px) {
-  .about-us .about-desc {
-    width: 80%;
-    margin: 0 auto; }
   .about-us .about-hero {
     width: 100%;
     margin: 0;
@@ -1669,53 +1769,53 @@ footer {
       line-height: 1.2em;
       position: relative;
       margin: 1em 0 0.3em; }
+  .about-us .about-desc {
+    padding: 2em 0; }
   .about-us .mini-hero {
     height: 30em; }
   .about-us .rider-info {
     clear: both;
-    overflow: hidden; }
+    overflow: hidden;
+    margin: 2em 0; }
     .about-us .rider-info .exp,
     .about-us .rider-info .market {
-      width: 50%;
+      width: 45%;
       display: inline-block;
       float: left;
       max-width: 270px;
       position: relative;
-      margin: 0 auto 2em; }
+      margin: 0 2% 2em 0; }
+    .about-us .rider-info .market {
+      margin: 0 0 2em 2%; }
     .about-us .rider-info p {
       width: 80%;
-      margin: 1em 10%;
-      padding: 0 1em; }
+      margin: 1em 10%; }
     .about-us .rider-info .sub-info {
       width: 80%;
       margin: 2em 10%; } }
 @media screen and (min-width: 900px) {
   .about-us .content {
-    width: 80%;
-    margin: 0 10%; }
+    width: 70%;
+    margin: 0 auto; }
   .about-us .about-hero {
     height: 50em;
     width: 100%;
     padding: 10em 0; }
-  .about-us .about-desc {
-    width: 100%;
-    margin: 3em 0; }
   .about-us .rider-box .mini-hero {
-    width: 80%;
-    margin: 0 10%;
-    height: 25em; } }
-@media screen and (min-width: 900px) and (min-width: 950px) {
+    width: 70%;
+    margin: 1em auto;
+    height: 27em; } }
+@media screen and (min-width: 900px) and (min-width: 1300px) {
   .about-us .rider-box {
-    width: 48%;
+    width: 50%;
     display: inline-block;
+    height: 55em;
     float: left;
-    margin: 1em 2% 2em 0; }
+    margin: 2em auto; }
     .about-us .rider-box .mini-hero {
-      height: 30em;
-      width: 100%;
-      margin: 0; }
-    .about-us .rider-box:nth-of-type(2n) {
-      margin: 1em 0 2em 2%; } }
+      height: 20em;
+      width: 70%;
+      margin: 0 auto; } }
 
 .partners {
   background: url("../img/cranes.jpg");

@@ -245,7 +245,10 @@ header {
     position: relative;
     top:0;
     width: 100%;
-    background:$brandcolor2;
+    // background:$brandcolor2;
+  background:$brandcolor;
+    
+
     // background: url('../img/austin-tx-6th-street-rainy-night-01-XL.jpg');
     background-repeat: no-repeat;
     background-size:cover;
@@ -300,6 +303,8 @@ button {
     // box-shadow: 3px 3px 0px 0px $brandcolor;
     &:hover {
       background: lighten(#67B692,5%);
+
+
 
 
     }
@@ -458,8 +463,9 @@ header.navigation {
 
 
 footer {
-  // background:$brandcolor2;
-  background:darken($brandcolor,10%);
+  background:$brandcolor2;
+  // background:darken($brandcolor,13%);
+  // background
 
   width: 100%;
   overflow: hidden;
@@ -572,6 +578,8 @@ footer {
     // @include margin(1em 5%);
     text-align:center;
     // box-shadow: 3px 3px 0px 0px $brandcolor;
+        @include border-radius(0.3em); 
+    
     &:hover {
       background: lighten(#67B692,5%);
     }

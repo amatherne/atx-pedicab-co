@@ -235,3 +235,31 @@ function formcheck() {
 $('input[type="checkbox"]').on('change', function() {
    $('input[type="checkbox"]').not(this).prop('checked', false);
 });
+
+
+$(document).ready(function(){
+        if($(window).on('load, resize').width() > 700){
+            $( "#options" ).trigger( "click" );
+        }
+});
+
+
+// $(window).on('load, resize', function mobileViewUpdate() {
+//     var viewportWidth = $(window).width();
+//         if($(window).width() > 700){
+//             $( "#options" ).trigger( "click" );
+//         }
+//     }
+// });
+
+
+
+
+
+
+
+
+
+
+
+

@@ -23,94 +23,75 @@
 		<h1><a href="/atx-pedicab-co/">
 			Austin Pedicab
 		</a></h1>
-      <button class="toggle-content">Call Your Cab Now!</button>
-
-	
-
+		<button class="toggle-content">Call Your Cab Now!</button>
+		
 		<a href="#" class="navigation-menu-button" id="js-mobile-menu">
-<!-- 			<img src="/atx-pedicab-co/img/icons/plain-burger.png"> -->
-<span class="menuword">menu</span></a>
-		<nav role="navigation">
-			<ul id="js-navigation-menu" class="navigation-menu show">
-				<li>
-					<a class="nav-link" href="/atx-pedicab-co/">
-						<img src="/atx-pedicab-co/img/icons/home.png"><span>Home</span>
-					</a>
-				</li>
-				<li>
-					<a class="nav-link" href="/atx-pedicab-co/tours/">
-						<img src="/atx-pedicab-co/img/icons/pedicab.png"><span>Tours</span>
-				</a>
-			</li>
-				<li>
-					<a class="nav-link" href="/atx-pedicab-co/about/">
-						<img src="/atx-pedicab-co/img/icons/butt.png"><span>About</span>
-				</a>
-			</li>
-				<li>
-					<a class="nav-link" href="/atx-pedicab-co/partners/">
-						<img src="/atx-pedicab-co/img/icons/partners.png"><span>Partners</span>
-				</a>
-			</li>
-				<li>
-					<a class="nav-link" href="/atx-pedicab-co/contact/">
-						<img src="/atx-pedicab-co/img/icons/contact-chat.png"><span>Contact</span>
-				</a>
-			</li>
-			</ul>
-		</nav>     
-
- 
-
+			<!-- 			<img src="/atx-pedicab-co/img/icons/plain-burger.png"> -->
+			<span class="menuword">menu</span></a>
+			<nav role="navigation">
+				<ul id="js-navigation-menu" class="navigation-menu show">
+					<li>
+						<a class="nav-link" href="/atx-pedicab-co/">
+							<img src="/atx-pedicab-co/img/icons/home.png"><span>Home</span>
+						</a>
+					</li>
+					<li>
+						<a class="nav-link" href="/atx-pedicab-co/tours/">
+							<img src="/atx-pedicab-co/img/icons/pedicab.png"><span>Tours</span>
+						</a>
+					</li>
+					<li>
+						<a class="nav-link" href="/atx-pedicab-co/about/">
+							<img src="/atx-pedicab-co/img/icons/butt.png"><span>About</span>
+						</a>
+					</li>
+					<li>
+						<a class="nav-link" href="/atx-pedicab-co/partners/">
+							<img src="/atx-pedicab-co/img/icons/partners.png"><span>Partners</span>
+						</a>
+					</li>
+					<li>
+						<a class="nav-link" href="/atx-pedicab-co/contact/">
+							<img src="/atx-pedicab-co/img/icons/contact-chat.png"><span>Contact</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			
 		</div>
 		<div class="booking">
-		<div class="booking-content hidden-content slide-up">
-        <form action="sendMessage.php" method="get">
-          <fieldset>
-
-          
-              <div>
-
-                <input class="input-reg" type="text" name="full_name" for="" placeholder="Your Name/Call Sign">
-
-                <input class="input-reg" type="text" name="phone" for="" placeholder="Confirmation Phone Number">
-
-                <input class="input-reg" type="text" name="current_location" for="" placeholder="Current / Pickup Location">
-
-                <div class="radios">
-
-                  <input type="checkbox" id="radio01" name="party_size" />
-                  <label class="radio-one" for="radio01">1 - 3</label>
-
-                  <input type="checkbox" id="radio02" name="party_size" />
-                  <label class="radio-one" for="radio02">4 - 6</label>
-                  
-                </div>
-              </div>
-
-              <div class="divider"></div>
-              
-              <h3 class="toggle-content-three">More Options</h3>
-              <div class="hidden-content-three slide-up">
-                <input class="input-reg" type="text" name="destination" for="" placeholder="Destination (optional)">
-                <input type="text" id="datetime12" data-format="h:mm a" data-template="hh : mm a" name="datetime" value="8:30 pm">
-
-              </div>
-              <div class="divider"></div>
-              <button class="call" type="submit" name="submit" id="call"><span>Call Cab</span><img src="/atx-pedicab-co/img/pedicab.png"></button>
-
-            
-            
-          </fieldset>
-        </form>
-      </div> 
-    </div>
-
-
-</header>
-
-
-
+			<div class="booking-content hidden-content slide-up">
+				<form action="sendMessage.php" method="get">
+					<fieldset>
+						
+						<div class="left">
+							<input class="input-reg" type="text" name="full_name" for="" placeholder="Your Name/Call Sign">
+							<input class="input-reg" type="text" name="phone" for="" placeholder="Confirmation Phone Number">
+							<input class="input-reg" type="text" name="current_location" for="" placeholder="Current / Pickup Location">
+							<div class="radios">
+								<input type="checkbox" id="radio01" name="party_size" />
+								<label class="radio-one" for="radio01">1 - 3</label>
+								<input type="checkbox" id="radio02" name="party_size" />
+								<label class="radio-one" for="radio02">4 - 6</label>
+								
+							</div>
+						</div>
+						<div class="divider"></div>
+						
+						<h3 id="options" class="toggle-content-three">More Options</h3>
+						<div  class="hidden-content-three slide-up">
+							<input class="input-reg" type="text" name="destination" for="" placeholder="Destination (optional)">
+							<input type="text" id="datetime12" data-format="h:mm a" data-template="hh : mm a" name="datetime" value="8:30 pm">
+						</div>
+						<div class="divider"></div>
+						<button class="call" type="submit" name="submit" id="call"><span>Call Cab</span><img src="/atx-pedicab-co/img/pedicab.png"></button>
+						
+						
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</header>
 
     <div class="page-content">
       <div class="wrapper">

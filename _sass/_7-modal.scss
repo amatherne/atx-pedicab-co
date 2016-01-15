@@ -19,6 +19,7 @@
 }
 .navigation-wrapper {
     background:darken($brandcolor,10%);
+    // background:$brandcolor2;
 
 }
 .booking {
@@ -32,6 +33,10 @@
   @include padding(0 5%);
   @media screen and (min-width:400px) {
     @include margin(0 auto);
+  }
+  .booking-content {
+    position: relative;
+    // @include padding(2em 0);
   }
 
 	.divider {
@@ -63,6 +68,8 @@
     	position: relative;
   	  z-index: 2;
       background:#67B692;
+        @include border-radius(0.3em); 
+
       box-shadow: 3px 3px 0px 0px #1D3058;
     }
   }
@@ -72,17 +79,23 @@
     color: #2E526B;
     @include font(1.1);
     font-family: $h-font;
+    position: relative;
+    @include margin(1em 0);
   }
   input[type=checkbox] {
     display:none; 
 	}
 	input[type=checkbox] + label {
+        @include border-radius(0.3em); 
+
 	    display:inline-block;
 	    @include padding(0.7em);
 	    background:#67B692;
       box-shadow: 3px 3px 0px 0px #1D3058;
 	}
 	input[type=checkbox]:checked + label { 
+        @include border-radius(0.3em); 
+
 	    background-image: none;
 	    background-color:$highlightcolor;
 	    color:white;
@@ -136,6 +149,8 @@
     	@include font(0.6);
     	overflow: hidden;
     	text-transform: uppercase;
+        @include border-radius(0.3em); 
+
 		}
 	}
 
@@ -149,19 +164,11 @@
       color:$fontcolor;
      	@include transition(background-color 300ms ease-in 0s);
 		border: none;
+        @include border-radius(0.3em); 
+    
       	img {
-        	// vertical-align: middle;
-        	// @include margin(0.1em 10% 1em 0);
-        	// width: 20%;
         	display: none;
       	}
-      	// span {
-       //  	display: inline-block;
-       //  	@include font(2.5);
-       //  	width: 50%;
-       //  	// @include padding(0.3em 0.3em);
-       //  	@include margin(0.1em 5%);
-      	// }
       	&.complete {
         	@include transition(background-color 300ms ease-in 0s);
       		background:darken($buttoncolor,10%);
@@ -184,129 +191,54 @@
 	   color: #2E526B;  
 	}
 }
+@media screen and (min-width:700px) {
+  .booking {
+    max-width: 900px;
+    // @include margin(2em auto);
+    // @include padding(2em 5%);
+    .left {
+      width: 45%;
+      display: inline-block;
+      @include margin(1em 1%);
+      float: left;
+    }
+    .divider {
+      display: none;
+    }
+    .toggle-content-three {
+      display: inline-block;
+      width: 45%;
+      float: right;
+      @include margin(0 1%);
+      // width: 40%;
+      // font-family: $h-font;
+      @include font(2);
+      color: $fontcolor;
+      // @include margin(0 30%);
+      // @include padding(0.2em);
+      // border: none;
+      background:transparent;
+      box-shadow: none;
 
+    }
+    .hidden-content-three {
+      display: inline-block;
+      width: 45%;
+      @include margin(1em 1%);
+      float: right;
+      input[type=text].input-reg {
+        @include margin(0.1em 1% 1.7em);
 
-
-
-
-
-
-// /* Overlay style */
-// .overlay {
-// 	position: fixed;
-// 	overflow-y:scroll;
-// 	width: 100%;
-// 	// height: 100%;
-// 	top: 0;
-// 	left: 0;
-// 	// background: rgba(153,204,51,0.9);
-// }
-
-// /* Overlay closing cross */
-// .overlay .overlay-close {
-// 	width: 144px;
-// 	height: 49px;
-// 	position: relative;
-// 	float:right;
-// 	overflow: hidden;
-// 	@include margin(-2em 1em null null);
-// 	border: none;
-// 	background:transparent;
-// 	@include border-radius(0.8em);
-// 	z-index:10;
-// 	background: $brandcolor2;
-// 	outline: none;
-// 	display:inline-block;
-// 	img {
-// 		width: 40px;
-// 		// float: right;
-// 		vertical-align: middle;
-// 		padding-bottom:1.8em;
-// 		padding-top:0.15em;
-// 		z-index: 20;
-// 	}
-// 	span {
-// 	font-family: "roadgeek";
-// 	display:inline-block;
-// 	width:70px;
-// 	color:$fontcolor;
-//       @include font(3);
-//       line-height: 0.3em;
-//       padding-top:0.6em;
-//       padding-right:0.3em;
-//       z-index: 20;
-// 	}
-// }
-
-
-// /* Effects */
-// html, body {
-// 	overflow-x: hidden;
-// 	// height:-100%;
-
-// }
-
-// .container {
-// 	overflow-x: hidden;
-// 	-webkit-transition: -webkit-transform 0.5s 0.5s;
-// 	transition: transform 0.5s 0.5s;	
-// }
-
-// .container.overlay-open {
-// 	-webkit-transform: translateX(100%);
-// 	transform: translateX(50%);
-// }
-
-// .container::after {
-// 	content: '';
-// 	opacity: 0;
-// 	visibility: hidden;
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	height: 100%;
-// 	background: rgba(0,0,0,0.6);
-// 	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-// 	transition: opacity 0.5s, visibility 0s 0.5s;
-// }
-
-// .container.overlay-open::after {
-// 	visibility: visible;
-// 	opacity: 1;
-// 	-webkit-transition: opacity 0.5s;
-// 	transition: opacity 0.5s;
-// }
-
-// .overlay-contentpush {
-// 	// background: rgba(153,204,51,1);
-// 	visibility: hidden;
-// 	-webkit-backface-visibility: hidden;
-// 	backface-visibility: hidden;
-// 	-webkit-transform: translateX(-100%);
-// 	transform: translateX(-100%);
-// 	-webkit-transition: -webkit-transform 0s, visibility 0s 0.5s;
-// 	transition: transform 0s, visibility 0s 0.5s;
-// }
-
-// .overlay-contentpush.open {
-// 	visibility: visible;
-// 	-webkit-transform: translateX(0%);
-// 	transform: translateX(0%);
-// 	-webkit-transition: -webkit-transform 0.5s 0.5s;
-// 	transition: transform 0.5s 0.5s;
-// }
-
-// figure out how to make this work later
-// .overlay-contentpush.close {
-// 	visibility: visible;
-// 	-webkit-transform: translateX(-100%);
-// 	transform: translateX(-100%);
-// 	-webkit-transition: -webkit-transform 0.5s 0.5s;
-// 	transition: transform 0.5s 0.5s;
-// }
-
-
+      }
+    }
+    .call {
+      display: inline-block;
+      width: 45%;
+      @include margin(1em 1%);
+      float: right;
+    }
+  }
+}
 
 
 
