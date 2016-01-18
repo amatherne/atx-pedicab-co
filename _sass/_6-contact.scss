@@ -1,31 +1,206 @@
 .contact {
-	background: url('../img/sunset.jpg');
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: center top;
+    background-color: darken(rgba(46,82,107,1),5%);
     position: relative;
-    z-index: 0;
-    &:before {
-        content: '';
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top:0;
-        left:0;
-        background-color: darken(rgba(46,82,107,0.6),5%);
-        z-index: -1;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .contain {
+        max-width: 900px;
+        @include margin(0 auto);
     }
-    h2 {
-    	text-align: center;
+    .hero {
+        text-align: center;
+        @include margin(0 auto);
         display: block;
-        @include font(3);
-        line-height: 1.6em;
-        @include padding(4em 0);
-        z-index: 2;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background: url('../img/6th.jpg');
+        background-repeat:no-repeat;
+        background-position: 80% 80%;
+        background-size: cover;
+        &:before {
+            content: '';
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left:0;
+            background-color: darken(rgba(46,82,107,0.7),15%);
+        }
+        .para {
+            display: none;
+        }
+        .email {
+            display: none;
+        }
+        h2 {
+            @include padding(0 0);
+            @include margin(1.5em auto 2.5em);
+            display: block;
+            @include font(4);
+            line-height: 1em;
+            position: relative;
+            opacity: 1;
+            @media screen and (min-width:400px) {
+                @include font(4.5);
+                line-height: 1em;
+            }
+        }
+        h3 {
+            @include font(2);
+            @include padding(0);
+            line-height: 1em;
+            position: relative;
+            opacity: 1;
+            @include margin(0 auto 3em);
+            @media screen and (min-width:400px) {
+                @include font(2.8);
+                line-height: 1em;
+            }
+        }
+        .para {
+            display: none;
+        }
+        .divider {
+            width: 300px;
+            height:2px;
+            @include margin(0 auto);
+            background: $fontcolor;
+            position: relative;
+            opacity: 0.8;
+        }
     }
-}
+    .blurb {
+        text-align: center;
+        @include margin(0);
+        display: block;
+        width: 100%;
+        position: relative;
+        @include padding(2em 0);
+        // &:before {
+        //     content: '';
+        //     position: absolute;
+        //     top:0;
+        //     left:0;
+        //     width: 100%;
+        //     height:100%;
+        //     background:darken($brandcolor,8%);
+        // }
+        p {
+            @include font(1);
+            text-align: left;
+          position: relative;
+          display: inline-block;
+          width:80%;
+          max-width: 350px;
+          @include margin(1em auto);
+        }
+    }
+    .email {
+            position: relative;
+            // background:$brandcolor;
+            // background: rgba(46,82,107,1);
+            z-index: 99;
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+            @include margin(0 auto);
+            @include padding(0 5%);
+            fieldset {
+                @include padding(2em 5%);
+            }
+            h3 {
+                width: 80%;
+                @include margin(0 10%);
+                text-align:center;
+            }
+            input[type=text] {
+                &.input-reg {
+                    width: 98%;
+                    vertical-align: top;
+                    color: #2E526B;
+                    @include font(1.1);
+                    @include margin(1em 1%);
+                    @include padding(0.7em);
+                    font-family: $h-font;
+                    border:none;
+                    position: relative;
+                    z-index: 2;
+                    background:#67B692;
+                    @include border-radius(0.3em); 
+                    box-shadow: 3px 3px 0px 0px #1D3058;
+                }
+                &.last {
+                    height:10em;
+                    // word-wrap: 
+                }
+            }
+            .large-box {
+                    width: 98%;
+                    vertical-align: top;
+                    text-align:left;
+                    color: #2E526B;
+                    @include font(1.1);
+                    @include margin(1em 1%);
+                    @include padding(0.7em);
+                    font-family: $h-font;
+                    border:none;
+                    position: relative;
+                    z-index: 2;
+                    background:#67B692;
+                    @include border-radius(0.3em); 
+                    box-shadow: 3px 3px 0px 0px #1D3058;
+                    height:10em;
 
+            }
+        }
+        // p {
+        //     @include font(1);
+        //     text-align: left;
+        //     position: relative;
+        //     display: inline-block;
+        //     width:80%;
+        //     max-width: 350px;
+        //     @include margin(1em auto);
+        // }
+        .call {
+            width: 50%;
+            @include margin(2em 0 1em);
+            @include padding(0.1em);
+            @include font(0.9);
+            position: relative;
+            background-color: darken($highlightcolor,5%);
+            color:$fontcolor;
+            @include transition(background-color 300ms ease-in 0s);
+            border: none;
+            @include border-radius(0.3em); 
+            box-shadow: 3px 3px 0px 0px #1D3058;
+            img {
+                display: none;
+            }
+            &.complete {
+                @include transition(background-color 300ms ease-in 0s);
+                background:darken($buttoncolor,10%);
+            }
+        }    
+        ::-webkit-input-placeholder {
+           color: #2E526B;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+           color: #2E526B;  
+        }
+
+        ::-moz-placeholder {  /* Firefox 19+ */
+           color: #2E526B;  
+        }
+
+        :-ms-input-placeholder {  
+           color: #2E526B;  
+        }
+    }
 // <!--===========================================================
 // ===============================================================  
 
@@ -36,14 +211,107 @@
 // ==============================================================
 // ===========================================================-->
 
+
+
 @media screen and (min-width:900px) {
     .contact {
-        height:50em;
-        h2 {
-            @include font(5);
-            @include padding(2em 0);
+
+        .hero {
+            width: 100%;
+            // height:25em;
+            @include margin(0 0 0 0);
+            background-position: bottom;
+            &:before {
+                background-color: darken(rgba(46,82,107,0.8),15%);
+            }
+            .para {
+                vertical-align: top;
+                text-align: left;
+                @include margin(3em auto);
+                display: inline-block;
+                width: 45%;
+                p {
+                    @include font(1);
+                }
+                max-width: 350px;
+                position: relative;
+                @include padding(2em auto);
+            }
+            .email {
+                display: inline-block;
+                position: relative;
+                // background:$brandcolor;
+                // background: rgba(46,82,107,1);
+                z-index: 99;
+                overflow: hidden;
+                width: 45%;
+                max-width: 600px;
+                @include margin(0 auto 3em);
+                @include padding(0 auto);
+                fieldset {
+                    @include padding(2em auto);
+                }
+                h3 {
+                    width: 80%;
+                    @include margin(0 10%);
+                    text-align:center;
+                }
+                input[type=text] {
+                    &.input-reg {
+                        width: 98%;
+                        vertical-align: top;
+                        color: #2E526B;
+                        @include font(1.1);
+                        @include margin(1em 1%);
+                        @include padding(0.7em);
+                        font-family: $h-font;
+                        border:none;
+                        position: relative;
+                        z-index: 2;
+                        background:#67B692;
+                        @include border-radius(0.3em); 
+                        box-shadow: 3px 3px 0px 0px #1D3058;
+                    }
+                    &.last {
+                        height:10em;
+                        // word-wrap: 
+                    }
+                }
+                .large-box {
+                        width: 98%;
+                        vertical-align: top;
+                        text-align:left;
+                        color: #2E526B;
+                        @include font(1.1);
+                        @include margin(1em 1%);
+                        @include padding(0.7em);
+                        font-family: $h-font;
+                        border:none;
+                        position: relative;
+                        z-index: 2;
+                        background:#67B692;
+                        @include border-radius(0.3em); 
+                        box-shadow: 3px 3px 0px 0px #1D3058;
+                        height:10em;
+
+                }
+            }
+            h2 {
+                @include padding(0 0);
+                @include margin(3em 0 0 8%);
+                @include font(4);
+                width:50%;
+                line-height: 1em;
+                text-align: left;
+                position: relative;
+            }
+        }
+        .blurb {
+            display: none;
+        }
+        .email {
+            display: none;
         }
     }
-    
-
 }
+

@@ -72,6 +72,18 @@ html {
 @font-face {
   font-family: 'Roadgeek';
   src: url("fonts/Roadgeek 2005 Series C.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Khula Light';
+  src: url("fonts/Khula-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Khula Bold';
+  src: url("fonts/Khula-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Oxygen Light';
+  src: url("fonts/Oxygen-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Oxygen Bold';
+  src: url("fonts/Oxygen-Bold.ttf") format("truetype"); }
 /* ========================== Border Box ======================= */
 /* ==================== Border Radius ========================== */
 /* ============================= gradient ====================*/
@@ -101,7 +113,7 @@ body,
   *:before sup,
   *:before span,
   *:before input {
-    font-family: "Melbourne", san-serif, serif;
+    font-family: "Oxygen Light", serif, serif;
     font-size: 0.9375px;
     font-size: 1.5em;
     line-height: 2.1em;
@@ -111,7 +123,7 @@ body,
   *:after a,
   *:before a {
     color: #F5E6BF;
-    font-family: "Melbourne bold", san-serif;
+    font-family: "Oxygen Bold", san-serif;
     font-size: 0.9375px;
     font-size: 1.5em;
     line-height: 2.1em;
@@ -327,7 +339,7 @@ header.navigation .nav-link {
     margin: 0.3em 0;
     vertical-align: middle;
     display: inline-block;
-    width: 8%; }
+    width: 13%; }
 
 .page-content {
   position: relative; }
@@ -339,12 +351,17 @@ footer {
   clear: both;
   position: relative;
   font-family: "roadgeek"; }
-  footer h2 {
-    font-size: 1.25px;
-    font-size: 2em;
-    line-height: 2.8em;
+  footer h2 > a {
+    padding: 0;
+    margin: 1em 12.5% 0;
+    display: inline-block;
     text-align: center;
-    margin: 1em auto;
+    font-size: 0.875px;
+    font-size: 1.4em;
+    line-height: 1.96em;
+    width: 75%;
+    position: relative;
+    font-family: "roadgeek";
     letter-spacing: 6px; }
   footer h4 {
     font-size: 0.625px;
@@ -476,6 +493,17 @@ footer {
     background: transparent; }
     footer .nav-link img {
       visibility: hidden; } }
+@media screen and (min-width: 900px) {
+  header.navigation .nav-link span {
+    font-size: 0.375px;
+    font-size: 0.6em;
+    line-height: 0.84em; } }
+  @media screen and (min-width: 900px) and (min-width: 1100px) {
+    header.navigation .nav-link span {
+      font-size: 0.4375px;
+      font-size: 0.7em;
+      line-height: 0.98em; } }
+
 @media screen and (min-width: 900px) {
   footer {
     padding: 3em 15%; } }
@@ -781,9 +809,9 @@ footer {
       height: 100%;
       background: #223c4e; }
     .home .blurb p {
-      font-size: 0.65625px;
-      font-size: 1.05em;
-      line-height: 1.47em;
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
       text-align: left;
       position: relative;
       display: inline-block;
@@ -801,14 +829,14 @@ footer {
       font-size: 4em;
       line-height: 5.6em;
       margin: 1em 0 0;
-      line-height: 0.7em;
+      line-height: 1em;
       position: relative;
       letter-spacing: 3px; }
     .home .mini-hero p {
       display: block;
-      font-size: 0.6875px;
-      font-size: 1.1em;
-      line-height: 1.54em;
+      font-size: 0.875px;
+      font-size: 1.4em;
+      line-height: 1.96em;
       line-height: 1.4em;
       position: relative;
       width: 60%;
@@ -821,7 +849,7 @@ footer {
       background: #d4c9ad;
       position: relative; }
     .home .mini-hero a {
-      width: 50%;
+      width: 60%;
       margin: 1em auto 3em;
       padding: 0.4em 1em;
       position: relative;
@@ -901,9 +929,9 @@ footer {
       height: 100%;
       z-index: -1; }
     .home .recents h3 {
-      font-size: 1.3125px;
-      font-size: 2.1em;
-      line-height: 2.94em;
+      font-size: 1.4375px;
+      font-size: 2.3em;
+      line-height: 3.22em;
       line-height: 1em;
       width: 80%;
       margin: 0.5em 10%; }
@@ -913,9 +941,9 @@ footer {
       margin: 1em 10%;
       background: #d4c9ad; }
     .home .recents p {
-      font-size: 0.65625px;
-      font-size: 1.05em;
-      line-height: 1.47em;
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
       text-align: left;
       position: relative;
       display: inline-block;
@@ -923,17 +951,21 @@ footer {
       max-width: 350px;
       margin: 1em auto; }
     .home .recents .name {
-      font-size: 0.5625px;
-      font-size: 0.9em;
-      line-height: 1.26em;
-      margin: -1.2em 0.5em 0;
-      display: block; }
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
+      margin: 0;
+      display: inline-block; }
     .home .recents .sub {
-      margin: -1.3em 2em 0;
+      margin: 0;
       font-size: 0.5px;
       font-size: 0.8em;
       line-height: 1.12em;
-      display: block; }
+      display: inline-block; }
+      .home .recents .sub a {
+        font-size: 0.625px;
+        font-size: 1em;
+        line-height: 1.4em; }
 
 @media screen and (min-width: 600px) {
   .home {
@@ -969,9 +1001,9 @@ footer {
         display: block;
         margin: 0 auto 2em; }
         .home .tag-line .tag-blurb p {
-          font-size: 0.65625px;
-          font-size: 1.05em;
-          line-height: 1.47em;
+          font-size: 0.625px;
+          font-size: 1em;
+          line-height: 1.4em;
           text-align: left;
           position: relative;
           display: inline-block;
@@ -994,6 +1026,8 @@ footer {
       background-color: rgba(23, 41, 54, 0.8); } }
   @media screen and (min-width: 600px) and (min-width: 700px) {
     .home .tour-links .mini-hero {
+      max-width: 900px;
+      margin: 0 auto;
       padding: 3em 0; }
       .home .tour-links .mini-hero .contain {
         padding: 1em 10%; }
@@ -1004,9 +1038,6 @@ footer {
         width: 70%; }
       .home .tour-links .mini-hero p {
         display: block;
-        font-size: 0.6875px;
-        font-size: 1.1em;
-        line-height: 1.54em;
         line-height: 1.4em;
         position: relative;
         width: 40%;
@@ -1015,16 +1046,20 @@ footer {
       .home .tour-links .mini-hero a {
         display: block;
         width: 30%;
-        margin: 1em 70% 1em 0; } }
+        margin: 2em 70% 1em 0; } }
   @media screen and (min-width: 600px) and (min-width: 1000px) {
     .home .tour-links .mini-hero {
-      padding: 8em 2em; } }
+      padding: 8em 0; } }
 @media screen and (min-width: 600px) {
     .home .recents {
       padding: 3em 1em; } }
     @media screen and (min-width: 600px) and (min-width: 700px) {
       .home .recents h3 {
-        text-align: left; } }
+        text-align: left;
+        font-size: 1.875px;
+        font-size: 3em;
+        line-height: 4.2em;
+        line-height: 1em; } }
 @media screen and (min-width: 600px) {
     .home .quotes {
       width: 70%;
@@ -1038,9 +1073,9 @@ footer {
         margin: 0; } }
 @media screen and (min-width: 600px) {
       .home .quotes p {
-        font-size: 0.65625px;
-        font-size: 1.05em;
-        line-height: 1.47em;
+        font-size: 0.625px;
+        font-size: 1em;
+        line-height: 1.4em;
         text-align: left;
         position: relative;
         display: inline-block;
@@ -1110,9 +1145,9 @@ footer {
           line-height: 6.3em;
           line-height: 1em; } }
     .tours .hero h3 {
-      font-size: 1.5625px;
-      font-size: 2.5em;
-      line-height: 3.5em;
+      font-size: 1.4375px;
+      font-size: 2.3em;
+      line-height: 3.22em;
       padding: 0;
       line-height: 1em;
       position: relative;
@@ -1120,9 +1155,9 @@ footer {
       margin: 0 auto 3em; }
       @media screen and (min-width: 400px) {
         .tours .hero h3 {
-          font-size: 1.75px;
-          font-size: 2.8em;
-          line-height: 3.92em;
+          font-size: 1.5625px;
+          font-size: 2.5em;
+          line-height: 3.5em;
           line-height: 1em; } }
   .tours .blurb {
     text-align: center;
@@ -1140,9 +1175,9 @@ footer {
       height: 100%;
       background: #223c4e; }
     .tours .blurb p {
-      font-size: 0.65625px;
-      font-size: 1.05em;
-      line-height: 1.47em;
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
       text-align: left;
       position: relative;
       display: inline-block;
@@ -1176,9 +1211,9 @@ footer {
       width: 70%; }
     .tours .mini-hero p {
       display: block;
-      font-size: 0.8125px;
-      font-size: 1.3em;
-      line-height: 1.82em;
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
       line-height: 1.5em;
       position: relative;
       width: 70%;
@@ -1199,9 +1234,8 @@ footer {
     position: relative; }
     .tours .tour-info .sub-info {
       max-width: 300px;
-      width: 70%;
       position: relative;
-      margin: 0 auto 2em;
+      margin: 0 0 2em 15%;
       border: 2px solid #d4c9ad;
       -webkit-border-radius: 0.3em;
       border-radius: 0.3em;
@@ -1233,8 +1267,7 @@ footer {
     .tours .tour-info li {
       display: list-item;
       list-style-type: disc;
-      width: 80%;
-      margin: 0 auto;
+      margin: 0 0 0 8%;
       position: relative;
       font-family: "Roadgeek", san-serif;
       font-size: 0.625px;
@@ -1247,9 +1280,9 @@ footer {
       max-width: 350px;
       margin: 2em auto;
       padding: 0;
-      font-size: 0.6875px;
-      font-size: 1.1em;
-      line-height: 1.54em;
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
       line-height: 1.5em; }
     .tours .tour-info .divider {
       width: 100%;
@@ -1374,18 +1407,20 @@ footer {
   @media screen and (min-width: 600px) and (min-width: 700px) {
     .tours .hero h2 {
       padding: 0;
-      margin: 1em 45% 0 2%;
+      margin: 1em 0 0 10%;
       font-size: 2.5px;
       font-size: 4em;
       line-height: 5.6em;
       width: 50%;
-      line-height: 1em; }
+      line-height: 1em;
+      text-align: left; }
     .tours .hero h3 {
+      text-align: left;
       font-size: 1.5625px;
       font-size: 2.5em;
       line-height: 3.5em;
       padding: 0;
-      margin: 0 45% 1em 2%;
+      margin: 0 0 1em 10%;
       width: 50%;
       line-height: 1em; } }
 @media screen and (min-width: 600px) {
@@ -1395,9 +1430,9 @@ footer {
       display: block;
       margin: 0 auto 2em; }
       .tours .hero .hero-blurb p {
-        font-size: 0.65625px;
-        font-size: 1.05em;
-        line-height: 1.47em;
+        font-size: 0.625px;
+        font-size: 1em;
+        line-height: 1.4em;
         text-align: left;
         position: relative;
         display: inline-block;
@@ -1429,7 +1464,7 @@ footer {
   .tours .tour-info {
     width: 100%;
     display: inline-block;
-    margin: 1em auto;
+    margin: 3em auto;
     padding: 0.5em 10%; }
     .tours .tour-info h3 {
       width: 100%;
@@ -1440,11 +1475,11 @@ footer {
       float: right;
       max-width: 270px;
       position: relative;
-      margin: 0 0 2em 2%; }
+      margin: 0 0 1em 2%; }
     .tours .tour-info p {
-      font-size: 0.65625px;
-      font-size: 1.05em;
-      line-height: 1.47em;
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
       text-align: left;
       position: relative;
       float: left;
@@ -1469,9 +1504,8 @@ footer {
   .tours .tour-box {
     width: 45%;
     display: inline-block;
-    height: 55em;
     float: left;
-    margin: 2em 2.5%; }
+    margin: 2em 2.5% 1em; }
   .tours .mini-hero {
     width: 95%;
     height: 25em;
@@ -1557,9 +1591,9 @@ footer {
       height: 100%;
       background: #223c4e; }
     .about-us .blurb p {
-      font-size: 0.65625px;
-      font-size: 1.05em;
-      line-height: 1.47em;
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
       text-align: left;
       position: relative;
       display: inline-block;
@@ -1588,6 +1622,9 @@ footer {
     width: 100%;
     min-height: 18em;
     position: relative; }
+    @media screen and (min-width: 400px) and (max-width: 599px) {
+      .about-us .mini-hero {
+        max-width: 400px; } }
     .about-us .mini-hero:before {
       content: '';
       position: absolute;
@@ -1658,9 +1695,9 @@ footer {
       max-width: 350px;
       margin: 2em auto;
       padding: 0;
-      font-size: 0.6875px;
-      font-size: 1.1em;
-      line-height: 1.54em;
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
       line-height: 1.5em; }
     .about-us .rider-info sup {
       font-size: 0.46875px;
@@ -1738,9 +1775,9 @@ footer {
     display: block;
     margin: 0 auto 2em; }
     .about-us .hero-blurb p {
-      font-size: 0.65625px;
-      font-size: 1.05em;
-      line-height: 1.47em;
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
       text-align: left;
       position: relative;
       display: inline-block;
@@ -1772,7 +1809,8 @@ footer {
   .about-us .about-desc {
     padding: 2em 0; }
   .about-us .mini-hero {
-    height: 30em; }
+    height: 20em;
+    width: 70%; }
   .about-us .rider-info {
     clear: both;
     overflow: hidden;
@@ -1853,37 +1891,276 @@ footer {
       line-height: 7em;
       padding: 2em 0; } }
 .contact {
-  background: url("../img/sunset.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
+  background-color: #264459;
   position: relative;
-  z-index: 0; }
-  .contact:before {
-    content: '';
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .contact .contain {
+    max-width: 900px;
+    margin: 0 auto; }
+  .contact .hero {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: url("../img/6th.jpg");
+    background-repeat: no-repeat;
+    background-position: 80% 80%;
+    background-size: cover; }
+    .contact .hero:before {
+      content: '';
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(23, 41, 54, 0.7); }
+    .contact .hero .para {
+      display: none; }
+    .contact .hero .email {
+      display: none; }
+    .contact .hero h2 {
+      padding: 0;
+      margin: 1.5em auto 2.5em;
+      display: block;
+      font-size: 2.5px;
+      font-size: 4em;
+      line-height: 5.6em;
+      line-height: 1em;
+      position: relative;
+      opacity: 1; }
+      @media screen and (min-width: 400px) {
+        .contact .hero h2 {
+          font-size: 2.8125px;
+          font-size: 4.5em;
+          line-height: 6.3em;
+          line-height: 1em; } }
+    .contact .hero h3 {
+      font-size: 1.25px;
+      font-size: 2em;
+      line-height: 2.8em;
+      padding: 0;
+      line-height: 1em;
+      position: relative;
+      opacity: 1;
+      margin: 0 auto 3em; }
+      @media screen and (min-width: 400px) {
+        .contact .hero h3 {
+          font-size: 1.75px;
+          font-size: 2.8em;
+          line-height: 3.92em;
+          line-height: 1em; } }
+    .contact .hero .para {
+      display: none; }
+    .contact .hero .divider {
+      width: 300px;
+      height: 2px;
+      margin: 0 auto;
+      background: #d4c9ad;
+      position: relative;
+      opacity: 0.8; }
+  .contact .blurb {
+    text-align: center;
+    margin: 0;
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 2em 0; }
+    .contact .blurb p {
+      font-size: 0.625px;
+      font-size: 1em;
+      line-height: 1.4em;
+      text-align: left;
+      position: relative;
+      display: inline-block;
+      width: 80%;
+      max-width: 350px;
+      margin: 1em auto; }
+  .contact .email {
+    position: relative;
+    z-index: 99;
     overflow: hidden;
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(38, 68, 89, 0.6);
-    z-index: -1; }
-  .contact h2 {
-    text-align: center;
-    display: block;
-    font-size: 1.875px;
-    font-size: 3em;
-    line-height: 4.2em;
-    line-height: 1.6em;
-    padding: 4em 0;
-    z-index: 2; }
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 5%; }
+    .contact .email fieldset {
+      padding: 2em 5%; }
+    .contact .email h3 {
+      width: 80%;
+      margin: 0 10%;
+      text-align: center; }
+    .contact .email input[type=text].input-reg {
+      width: 98%;
+      vertical-align: top;
+      color: #2E526B;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
+      margin: 1em 1%;
+      padding: 0.7em;
+      font-family: "Roadgeek", san-serif;
+      border: none;
+      position: relative;
+      z-index: 2;
+      background: #67B692;
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      box-shadow: 3px 3px 0px 0px #1D3058; }
+    .contact .email input[type=text].last {
+      height: 10em; }
+    .contact .email .large-box {
+      width: 98%;
+      vertical-align: top;
+      text-align: left;
+      color: #2E526B;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
+      margin: 1em 1%;
+      padding: 0.7em;
+      font-family: "Roadgeek", san-serif;
+      border: none;
+      position: relative;
+      z-index: 2;
+      background: #67B692;
+      -webkit-border-radius: 0.3em;
+      border-radius: 0.3em;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      box-shadow: 3px 3px 0px 0px #1D3058;
+      height: 10em; }
+  .contact .call {
+    width: 50%;
+    margin: 2em 0 1em;
+    padding: 0.1em;
+    font-size: 0.5625px;
+    font-size: 0.9em;
+    line-height: 1.26em;
+    position: relative;
+    background-color: #8a3051;
+    color: #d4c9ad;
+    -webkit-transition: background-color 300ms ease-in 0s;
+    -moz-transition: background-color 300ms ease-in 0s;
+    transition: background-color 300ms ease-in 0s;
+    border: none;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    box-shadow: 3px 3px 0px 0px #1D3058; }
+    .contact .call img {
+      display: none; }
+    .contact .call.complete {
+      -webkit-transition: background-color 300ms ease-in 0s;
+      -moz-transition: background-color 300ms ease-in 0s;
+      transition: background-color 300ms ease-in 0s;
+      background: #4c9e79; }
+  .contact ::-webkit-input-placeholder {
+    color: #2E526B; }
+  .contact :-moz-placeholder {
+    /* Firefox 18- */
+    color: #2E526B; }
+  .contact ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #2E526B; }
+  .contact :-ms-input-placeholder {
+    color: #2E526B; }
 
 @media screen and (min-width: 900px) {
-  .contact {
-    height: 50em; }
-    .contact h2 {
-      font-size: 3.125px;
-      font-size: 5em;
-      line-height: 7em;
-      padding: 2em 0; } }
+  .contact .hero {
+    width: 100%;
+    margin: 0;
+    background-position: bottom; }
+    .contact .hero:before {
+      background-color: rgba(23, 41, 54, 0.8); }
+    .contact .hero .para {
+      vertical-align: top;
+      text-align: left;
+      margin: 3em auto;
+      display: inline-block;
+      width: 45%;
+      max-width: 350px;
+      position: relative;
+      padding: 2em auto; }
+      .contact .hero .para p {
+        font-size: 0.625px;
+        font-size: 1em;
+        line-height: 1.4em; }
+    .contact .hero .email {
+      display: inline-block;
+      position: relative;
+      z-index: 99;
+      overflow: hidden;
+      width: 45%;
+      max-width: 600px;
+      margin: 0 auto 3em;
+      padding: 0 auto; }
+      .contact .hero .email fieldset {
+        padding: 2em auto; }
+      .contact .hero .email h3 {
+        width: 80%;
+        margin: 0 10%;
+        text-align: center; }
+      .contact .hero .email input[type=text].input-reg {
+        width: 98%;
+        vertical-align: top;
+        color: #2E526B;
+        font-size: 0.6875px;
+        font-size: 1.1em;
+        line-height: 1.54em;
+        margin: 1em 1%;
+        padding: 0.7em;
+        font-family: "Roadgeek", san-serif;
+        border: none;
+        position: relative;
+        z-index: 2;
+        background: #67B692;
+        -webkit-border-radius: 0.3em;
+        border-radius: 0.3em;
+        background-clip: padding-box;
+        /* stops bg color from leaking outside the border: */
+        box-shadow: 3px 3px 0px 0px #1D3058; }
+      .contact .hero .email input[type=text].last {
+        height: 10em; }
+      .contact .hero .email .large-box {
+        width: 98%;
+        vertical-align: top;
+        text-align: left;
+        color: #2E526B;
+        font-size: 0.6875px;
+        font-size: 1.1em;
+        line-height: 1.54em;
+        margin: 1em 1%;
+        padding: 0.7em;
+        font-family: "Roadgeek", san-serif;
+        border: none;
+        position: relative;
+        z-index: 2;
+        background: #67B692;
+        -webkit-border-radius: 0.3em;
+        border-radius: 0.3em;
+        background-clip: padding-box;
+        /* stops bg color from leaking outside the border: */
+        box-shadow: 3px 3px 0px 0px #1D3058;
+        height: 10em; }
+    .contact .hero h2 {
+      padding: 0;
+      margin: 3em 0 0 8%;
+      font-size: 2.5px;
+      font-size: 4em;
+      line-height: 5.6em;
+      width: 50%;
+      line-height: 1em;
+      text-align: left;
+      position: relative; }
+  .contact .blurb {
+    display: none; }
+  .contact .email {
+    display: none; } }

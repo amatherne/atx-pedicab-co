@@ -1,9 +1,12 @@
 
 
 $global:0.625;
-$globalfont:"Melbourne", san-serif;
-$linkfont:"Melbourne bold", san-serif;
+// $globalfont:"Melbourne", san-serif;
+// $linkfont:"Melbourne bold", san-serif;
+$globalfont: "Oxygen Light", serif;
+$linkfont:"Oxygen Bold", san-serif;
 $h-font:"Roadgeek", san-serif;
+
 
 /* ========================= Colors ============================ */
 
@@ -41,6 +44,22 @@ $buttoncolor:#67B692;
 @font-face {
     font-family: 'Roadgeek';
     src: url('fonts/Roadgeek 2005 Series C.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Khula Light';
+    src: url('fonts/Khula-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Khula Bold';
+    src: url('fonts/Khula-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Oxygen Light';
+    src: url('fonts/Oxygen-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Oxygen Bold';
+    src: url('fonts/Oxygen-Bold.ttf') format('truetype');
 }
 
 
@@ -428,7 +447,7 @@ header.navigation {
       vertical-align: middle;
 
       display: inline-block;
-      width: 8%;
+      width: 13%;
     }
 
   }
@@ -473,10 +492,17 @@ footer {
   position: relative;
   font-family: "roadgeek";
 
-  h2 {
-    @include font(2);
-    text-align: center;
-    @include margin(1em auto);
+  h2 > a {
+      @include padding(0);
+      @include margin(1em 12.5% 0);
+      display: inline-block;
+      text-align: center;
+      @include font(1.4);
+      // float:right;
+      width: 75%;
+      position: relative;
+      font-family: "roadgeek";
+
       letter-spacing:6px;
 
   }
@@ -688,33 +714,13 @@ footer {
 // ===========================================================-->
 
 @media screen and (min-width:900px) {
-  // .ph-number {
-  //   left:3.2em;
-  //   top:5em;
-  //   width: 180px;
+  header.navigation .nav-link  span {
+    @include font(0.6);
+    @media screen and (min-width:1100px) {
+      @include font(0.7);
+    }
+  }
 
-  // }
-  // header {
-  //   background:transparent;
-  //   position: absolute;
-  //   // overflow: visible;
-
-  // }
-  // header.navigation {
-  //   ul.navigation-menu {
-  //     // width:50%;
-  //     display: block;
-  //     @include margin(-2em 0 0 1em);
-  //     .nav-link {
-  //       clear: both;
-  //       @include margin(0 3% -0.7em 3%);
-        
-        
-
-  //     }
-
-  //   }
-  // }
   footer {
       @include padding(3em 15%);
 
@@ -725,5 +731,8 @@ footer {
 
 
 }
+
+
+
 
 

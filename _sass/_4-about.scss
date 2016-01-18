@@ -131,7 +131,7 @@
             // @include border-radius(0.4em);
         }
         p {
-            @include font(1.05);
+            @include font(1);
             text-align: left;
           position: relative;
           display: inline-block;
@@ -164,6 +164,9 @@
     .mini-hero {
         width: 100%;
         min-height: 18em;
+        @media screen and (min-width:400px) and (max-width:599px) {
+            max-width: 400px;
+        }
         position: relative;
         // h4 {
         //     text-align: center;
@@ -259,7 +262,7 @@
             max-width: 350px;
             @include margin(2em auto);
             @include padding(0);
-            @include font(1.1);
+            @include font(1);
             line-height: 1.5em;
 
         }
@@ -370,7 +373,7 @@
 
             
             p {
-                @include font(1.05);
+                @include font(1);
                 text-align: left;
                 position: relative;
                 display: inline-block;
@@ -420,7 +423,8 @@
 
         // }
         .mini-hero {
-            height:30em;
+            height:20em;
+            width: 70%;
         }
         .rider-info {
             clear: both;

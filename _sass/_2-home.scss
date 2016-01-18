@@ -115,7 +115,7 @@
 	    	// @include border-radius(0.4em);
 	    }
 	    p {
-	      	@include font(1.05);
+	      	@include font(1);
 	      	text-align: left;
           position: relative;
           display: inline-block;
@@ -137,7 +137,7 @@
         text-align: center;
         @include font(4);
         @include margin(1em 0 0 0);
-        line-height: 0.7em;
+        line-height: 1em;
         position: relative;
         letter-spacing:3px;
 
@@ -146,7 +146,7 @@
 
       p {
         display: block;
-        @include font(1.1);
+        @include font(1.4);
         line-height: 1.4em;
         position: relative;
         width: 60%;
@@ -164,7 +164,7 @@
         position: relative;
       }
       a {
-          width: 50%;
+          width: 60%;
           @include margin(1em auto 3em);
           @include padding(0.4em 1em);
           position: relative;
@@ -242,7 +242,7 @@
       	z-index: -1;
       }
 	    h3 {
-	      	@include font(2.1);
+	      	@include font(2.3);
 	      	line-height: 1em;
           // text-align:left;
           width: 80%;
@@ -261,7 +261,7 @@
 	    //   	text-align: left;
 	    // }
       p {
-          @include font(1.05);
+          @include font(1);
           text-align: left;
           position: relative;
           display: inline-block;
@@ -270,14 +270,17 @@
           @include margin(1em auto);
       }
 	    .name {
-	      	@include font(0.9);
-	      	@include margin(-1.2em 0.5em 0 0.5em);
-	      	display: block;
+	      	@include font(1);
+	      	@include margin(0);
+	      	display: inline-block;
 	    }
 	    .sub {
-	      	@include margin(-1.3em 2em 0 2em);
+	      	@include margin(0);
 	      	@include font(0.8);
-	      	display: block;
+	      	display: inline-block;
+          a {
+            @include font(1);
+          }
 	    }
     }
 }
@@ -336,7 +339,7 @@
         @include margin(0 auto 2em);
         
         p {
-            @include font(1.05);
+            @include font(1);
             text-align: left;
             position: relative;
             display: inline-block;
@@ -375,6 +378,8 @@
       @media screen and (min-width:700px) {
 
       .mini-hero {
+        max-width: 900px;
+        @include margin(0 auto);
     
         @include padding(3em 0);
         .contain {
@@ -391,7 +396,7 @@
          p {
           // float:right;
           display: block;
-          @include font(1.1);
+          // @include font(1.1);
           line-height: 1.4em;
           position: relative;
           width: 40%;
@@ -404,7 +409,7 @@
           display: block;
           width:30%;
           // float:right;
-          @include margin(1em 70% 1em 0);
+          @include margin(2em 70% 1em 0);
          }
       }
       
@@ -412,7 +417,7 @@
       }
       @media screen and (min-width:1000px) {
         .mini-hero {
-          @include padding(8em 2em);
+          @include padding(8em 0);
 
         }
 
@@ -423,6 +428,8 @@
       @media screen and (min-width:700px) {
         h3 {
           text-align:left;
+          @include font(3);
+          line-height: 1em;
         }
         // display: inline-block;
         // width: 66%;
@@ -443,7 +450,7 @@
       }
 
       p {
-          @include font(1.05);
+          @include font(1);
           text-align: left;
           position: relative;
           display: inline-block;
