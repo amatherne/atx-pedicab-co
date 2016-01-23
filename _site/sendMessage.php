@@ -14,8 +14,8 @@ $body = array(
     );
  
 // set your AccountSid and AuthToken from www.twilio.com/user/account
-$AccountSid = "AC7de339a5bb1df0af37f3d9ca5a3698e3";
-$AuthToken = "AC828e2639a6f515b18a5913ed4b26ed90";
+$AccountSid = "SK01ff6702a25dd0fa22915c6b4f020da7";
+$AuthToken = "nUbzvVbBNRMklm3KzNb8ukYAZLbiucb4";
 
 $client = new Services_Twilio($AccountSid, $AuthToken);
 
