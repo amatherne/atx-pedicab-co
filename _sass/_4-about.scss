@@ -131,7 +131,7 @@
             // @include border-radius(0.4em);
         }
         p {
-            @include font(1);
+            @include font(1.1);
             text-align: left;
           position: relative;
           display: inline-block;
@@ -200,8 +200,12 @@
         clear:both;
         position: relative;
         .sub-info {
-            width: 70%;
-            @include margin(1em auto);
+            // width: 70%;
+            // @include margin(1em auto);
+                        // max-width: 200px;
+            width:80%;
+            position: relative;
+            @include margin(0 0 2em 10%);
         }
 
         .exp,
@@ -294,7 +298,7 @@
         @include border-radius(0.3em); 
     }
     .adam {
-        background: url('../img/steve.jpg');
+        background: url('../img/adam.jpg');
         background-size: cover;
         background-repeat:no-repeat;
         background-position: center top;
@@ -306,8 +310,8 @@
         z-index: 1;
         @include border-radius(0.3em); 
     }
-    .austin {
-        background: url('../img/austin.png');
+    .steve {
+        background: url('../img/steve.jpg');
         background-size: cover;
         background-repeat:no-repeat;
         background-position: center top;
@@ -366,14 +370,14 @@
             }
         .hero-blurb {
             width:100%;
-            max-width: 900px;
+            max-width: 1000px;
             display: block;
             // @include padding(1em);
             @include margin(0 auto 2em);
 
             
             p {
-                @include font(1);
+                @include font(1.1);
                 text-align: left;
                 position: relative;
                 display: inline-block;
@@ -470,7 +474,7 @@
 @media screen and (min-width:900px) {
     .about-us {
         .content {
-          width: 70%;
+          width: 80%;
           @include margin(0 auto);
         }
         .about-hero {

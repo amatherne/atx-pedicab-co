@@ -168,7 +168,7 @@
             // @include border-radius(0.4em);
         }
         p {
-            @include font(1);
+            @include font(1.1);
             text-align: left;
           position: relative;
           display: inline-block;
@@ -208,7 +208,7 @@
         }
         p {
             display: block;
-            @include font(1);
+            @include font(1.2);
             line-height: 1.5em;
             position: relative;
             width: 70%;
@@ -234,10 +234,10 @@
         clear:both;
         position: relative;
         .sub-info {
-            max-width: 300px;
-            // width:70%;
+            max-width: 200px;
+            width:80%;
             position: relative;
-            @include margin(0 0 2em 15%);
+            @include margin(0 0 2em 10%);
             border: 2px solid $fontcolor;
         @include border-radius(0.3em); 
 
@@ -249,7 +249,7 @@
             text-align: left;
             // @include margin(1em 0);
             width:70%;
-            @include margin(0.5em auto);
+            @include margin(0.5em auto 0.7em);
             position: relative;
         }
         h3{
@@ -455,7 +455,7 @@
           }
           .hero-blurb {
             width:100%;
-            max-width: 900px;
+            max-width: 1000px;
             display: block;
             // @include padding(1em);
             @include margin(0 auto 2em);
@@ -608,12 +608,14 @@
     .tours {
 
         .content {
-            width: 70%;
+            width: 80%;
             @include margin(0 auto);
         }
         .hero {
             width: 100%;
             @include padding(9em 0 3em);
+            background-position: 100% 70%;
+
         }
         .tour-box {
             width:80%;

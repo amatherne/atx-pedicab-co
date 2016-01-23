@@ -133,20 +133,26 @@
 		border: none;
 	   background:#67B692;
     box-shadow: 3px 3px 0px 0px #1D3058;
+        @include border-radius(0.3em); 
+
 	}
 	.combodate {
-    @include margin(0 20%);
-    text-align: center;
+    @include margin(0 0 0.1em);
+    @include padding(0.2em);
+
+    text-align: left;
     display: block;
 
 		select {
+      font-family: $h-font;
+      color: #2E526B;
 			border:none;
 			border-radius:0;
 			-webkit-appearance: none;
-  		@include padding(0.9em);
+  		@include padding(0.95em);
   		background:#67B692;
   		box-shadow: 3px 3px 0px 0px #1D3058;
-    	@include font(0.6);
+    	@include font(0.75);
     	overflow: hidden;
     	text-transform: uppercase;
         @include border-radius(0.3em); 
@@ -156,8 +162,8 @@
 
 	.call {
 	    width: 60%;
-	    @include margin(2em 20% 1em);
-	    @include padding(0.1em);
+	    @include margin(1.5em 20% 1em);
+	    @include padding(0);
 	    @include font(1.2);
 	    position: relative;
       background-color: darken($highlightcolor,5%);
@@ -227,15 +233,16 @@
       @include margin(1em 1%);
       float: right;
       input[type=text].input-reg {
-        @include margin(0.1em 1% 1.7em);
+        @include margin(0.1em 1% 1.55em);
 
       }
     }
     .call {
       display: inline-block;
       width: 45%;
-      @include margin(1em 1%);
+      @include margin(0.5em 1%);
       float: right;
+      @include font(1.1);
     }
   }
 }

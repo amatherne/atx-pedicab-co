@@ -5,7 +5,7 @@
   	position: relative;
   	overflow: hidden;
     .contain {
-      max-width: 900px;
+      max-width: 1000px;
       @include margin(0 auto);
     }
 	.cab-hail {
@@ -115,7 +115,7 @@
 	    	// @include border-radius(0.4em);
 	    }
 	    p {
-	      	@include font(1);
+	      	@include font(1.1);
 	      	text-align: left;
           position: relative;
           display: inline-block;
@@ -261,7 +261,7 @@
 	    //   	text-align: left;
 	    // }
       p {
-          @include font(1);
+          @include font(1.1);
           text-align: left;
           position: relative;
           display: inline-block;
@@ -311,35 +311,42 @@
       @include margin(0 0 0 0);
       background-position: bottom;
                   background-color: darken(rgba(46,82,107,0.8),15%);
+      h2 {
+        @include margin(1em auto 0);
+        max-width: 350px;
+        text-align: left;
 
+      }
       h3 {
         @include margin(0 auto 1em);
+        max-width: 350px;
+        text-align: left;
       }
       @media screen and (min-width:700px) {
         h2 {
             @include padding(0 0);
-            @include margin(1em 45% 0 2%);
+            @include margin(1em 0 0 10%);
             @include font(4);
-            width:50%;
+            // width:50%;
             line-height: 1em;
         }
         h3 {
             @include font(2.5);
             @include padding(0);
-            @include margin(0 45% 1em 2%);
-            width:50%;
+            @include margin(0 0 1em 10%);
+            // width:50%;
             line-height: 1em;
         }
       }
       .tag-blurb {
         width:100%;
-        max-width: 900px;
+        max-width: 1000px;
         display: block;
         // @include padding(1em);
         @include margin(0 auto 2em);
         
         p {
-            @include font(1);
+            @include font(1.1);
             text-align: left;
             position: relative;
             display: inline-block;
@@ -378,7 +385,7 @@
       @media screen and (min-width:700px) {
 
       .mini-hero {
-        max-width: 900px;
+        max-width: 1000px;
         @include margin(0 auto);
     
         @include padding(3em 0);
@@ -436,7 +443,7 @@
       }
     }
     .quotes {
-      width: 70%;
+      width: 80%;
       @include margin(1em 0);
       display: inline-block;
       vertical-align: top;
@@ -450,7 +457,7 @@
       }
 
       p {
-          @include font(1);
+          @include font(1.1);
           text-align: left;
           position: relative;
           display: inline-block;

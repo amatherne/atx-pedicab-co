@@ -5,7 +5,7 @@
     position: relative;
     overflow: hidden;
     .contain {
-        max-width: 900px;
+        max-width: 1000px;
         @include margin(0 auto);
     }
     .hero {
@@ -89,7 +89,7 @@
         //     background:darken($brandcolor,8%);
         // }
         p {
-            @include font(1);
+            @include font(1.1);
             text-align: left;
           position: relative;
           display: inline-block;
@@ -224,14 +224,15 @@
             &:before {
                 background-color: darken(rgba(46,82,107,0.8),15%);
             }
+
             .para {
                 vertical-align: top;
                 text-align: left;
-                @include margin(3em auto);
+                @include margin(3em 0);
                 display: inline-block;
                 width: 45%;
                 p {
-                    @include font(1);
+                    @include font(1.1);
                 }
                 max-width: 350px;
                 position: relative;
@@ -251,11 +252,11 @@
                 fieldset {
                     @include padding(2em auto);
                 }
-                h3 {
-                    width: 80%;
-                    @include margin(0 10%);
-                    text-align:center;
-                }
+                // h3 {
+                //     width: 80%;
+                //     @include margin(0 0 0 10%);
+                //     text-align:left;
+                // }
                 input[type=text] {
                     &.input-reg {
                         width: 98%;
@@ -299,8 +300,11 @@
             h2 {
                 @include padding(0 0);
                 @include margin(3em 0 0 8%);
+                @media screen and (min-width:950px) {
+                    @include margin(3em 0 0 10%);
+                }
                 @include font(4);
-                width:50%;
+                // width:50%;
                 line-height: 1em;
                 text-align: left;
                 position: relative;

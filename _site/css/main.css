@@ -630,21 +630,28 @@ footer {
     padding: 0.2em;
     border: none;
     background: #67B692;
-    box-shadow: 3px 3px 0px 0px #1D3058; }
+    box-shadow: 3px 3px 0px 0px #1D3058;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
   .booking .combodate {
-    margin: 0 20%;
-    text-align: center;
+    margin: 0 0 0.1em;
+    padding: 0.2em;
+    text-align: left;
     display: block; }
     .booking .combodate select {
+      font-family: "Roadgeek", san-serif;
+      color: #2E526B;
       border: none;
       border-radius: 0;
       -webkit-appearance: none;
-      padding: 0.9em;
+      padding: 0.95em;
       background: #67B692;
       box-shadow: 3px 3px 0px 0px #1D3058;
-      font-size: 0.375px;
-      font-size: 0.6em;
-      line-height: 0.84em;
+      font-size: 0.46875px;
+      font-size: 0.75em;
+      line-height: 1.05em;
       overflow: hidden;
       text-transform: uppercase;
       -webkit-border-radius: 0.3em;
@@ -653,8 +660,8 @@ footer {
       /* stops bg color from leaking outside the border: */ }
   .booking .call {
     width: 60%;
-    margin: 2em 20% 1em;
-    padding: 0.1em;
+    margin: 1.5em 20% 1em;
+    padding: 0;
     font-size: 0.75px;
     font-size: 1.2em;
     line-height: 1.68em;
@@ -714,12 +721,15 @@ footer {
       margin: 1em 1%;
       float: right; }
       .booking .hidden-content-three input[type=text].input-reg {
-        margin: 0.1em 1% 1.7em; }
+        margin: 0.1em 1% 1.55em; }
     .booking .call {
       display: inline-block;
       width: 45%;
-      margin: 1em 1%;
-      float: right; } }
+      margin: 0.5em 1%;
+      float: right;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em; } }
 .home {
   background-color: #264459;
   position: relative;
@@ -727,7 +737,7 @@ footer {
   position: relative;
   overflow: hidden; }
   .home .contain {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto; }
   .home .cab-hail {
     display: none; }
@@ -809,9 +819,9 @@ footer {
       height: 100%;
       background: #223c4e; }
     .home .blurb p {
-      font-size: 0.625px;
-      font-size: 1em;
-      line-height: 1.4em;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
       text-align: left;
       position: relative;
       display: inline-block;
@@ -941,9 +951,9 @@ footer {
       margin: 1em 10%;
       background: #d4c9ad; }
     .home .recents p {
-      font-size: 0.625px;
-      font-size: 1em;
-      line-height: 1.4em;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
       text-align: left;
       position: relative;
       display: inline-block;
@@ -975,35 +985,39 @@ footer {
       margin: 0;
       background-position: bottom;
       background-color: rgba(23, 41, 54, 0.8); }
+      .home .tag-line h2 {
+        margin: 1em auto 0;
+        max-width: 350px;
+        text-align: left; }
       .home .tag-line h3 {
-        margin: 0 auto 1em; } }
+        margin: 0 auto 1em;
+        max-width: 350px;
+        text-align: left; } }
     @media screen and (min-width: 600px) and (min-width: 700px) {
       .home .tag-line h2 {
         padding: 0;
-        margin: 1em 45% 0 2%;
+        margin: 1em 0 0 10%;
         font-size: 2.5px;
         font-size: 4em;
         line-height: 5.6em;
-        width: 50%;
         line-height: 1em; }
       .home .tag-line h3 {
         font-size: 1.5625px;
         font-size: 2.5em;
         line-height: 3.5em;
         padding: 0;
-        margin: 0 45% 1em 2%;
-        width: 50%;
+        margin: 0 0 1em 10%;
         line-height: 1em; } }
 @media screen and (min-width: 600px) {
       .home .tag-line .tag-blurb {
         width: 100%;
-        max-width: 900px;
+        max-width: 1000px;
         display: block;
         margin: 0 auto 2em; }
         .home .tag-line .tag-blurb p {
-          font-size: 0.625px;
-          font-size: 1em;
-          line-height: 1.4em;
+          font-size: 0.6875px;
+          font-size: 1.1em;
+          line-height: 1.54em;
           text-align: left;
           position: relative;
           display: inline-block;
@@ -1026,7 +1040,7 @@ footer {
       background-color: rgba(23, 41, 54, 0.8); } }
   @media screen and (min-width: 600px) and (min-width: 700px) {
     .home .tour-links .mini-hero {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 3em 0; }
       .home .tour-links .mini-hero .contain {
@@ -1062,7 +1076,7 @@ footer {
         line-height: 1em; } }
 @media screen and (min-width: 600px) {
     .home .quotes {
-      width: 70%;
+      width: 80%;
       margin: 1em 0;
       display: inline-block;
       vertical-align: top; } }
@@ -1073,9 +1087,9 @@ footer {
         margin: 0; } }
 @media screen and (min-width: 600px) {
       .home .quotes p {
-        font-size: 0.625px;
-        font-size: 1em;
-        line-height: 1.4em;
+        font-size: 0.6875px;
+        font-size: 1.1em;
+        line-height: 1.54em;
         text-align: left;
         position: relative;
         display: inline-block;
@@ -1175,9 +1189,9 @@ footer {
       height: 100%;
       background: #223c4e; }
     .tours .blurb p {
-      font-size: 0.625px;
-      font-size: 1em;
-      line-height: 1.4em;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
       text-align: left;
       position: relative;
       display: inline-block;
@@ -1211,9 +1225,9 @@ footer {
       width: 70%; }
     .tours .mini-hero p {
       display: block;
-      font-size: 0.625px;
-      font-size: 1em;
-      line-height: 1.4em;
+      font-size: 0.75px;
+      font-size: 1.2em;
+      line-height: 1.68em;
       line-height: 1.5em;
       position: relative;
       width: 70%;
@@ -1233,9 +1247,10 @@ footer {
     clear: both;
     position: relative; }
     .tours .tour-info .sub-info {
-      max-width: 300px;
+      max-width: 200px;
+      width: 80%;
       position: relative;
-      margin: 0 0 2em 15%;
+      margin: 0 0 2em 10%;
       border: 2px solid #d4c9ad;
       -webkit-border-radius: 0.3em;
       border-radius: 0.3em;
@@ -1245,7 +1260,7 @@ footer {
     .tours .tour-info ul {
       text-align: left;
       width: 70%;
-      margin: 0.5em auto;
+      margin: 0.5em auto 0.7em;
       position: relative; }
     .tours .tour-info h3 {
       text-align: left;
@@ -1426,7 +1441,7 @@ footer {
 @media screen and (min-width: 600px) {
     .tours .hero .hero-blurb {
       width: 100%;
-      max-width: 900px;
+      max-width: 1000px;
       display: block;
       margin: 0 auto 2em; }
       .tours .hero .hero-blurb p {
@@ -1489,11 +1504,12 @@ footer {
       margin: 0 2% 2em 0; } }
 @media screen and (min-width: 900px) {
   .tours .content {
-    width: 70%;
+    width: 80%;
     margin: 0 auto; }
   .tours .hero {
     width: 100%;
-    padding: 9em 0 3em; }
+    padding: 9em 0 3em;
+    background-position: 100% 70%; }
   .tours .tour-box {
     width: 80%;
     margin: 2em auto; }
@@ -1591,9 +1607,9 @@ footer {
       height: 100%;
       background: #223c4e; }
     .about-us .blurb p {
-      font-size: 0.625px;
-      font-size: 1em;
-      line-height: 1.4em;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
       text-align: left;
       position: relative;
       display: inline-block;
@@ -1643,8 +1659,9 @@ footer {
     clear: both;
     position: relative; }
     .about-us .rider-info .sub-info {
-      width: 70%;
-      margin: 1em auto; }
+      width: 80%;
+      position: relative;
+      margin: 0 0 2em 10%; }
     .about-us .rider-info .exp,
     .about-us .rider-info .market {
       max-width: 300px;
@@ -1725,7 +1742,7 @@ footer {
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */ }
   .about-us .adam {
-    background: url("../img/steve.jpg");
+    background: url("../img/adam.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -1737,8 +1754,8 @@ footer {
     border-radius: 0.3em;
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */ }
-  .about-us .austin {
-    background: url("../img/austin.png");
+  .about-us .steve {
+    background: url("../img/steve.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -1771,13 +1788,13 @@ footer {
     background-color: rgba(23, 41, 54, 0.8); }
   .about-us .hero-blurb {
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     display: block;
     margin: 0 auto 2em; }
     .about-us .hero-blurb p {
-      font-size: 0.625px;
-      font-size: 1em;
-      line-height: 1.4em;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
       text-align: left;
       position: relative;
       display: inline-block;
@@ -1833,7 +1850,7 @@ footer {
       margin: 2em 10%; } }
 @media screen and (min-width: 900px) {
   .about-us .content {
-    width: 70%;
+    width: 80%;
     margin: 0 auto; }
   .about-us .about-hero {
     height: 50em;
@@ -1897,7 +1914,7 @@ footer {
   position: relative;
   overflow: hidden; }
   .contact .contain {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto; }
   .contact .hero {
     text-align: center;
@@ -1971,9 +1988,9 @@ footer {
     position: relative;
     padding: 2em 0; }
     .contact .blurb p {
-      font-size: 0.625px;
-      font-size: 1em;
-      line-height: 1.4em;
+      font-size: 0.6875px;
+      font-size: 1.1em;
+      line-height: 1.54em;
       text-align: left;
       position: relative;
       display: inline-block;
@@ -2083,16 +2100,16 @@ footer {
     .contact .hero .para {
       vertical-align: top;
       text-align: left;
-      margin: 3em auto;
+      margin: 3em 0;
       display: inline-block;
       width: 45%;
       max-width: 350px;
       position: relative;
       padding: 2em auto; }
       .contact .hero .para p {
-        font-size: 0.625px;
-        font-size: 1em;
-        line-height: 1.4em; }
+        font-size: 0.6875px;
+        font-size: 1.1em;
+        line-height: 1.54em; }
     .contact .hero .email {
       display: inline-block;
       position: relative;
@@ -2104,10 +2121,6 @@ footer {
       padding: 0 auto; }
       .contact .hero .email fieldset {
         padding: 2em auto; }
-      .contact .hero .email h3 {
-        width: 80%;
-        margin: 0 10%;
-        text-align: center; }
       .contact .hero .email input[type=text].input-reg {
         width: 98%;
         vertical-align: top;
@@ -2156,10 +2169,13 @@ footer {
       font-size: 2.5px;
       font-size: 4em;
       line-height: 5.6em;
-      width: 50%;
       line-height: 1em;
       text-align: left;
-      position: relative; }
+      position: relative; } }
+    @media screen and (min-width: 900px) and (min-width: 950px) {
+      .contact .hero h2 {
+        margin: 3em 0 0 10%; } }
+@media screen and (min-width: 900px) {
   .contact .blurb {
     display: none; }
   .contact .email {

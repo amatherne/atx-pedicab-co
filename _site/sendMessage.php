@@ -35,9 +35,10 @@ $messageToClient = $client->account->messages->create(array(
 
 $messageToDispatcher = $client->account->messages->create(array(
     "From" => "+15126436565",
-    "To" => "+18328688357",
+    "To" => "+12259376234",
     "Body" => "\r\n " . "\r\n Name: " . $body["fullName"] . "\r\n Phone: " . $body["phone"] . "\r\n Current Loc: " . $body["currentLocation"] . "\r\n Party Size: " . $body["partySize"] . "\r\n Time: " . $body["time"] . "\r\n Destination: " . $body["destination"] 
 ));
+// echo "Thank you " . $full_name . "! <BR><BR> You will get a confirmation text momentarily.";
 
 ?>
 
@@ -45,7 +46,7 @@ $messageToDispatcher = $client->account->messages->create(array(
 
 <html>
   <head>
-    <link rel='stylesheet' type='text/css' href='css/style.css' />
+    <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
   </head>
   <body>
     <div class="confirmed">
